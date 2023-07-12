@@ -1,0 +1,122 @@
+// out: false
+
+.page__banner {
+    background-image: url('../img/banner-mobile.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right 0 top 0;
+    margin: 21px 21px 0 21px;
+    padding-bottom: 59px;
+    border-radius: 5px;
+
+    .banner__content {
+        padding-top: 125px;
+        padding-bottom: 41px;
+
+        h2 {
+            position: relative;
+            font: 700 36px @fontT;
+            color: white;
+            line-height: 45px;
+            margin-bottom: 10px;
+            max-width: 214px;
+            margin-left: 35px;
+
+            .title__detail {
+                position: absolute;
+                left: -30px;
+                top: 8px;
+            }
+
+            @media screen and (min-width: 768px) {
+                max-width: fit-content;
+                margin-left: 0;
+            }
+        }
+
+        p {
+            font: 400 18px @fontT;
+            color: white;
+            line-height: 30px;
+            margin-left: 35px;            
+            max-width: 230px;
+            margin-bottom: 40px;
+
+            @media screen and (min-width: 768px) {
+                max-width: 300px;
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        h3 {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+                font: 400 22px @fontT;
+                color: white;
+                line-height: 30px;
+            }
+        }
+
+        .is--mobile {
+            padding-left: 0;
+            padding-right: 0;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        .is--desktop {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: center;
+
+                img {
+                    width: fit-content;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 207px;
+            padding-bottom: 94px;
+        }
+    }
+
+    .link__down {
+        display: flex;
+        justify-content: center;
+
+        .icon__mouse {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+
+                img {
+                    width: fit-content;
+                }
+            }
+        }
+
+        .arrow__down {
+            img {
+                width: fit-content;
+            }
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: url('../img/banner.webp');
+        padding-bottom: 47px;
+    }
+}

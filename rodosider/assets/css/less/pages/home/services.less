@@ -1,0 +1,104 @@
+//out: false
+
+.page__services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #191919;
+
+    .title {
+        padding-bottom: 40px;
+        
+        h2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font: 700 36px @fontM;
+            color: white;
+            text-align: center;
+
+            img {
+                margin-bottom: 20px;
+                width: fit-content;
+            }
+        }
+    }
+
+    .carousel {
+        padding-left: 0;
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.services__carousel {
+
+            .card__service {
+                position: relative;                
+                width: 270px;
+                height: 476px;
+                border-radius: 10px;
+                
+                h3 {
+                    font: 900 22px @fontL;
+                    color: white;
+                    line-height: 30px;
+                    position: absolute;
+                    left: 30px;
+                    bottom: 30px;
+                    z-index: 10;
+                }
+
+                .card__photo {
+                    filter: saturate(0) brightness(50%);
+                    transition: all linear .15s;
+                    border-radius: 10px;
+                }
+                
+                .overlay1 {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 1;
+                    width: 270px;
+                    height: 479px;
+                    border-radius: 10px;
+                }                
+
+                transition: all linear .15s;
+                &:hover {
+                    .card__photo {
+                        filter: saturate(1) brightness(100%);
+                    }
+                }
+            }
+
+            .owl-dots {
+                margin-top: 30px;
+
+                .owl-dot {
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        background-color: white;
+                        border: 2px solid white;
+                        margin: 5px 5px;
+                    }
+            
+                    &.active {
+                        span {
+                            background-color: #c00415;
+                            border: 2px solid white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        .carousel {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

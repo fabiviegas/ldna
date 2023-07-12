@@ -1,0 +1,194 @@
+// out: false
+
+.page__customer {
+    padding-top: 282px;
+    padding-bottom: 99px;
+    background-image: url('../img/bg-customer-mobile.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .blue {
+        padding-left: 25px;
+        
+        h2 {
+            position: relative;
+            font: 700 36px @fontT;
+            color: white;
+            line-height: 45px;
+            margin-bottom: 10px;
+            margin-left: 35px;
+
+            .title__detail {
+                position: absolute;
+                left: -25px;
+                top: 8px;
+            }
+
+            @media screen and (min-width: 768px) {                
+                margin-left: 50px;
+            }
+        }   
+        
+        p {
+            font: 400 22px @fontT;
+            color: white;
+            line-height: 30px;
+            margin-left: 35px;            
+            max-width: 246px;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 768px) {
+                max-width: 300px;
+                margin-left: 50px;
+                margin-bottom: 30px;
+            }
+        }
+
+        a {
+            margin-left: 35px;
+            
+            @media screen and (min-width: 768px) {
+                margin-left: 50px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-left: 15px;
+        }
+    }
+
+    .red {
+        padding-top: 364px;
+        padding-right: 25px;
+        
+        h2 {
+            position: relative;
+            font: 700 36px @fontT;
+            color: white;
+            line-height: 45px;
+            margin-bottom: 10px;
+            margin-right: 35px;
+            text-align: right;
+
+            .title__detail2 {
+                position: absolute;
+                right: -25px;
+                top: 10px;
+            }
+
+            @media screen and (min-width: 768px) {                
+                margin-right: 50px;
+            }
+        }   
+        
+        p {
+            font: 400 22px @fontT;
+            color: white;
+            line-height: 30px;
+            margin-right: 35px;
+            margin-left: auto;            
+            max-width: 258px;
+            margin-bottom: 20px;
+            text-align: right;
+
+            @media screen and (min-width: 768px) {
+                max-width: 300px;
+                margin-right: 50px;
+                margin-bottom: 30px;
+            }
+        }
+
+        a {
+            margin-right: 35px;
+            margin-left: auto;  
+
+            @media screen and (min-width: 768px) {
+                margin-right: 50px;
+                margin-left: auto; 
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 0;
+            padding-right: 15px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 180px;
+        padding-bottom: 180px;
+        background-image: url('../img/bg-customer.webp');
+        background-position: top -34px center;
+    }
+}
+
+.page__departments {
+    padding-top: 59px;
+    padding-bottom: 60px;
+    background-color: white;
+
+    .title {
+        display: flex;
+        align-items: center;
+
+        h2 {
+            position: relative;
+            font: 700 36px @fontT;
+            color: #000a1c;
+            line-height: 45px;
+            margin-left: 50px;
+            margin-bottom: 36px;
+            
+            .title__detail {
+                position: absolute;
+                left: -28px;
+                top: 8px;
+            }    
+            
+            @media screen and (min-width: 768px) {
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }   
+    }
+
+    .list {
+        display: flex;
+        flex-direction: column;
+        margin-left: 50px;
+        margin-right: 30px;
+        
+        .list__item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 19px;
+
+            .list__icon {
+                width: fit-content;
+                margin-right: 10px;
+                margin-top: 8px;
+            }
+
+            .name {
+                font: 700 18px @fontT;
+                color: #000a1c;
+            }
+
+            .description {
+                font: 400 15px @fontT;
+                color: #636363;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            align-items: center;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 68px;
+        padding-bottom: 63px;        
+    }
+}

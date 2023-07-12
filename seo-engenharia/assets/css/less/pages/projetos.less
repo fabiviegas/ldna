@@ -1,0 +1,211 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.projects__grid {
+
+    display: none; 
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        padding-top: 40px;
+        margin-bottom: 20px;
+        margin-right: 8px;
+
+        .tag {
+            background-color: @lemonGreen;
+            border-radius: 5px;
+            color: @stoneGray;
+            width: fit-content;
+            position: absolute;
+            top: -33px;
+            padding: 19px 39px 16px 30px;
+            left: calc(50% - 110px);
+            z-index: 10;
+
+            .icon__pig {
+                width: fit-content;
+                margin-right: 15px;
+            }
+
+            .tag__text {
+                .text1 {
+                    font: 500 12px @maven;
+                }
+
+                .text2 {
+                    font: 700 15px @maven;
+                }
+            }
+        }
+
+        .project {
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            margin-bottom: 65px;
+
+            .project__img {
+                position: relative;
+                z-index: 1;
+            }
+
+            .project__subtitle {
+                position: absolute;
+                z-index: 10;
+                color: white;
+                bottom: 30px;
+                left: 30px;
+
+                .category {
+                    font: 500 15px @maven;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+                }
+
+                .name {
+                    font: 700 22px @maven;
+                    margin-bottom: 20px;
+                }
+
+                .location {
+                    font: 700 16px @maven;
+                    
+                    i {
+                        color: @lemonGreen;
+                        font-size: 21px;
+                        margin-right: 8px;
+                    }
+                }
+            }
+
+            &:hover {
+                box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+            }
+        } 
+    }       
+}
+
+.projects__info {
+    .projects__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 48px;
+
+        .projects__title {
+            font: 500 16px @maven;
+            color: @stoneGray;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 5px;
+            margin-top: 20px;
+
+            @media screen and (min-width: 768px) {
+                font: 500 18px @maven;
+                letter-spacing: 3.6px;
+            }
+        }
+
+        .projects__title2 {
+            font: 700 32px @maven;
+            color: @stoneGray;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 768px) {
+                font: 700 36px @maven;
+            }
+        }
+
+        .projects__location {
+            font: 700 14px @maven;
+            color: @stoneGray;
+            margin-bottom: 20px;
+
+            i {
+                color: @lemonGreen;
+                font-size: 18px;
+                margin-right: 5px;
+            }
+
+            @media screen and (min-width: 768px) {
+                font: 700 16px @maven;
+                margin-bottom: 32px;
+
+                i {
+                    font-size: 21px;
+                }
+            }
+        }
+
+        .projects__description {
+            font: 400 14px @maven;
+            color: rgb(57, 60, 64);
+            line-height: 22px;
+            margin-bottom: 30px;
+
+            @media screen and (min-width: 768px) {
+                font: 400 16px @maven;
+                line-height: 25px;
+                margin-bottom: 46px;
+            }
+        }
+
+        .btn__projects {
+            width: 327px;
+            font-size: 18px;
+            color: rgb(18, 28, 9);
+
+            &:hover {
+                color: @lemonGreen;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            align-items: flex-start;
+            text-align: left;
+            margin-bottom: 60px;
+        }
+    }
+
+    .more__infos {
+        background-color: @lemonGreen;
+
+        .details {
+            margin-top: 16px;
+            margin-bottom: 16px;
+
+            .icon__projects {
+                margin-right: 20px;
+            }
+
+            .infos {
+                color: @stoneGray;
+
+                .info__title {
+                    font: 500 17px @maven;
+                    text-transform: uppercase;
+                }
+
+                .info__number {
+                    font: 700 21px @maven;
+                }
+            }
+        }
+    }
+}
+
+.projects {
+    .projects__title.projects__page,
+    .projects__title2.projects__page {
+        text-align: center;
+        margin-top: 0;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;            
+        }
+    }
+}
+

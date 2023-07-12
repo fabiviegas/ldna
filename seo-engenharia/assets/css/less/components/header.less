@@ -1,0 +1,141 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.page__header {
+
+    position: absolute;
+    width: 100%;
+    z-index: 3000;
+
+    .logo__header {
+        width: 125px;
+
+        @media screen and (min-width: 768px) {
+            width: fit-content;
+        }
+    }
+
+    .is--desktop {
+
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+
+            .menu__desk {
+                font: 700 16px @maven;
+                
+                .menu__links {
+                    display: inline-block;
+                    padding-right: 20px;
+                    color: @stoneGray;
+                    
+                    &:last-child {
+                        padding-right: 0;
+                    }
+
+                    .--transition();
+                    &:hover {
+                        cursor: pointer;
+                        transform: translateY(-5px);
+                    }
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+
+        .navbar__hamburguer {
+            padding: 11px;
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        .navbar__overlay {
+            z-index: 3000;
+            display: none;
+        
+            &.open {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                                
+                top: 0;
+                right: 0;
+                background-color: @stoneGray;
+                overflow: hidden !important;
+                transition: all linear 0.5s;
+        
+                .overlay__content {
+                    
+                    overflow-y: auto !important;
+                    height: 90%;
+        
+                    
+                    .overlay__close {
+                        float: right;
+                        margin: 30px 30px 10px 0;
+                        font-size: 20px;
+                        color: white;
+                    }
+
+                    .overlay__logo {
+                        margin: 30px 0 0 30px; 
+                        width: 125px;
+                    }
+
+                    .overlay__menu {
+                        margin: 0;
+                        
+                        .overlay__links {
+                            margin-top: 65px;
+
+                            .link {
+                                color: white;
+                                font: 700 16px @maven;
+                                margin-bottom: 21px;
+                            }
+                        }
+                        
+                        .btn__menu {
+                            width: 263px;
+                            font: 700 14px @maven;
+                            padding: 18px 0;
+                            color: rgb(18, 28, 9);
+                            margin-top: 7px;
+                            margin-bottom: 26px;
+
+                            i {
+                                font-size: 16px;
+                            }
+
+                            &:hover {
+                                color: @lemonGreen;
+                            }
+                        }
+                    }
+
+                    .overlay__social {
+                        width: 196px;
+
+                        .icon__menu {
+
+                            &:hover {
+                                filter: brightness(0) saturate(100%) invert(78%) sepia(77%) saturate(333%) hue-rotate(36deg) brightness(97%) contrast(86%);
+                                }
+                            }
+                    }
+                }
+            } 
+        }
+
+        
+    }
+}
+

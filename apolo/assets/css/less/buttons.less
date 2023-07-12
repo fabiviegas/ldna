@@ -1,0 +1,143 @@
+// out: false
+
+@import "__pallete.less"; 
+
+.btn__gray {
+    display: inline-block;
+    width: fit-content;
+    font-family: @lato;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 16px 32px;
+    background-color: rgba(75, 64, 59, 0.7);
+    text-align: center; 
+    
+    &:hover {
+        background-color: lighten(hsla(19, 12%, 26%, 0.7), 5%);
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-left: 6px;
+        font-size: 15px;
+        padding: 20px 39px;
+    }
+}
+
+.btn__white {
+    display: inline-block;
+    width: fit-content;
+    font-family: @lato;
+    background-color: rgb(227, 227, 227);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 16px 34px;
+    color: @umber;
+    text-align: center;
+    
+    a {
+        color: @umber;
+    }
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgba(114, 97, 89, 0.7);
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 15px;
+        padding: 20px 40px;
+    }
+}
+
+.btn__white2 {
+    display: inline-block;
+    width: fit-content;
+    font-family: @lato;
+    background-color: rgb(245, 245, 245);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 16px 34px;
+    color: @gray;
+    text-align: center;
+
+    a {
+        color: @gray;
+    }
+
+    &:hover {
+        color: rgb(245, 245, 245);
+        background-color: rgba(114, 97, 89, 0.7);
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 15px;
+        padding: 20px 40px;        
+    }
+}
+
+.btn__white3 {
+    display: inline-block;
+    width: fit-content;
+    font-family: @lato;
+    background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 16px 34px;
+    color: rgb(97, 83, 76);
+    
+    a {
+        color: @gray;
+    }
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(97, 83, 76);
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 15px;
+        padding: 20px 40px;
+    }
+
+    .download {
+        font-weight: 400;
+        font-size: 14px;
+    }
+
+    .strong {
+        font-weight: 900;
+        font-size: 18px;
+    }
+}
+
+.button__bw {
+    display: inline-block;
+    width: fit-content;
+    font-family: @lato;
+    background-color: rgb(255, 255, 255);
+    font-weight: 700;
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 16px 34px;
+    color: @umber;
+    border: 1px solid rgb(114, 97, 89);
+    
+    a {
+        color: @umber;
+    }
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background-color: rgb(97, 83, 76);
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 15px;
+        padding: 20px 40px;
+    }
+}

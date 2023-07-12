@@ -1,0 +1,125 @@
+// out: false
+
+.page__header {
+    position: absolute;
+    z-index: 3000;
+    padding-top: 20px;
+    width: 100%;
+
+    .logo {
+        padding-left: 20px;
+        margin-left: 20px;
+        
+        img {
+            width: 121px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-left: 0;            
+            padding-left: 15px;
+
+            img {
+                width: fit-content;
+            }
+        }
+    }
+
+    .is--desktop {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .links {
+                display: flex;
+                width: 317px;
+                justify-content: space-between;
+
+                a {
+                    color: white;
+                    font: 400 15px @fontT;
+                    
+
+                    &:hover {
+                        color: white;
+                        cursor: pointer;
+                        text-decoration: underline;
+                        text-underline-offset: 3px;
+                    }
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+
+        .navbar__hamburguer {
+            margin-right: 25px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar__overlay {
+            background-color: #001e53; 
+            border-radius: 5px;          
+            z-index: 3001;
+            display: none;
+        
+            &.open {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 90%;
+                position: fixed;                                
+                top: 0;
+                right: 0;
+                margin: 20px;
+                
+                overflow: hidden !important;
+                transition: all linear 0.5s;
+        
+                .overlay__content {
+                    
+                    overflow-y: auto !important;
+                    height: 90%;
+
+                    .overlay__header {
+                        margin: 20px 30px 97px 20px;                                                                  
+                        
+                    }
+
+                    .overlay__menu {
+                        margin: 0;
+                        
+                        .overlay__links {
+                            margin-bottom: 50px;
+
+                            a {
+                                font: 400 15px @fontT;
+                                color: white;
+                                text-decoration: none;
+                                text-transform: uppercase;
+                                margin-bottom: 20px;
+                            }
+                        }
+
+                        .overlay__social {
+                            width: 150px;                            
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 38px;
+    }
+}
+

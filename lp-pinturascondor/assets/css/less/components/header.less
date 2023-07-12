@@ -1,0 +1,137 @@
+// out: false
+
+.page__header {
+    position: absolute;
+    z-index: 3000;
+    padding-top: 34px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .logo {
+        
+        margin-left: 15px;
+        img {
+            width: 130px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-left: 0;
+
+            img {
+                width: fit-content;
+            }
+        }
+    }
+
+    .is--desktop {
+        display: none;
+
+        @media screen and (min-width: 990px) {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .links {
+                display: flex;
+                width: 296px;
+                justify-content: space-between;
+                margin-right: 30px;
+
+                a {
+                    color: white;
+                    font: 400 15px @fontR;
+                    transition: all linear .15s;
+                    &:hover {
+                        color: white;
+                        cursor: pointer; 
+                        text-decoration: underline;
+                        text-underline-offset: 4px;
+                        transform: translateY(-3px);                       
+                    }
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+        display: flex;
+        justify-content: flex-end;
+
+        .navbar__hamburguer {
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 58px;
+            height: 58px;
+            background-color: white;
+            border-radius: 100%;
+        }
+
+        .navbar__overlay {
+            background-color: #194f70;
+            z-index: 3001;
+            display: none;
+        
+            &.open {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                                
+                top: 0;
+                right: 0;
+                
+                overflow: hidden !important;
+                transition: all linear 0.5s;
+        
+                .overlay__content {
+                    
+                    overflow-y: auto !important;
+                    height: 90%;
+
+                    .overlay__header {
+                        margin: 30px 54px 109px 30px; 
+                        
+                        .overlay__logo {
+                            width: 140px;
+                        }                        
+                    }
+
+                    .overlay__menu {
+                        margin: 0;
+                        
+                        .overlay__links {
+                            a {
+                                font: 400 15px @fontR;
+                                color: white;
+                                text-decoration: none;
+                                margin-bottom: 16px;
+
+                                &:hover {
+                                    filter: brightness(0) saturate(100%) invert(49%) sepia(26%) saturate(1991%) hue-rotate(338deg) brightness(98%) contrast(84%);
+                                }
+                            }
+                        }
+
+                        .overlay__social {
+                            width: 140px;
+                            margin-top: 90px;
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media screen and (min-width: 990px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 990px) {
+        padding-top: 74px;
+    }
+}
+

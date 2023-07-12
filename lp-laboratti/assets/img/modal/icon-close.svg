@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <g id="icon-close" transform="translate(-0.883 -0.883)">
+    <g id="invisible_box" data-name="invisible box" transform="translate(0.57 0.57)">
+      <rect id="Retângulo_6543" data-name="Retângulo 6543" width="34" height="34" transform="translate(0.313 0.313)" fill="rgba(0,0,0,0)"/>
+    </g>
+    <g id="icons_Q2" data-name="icons Q2" transform="translate(1.386 1.386)">
+      <path id="Caminho_25461" data-name="Caminho 25461" d="M18.5,5A13.5,13.5,0,1,1,5,18.5,13.5,13.5,0,0,1,18.5,5m0-3A16.422,16.422,0,1,0,30.184,6.81,16.5,16.5,0,0,0,18.5,2Z" transform="translate(-2 -2)" fill="#c8c3c3"/>
+      <path id="Caminho_25462" data-name="Caminho 25462" d="M23.849,21.739l4.2-4.124a1.575,1.575,0,0,0,.15-2.025,1.425,1.425,0,0,0-2.25-.15l-4.2,4.2-4.2-4.2a1.425,1.425,0,0,0-2.25.15,1.575,1.575,0,0,0,.15,2.025l4.2,4.124-4.2,4.124a1.575,1.575,0,0,0-.15,2.025,1.425,1.425,0,0,0,2.25.15l4.2-4.2,4.2,4.2a1.425,1.425,0,0,0,2.25-.15,1.575,1.575,0,0,0-.15-2.025Z" transform="translate(-5.252 -5.242)" fill="#c8c3c3"/>
+    </g>
+  </g>
+</svg>

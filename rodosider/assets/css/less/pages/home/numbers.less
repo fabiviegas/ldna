@@ -1,0 +1,95 @@
+//out: false
+
+.page__numbers {
+    padding-bottom: 60px;
+    background-color: #191919;
+
+    .number--1,
+    .number--2 {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+
+            .number__icon {
+                margin-right: 16px;
+            }
+
+            .text {
+                display: flex;
+                flex-direction: column;                
+
+                .title1 {
+                    font: 700 28px @fontM;
+                    color: white;
+                    line-height: 40px;
+                }
+
+                .title2 {
+                    font: 700 36px @fontM;
+                    color: white;
+                    line-height: 40px;
+                }
+
+                .text1 {
+                    font: 400 16px @fontR;
+                    color: white;
+                    letter-spacing: 3.38px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                }
+
+                .text2 {
+                    font: 400 16px @fontR;
+                    color: white;
+                    letter-spacing: 1.09px;
+                    line-height: 20px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .button {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 100px;
+
+        .number--1 {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .info {
+                margin-bottom: 0;
+
+                .text {
+                    .title1 {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+
+        .number--2 {
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .info {
+                margin-bottom: 0;
+            }
+        }
+
+        .button {
+            margin-top: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

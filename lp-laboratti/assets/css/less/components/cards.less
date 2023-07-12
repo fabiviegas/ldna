@@ -1,0 +1,102 @@
+//out: false
+
+.blog__card {
+    margin-bottom: 30px;
+    width: 300px;
+                    
+    figure {
+        position: relative;
+        overflow: hidden; 
+        border-radius: 10px;                   
+
+        .photo__blog {
+            transition: all linear .2s;                    
+            width: 300px; 
+            
+            @media screen and (min-width: 768px) {
+                width: 370px;
+            }
+        }
+        
+        figcaption {
+            position: absolute;                            
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 251px;
+            height: 100px;
+            bottom: 16px;
+            left: 28px;
+            z-index: 4;
+
+            p {
+                font: 700 16px @fontT;
+                color: white;
+                line-height: 21px;
+            }
+
+            .icon__dots {
+                width: fit-content;
+            }
+
+            @media screen and (min-width: 768px) {
+                left: 35px;
+                bottom: 20px;
+                height: 140px;
+                width: 282px;
+
+                p {
+                    font-size: 18px;
+                    line-height: 31px;
+                }
+            }
+        }
+
+        .overlay1 {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(9, 14, 35, 0.16);                                                                                 
+            width: 300px;
+            height: 100%;
+            border-radius: 10px;
+            z-index: 2;
+
+            @media screen and (min-width: 768px) {
+                width: 370px;   
+            }
+        }
+
+        .overlay2 {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient(180deg, rgba(9, 14, 35, 0) 0%, #090e23 100%);
+            background-size: 100% 254px;
+            background-repeat: no-repeat;
+            background-position: bottom 0 left 0;
+            margin: 0 5px 5px 5px;
+            width: 290px;
+            height: 100%;
+            border-radius: 10px;
+            z-index: 3;
+
+            @media screen and (min-width: 768px) {
+                width: 360px;   
+            }
+        }
+    }
+
+    &:hover {
+        figure {
+
+            .photo__blog {
+                transform: scale(1.1);
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 370px;   
+    }
+}

@@ -1,0 +1,178 @@
+// out: false
+
+.page__testimonials {
+    padding-top: 70px;
+    padding-bottom: 580px;
+    position: relative;
+    overflow: hidden;
+
+    .background {
+        position: absolute;
+        background-image: linear-gradient(#194f70, #194f70);
+        background-repeat: no-repeat;
+        top: 0;
+        right: 0;
+        height: 622px;
+        width: 100%; 
+    }
+    
+    .content {
+        position: relative;
+
+        .pic__testimonials {
+            position: absolute;
+            left: -109px;
+            bottom: -510px;
+            z-index: 500;
+        }
+                
+        .title {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font: 700 46px @fontR;
+            color: white;
+            text-align: center;
+            margin-bottom: 69px;
+
+            img {
+                width: fit-content;
+                margin-bottom: 20px;
+            }
+        }
+
+        .testimonials {
+            padding-left: 0;
+            padding-right: 0;
+            
+            .owl-carousel.owl-theme.testimonials__carousel {
+                
+                .card__test {
+                    position: relative;
+                    background-color: white;
+                    padding: 80px 62px 46px 40px;
+                    border-radius: 30px;
+                    box-shadow: 0 26px 36px rgba(0, 0, 0, 0.09);
+                    height: 529px;
+                    width: 320px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    background-color: white;
+                    margin-bottom: 40px;
+
+                    .quotes {
+                        position: absolute;
+                        width: fit-content;
+                        left: -16px;
+                        top: -67px;
+                        z-index: 1001;
+                    }
+
+                    .card__text {
+                        font: 300 14px @fontR;
+                        color: #091426;
+                        line-height: 20px;
+                        margin-bottom: 28px;
+                    }
+
+                    .info {
+
+                        .card__name {
+                            font: 700 22px @fontR;
+                            color: #1c1c1c;
+                            margin-bottom: 4px;
+                        }
+
+                        .card__location {
+                            font: 300 15px @fontR;
+                            color: #8a8a8a;
+                        }
+                    }
+                }
+
+                .owl-nav {
+                    display: none;                    
+                }
+            }            
+        }
+    }
+
+    @media screen and (min-width: 768px) {        
+        padding-bottom: 98px; 
+        
+        .background {            
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            top: 70px;
+            right: 0;
+            height: 438px;
+            width: 70%; 
+        }
+        
+        .content {
+            margin-left: 80px;
+
+            .title {                
+                margin-bottom: 40px;
+                margin-top: 88px;
+                margin-left: 20px;
+                align-items: flex-start; 
+                text-align: left;
+            }
+
+            .pic__testimonials {
+                position: absolute;
+                left: -282px;
+                top: -85px;
+            }
+
+            .testimonials {
+                padding-left: 15px;
+                padding-right: 15px;
+
+                .owl-carousel.owl-theme.testimonials__carousel {
+
+                    .card__test {
+                        width: 376px;
+                        height: 398px;
+                        padding: 55px 51px 31px 30px;
+                    }
+
+                    .owl-nav {
+                        position: absolute;
+                        right: 0;
+                        top: -120px;
+                        display: flex;
+                        justify-content: space-between;
+
+                        .owl-prev,
+                        .owl-next {
+                            background-color: white;
+                            box-shadow: 0 26px 16px rgba(28, 28, 28, 0.36);
+                            width: 65px;
+                            height: 66px;
+                            border-radius: 100%;
+
+                            img {
+                                width: 25px;
+                            }
+
+                            &:hover {
+                                background-color: #e66c36;
+                            
+                                img {
+                                    filter: brightness(0) saturate(100%) invert(96%) sepia(100%) saturate(0%) hue-rotate(44deg) brightness(114%) contrast(101%);
+                                }
+                            }
+
+                            &.disabled {
+                                opacity: 1;
+                            }
+                        }                         
+                    }
+                }
+            }
+        }
+    }
+}

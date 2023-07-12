@@ -1,0 +1,77 @@
+// out: false
+
+.btn__line {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: transparent;
+    border: 1px solid #008ecb;
+    border-radius: 20px; 
+    padding: 23px 30px 20px 32px;
+    font: 500 16px @fontR;
+    letter-spacing: 1.6px;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    width: fit-content;
+    transition: all linear .15s;
+
+    &.btn__menu {
+        padding: 23px 15px 20px 17px;
+    }
+
+    &.btn__modal {
+        color: #008ecb;
+    }
+    
+    &:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #008ecb; 
+    }
+}
+
+.btn__blue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #008ecb;    
+    border-radius: 20px; 
+    padding: 21px 39px 20px 40px;
+    font: 700 18px @fontR;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all linear .15s;
+    
+    &:hover {
+        cursor: pointer;
+        color: white;
+        background-color: #00376d;
+        border: 1px solid #008ecb; 
+    }
+}
+
+.btn__marineBlue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00376d;   
+    border-radius: 10px; 
+    padding: 18px 24px 19px 33px;
+    font: 700 18px @fontR;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+    transition: all linear .15s;
+    width: fit-content;
+    
+    &:hover {
+        cursor: pointer;
+        color: #00376d;
+        background-color: white; 
+    }
+}
+
+

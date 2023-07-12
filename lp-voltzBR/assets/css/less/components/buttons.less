@@ -1,0 +1,58 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.btn__yellow {
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    border: 2px solid rgb(220, 208, 40);
+    background-color: transparent;
+    text-decoration: none;
+    font: 700 15px @fontE;
+    text-transform: uppercase;
+    color: rgb(220, 208, 40);
+    padding: 22px 42px;
+    width: fit-content;
+    letter-spacing: 0.9px;
+
+    i {
+        font-size: 20px;
+        margin-right: 10px;
+    }
+
+    .--transition();
+    &:hover {
+        color: rgb(220, 208, 40);
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    @media screen and (min-width: 768px) {
+        font-size: 18px;
+
+        i {
+            font-size: 23px;
+        }
+    }
+}
+
+.btn__yellow2 {
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 36px rgba(220, 208, 40, 0.4);
+    border-radius: 5px;
+    background-color: rgb(220, 208, 40);
+    text-decoration: none;
+    font: 700 18px @fontE;
+    text-transform: uppercase;
+    color: rgb(22, 121, 230);
+    padding: 22px 50px;
+    width: fit-content;
+    letter-spacing: 0.9px;
+
+    .--transition();
+    &:hover {
+        color: rgb(22, 121, 230);
+        background-color: rgb(0, 22, 46);
+    }
+}

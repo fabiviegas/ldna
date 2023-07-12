@@ -1,0 +1,137 @@
+// out: false
+
+.page__services {
+    padding-top: 98px;
+    background-color: white;
+    
+    .title {
+        
+        h2 {
+            font: 700 36px @fontT;
+            color: #000a1c;
+            line-height: 50px;
+            margin-left: 23px;
+            margin-bottom: 10px;
+
+            .title__detail {
+                margin-right: 10px;
+                margin-top: -7px;
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-left: 70px;
+                margin-bottom: 0;
+            }
+        }
+
+        p {
+           font: 400 16px @fontT;
+           color: #636363; 
+           line-height: 25px;
+           margin-left: 15px;
+
+           @media screen and (min-width: 768px) {
+                font-size: 22px;
+                line-height: 30px;
+                max-width: 520px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            align-items: center;
+            margin-bottom: 80px;
+        }
+    }
+
+    .services {
+        background-image: url('../img/bg-services.webp');
+        background-repeat: no-repeat;
+        background-position: center center;
+
+        .card__service {
+            width: 270px;
+            height: 270px;
+            box-shadow: 0 0 36px rgba(0, 0, 0, 0.06);
+            border-radius: 5px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font: 700 20px @fontT;
+            color: #000a1c;
+            padding-left: 32px;
+            padding-right: 32px;
+            text-align: center;
+
+            .card__icon {
+                width: fit-content;
+                margin-bottom: 10px;
+            }
+
+            &:hover {
+                background-color: #cf000c;
+                color: white;
+                cursor: pointer;
+                
+                .card__icon {
+                    filter: brightness(0) saturate(100%) invert(100%) sepia(94%) saturate(0%) hue-rotate(162deg) brightness(107%) contrast(107%);
+                }
+            }
+        }
+
+        &.is--desktop {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+
+                .card__service {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &.is--mobile {
+            padding-bottom: 60px;
+
+            .owl-carousel.owl-theme.services__carousel {
+
+                .card__service {
+                    margin-top: 30px;
+                    margin-bottom: 30px;
+                }
+
+                .owl-dots {
+    
+                    .owl-dot {
+                        span {
+                            width: 10px;
+                            height: 10px;
+                            background-color: white;
+                            border: 1px solid #001e53;
+                            margin: 5px 5px;
+                        }
+                
+                        &.active {
+                            span {
+                                background-color: #001e53;
+                                border: 1px solid transparent;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+        
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 114px;
+        padding-bottom: 70px;
+    }
+}

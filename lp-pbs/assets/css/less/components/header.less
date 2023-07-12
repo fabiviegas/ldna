@@ -1,0 +1,121 @@
+// out: false
+
+.page__header {
+    position: absolute;
+    z-index: 3000;
+    padding-top: 40px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .logo {
+        
+        margin-left: 15px;
+        width: 77px;
+
+        @media screen and (min-width: 768px) {
+            margin-left: 0;
+            width: fit-content;
+        }
+    }
+
+    .is--desktop {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .links {
+                display: flex;
+                width: 312px;
+                justify-content: space-between;
+
+                a {
+                    color: white;
+                    font: 300 15px @fontA;                    
+
+                    &:hover {
+                        color: #28b36f;
+                        cursor: pointer;                        
+                    }
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+
+        .navbar__hamburguer {
+            margin-right: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar__overlay {
+            background-color: #0b1a30;
+            background-image: url('../img/bg-about.svg');
+            background-repeat: no-repeat;
+            background-position: top 263px right -40px;
+            z-index: 3001;
+            display: none;
+        
+            &.open {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                                
+                top: 0;
+                right: 0;
+                
+                overflow: hidden !important;
+                transition: all linear 0.5s;
+        
+                .overlay__content {
+                    
+                    overflow-y: auto !important;
+                    height: 90%;
+
+                    .overlay__header {
+                        margin: 30px 54px 109px 30px;
+
+                        .overlay__logo {
+                            width: 77px;
+                        }                                                           
+                        
+                    }
+
+                    .overlay__menu {
+                        margin: 0;
+                        
+                        .overlay__links {
+                            a {
+                                font: 300 15px @fontA;
+                                color: white;
+                                text-decoration: none;
+                                margin-bottom: 16px;
+                            }
+                        }
+
+                        .overlay__social {
+                            width: 140px;
+                            margin-top: 190px;
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 38px;
+    }
+}
+

@@ -1,0 +1,955 @@
+@font-face {
+  font-family: 'Urbanist';
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xtDF02iFML4hGCyMqgdyNEf6or5L2WA10pUpmv.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDlR4fFg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDyx4fFg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xjDF02iFML4hGCyOCpRdycFsGxSrqD-R4fFg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDFRkfFg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDLBkfFg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDSxkfFg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Urbanist';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/urbanist/v10/L0xjDF02iFML4hGCyOCpRdycFsGxSrqDYhkfFg.ttf) format('truetype');
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-x: hidden;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+iframe {
+  margin: 0;
+}
+a {
+  display: block;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+address {
+  font-style: normal;
+}
+iframe {
+  border: none;
+}
+mark {
+  padding: 0;
+  background-color: transparent;
+}
+menu {
+  padding-inline-start: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+p {
+  margin-bottom: 0;
+}
+section,
+article,
+aside,
+details,
+figcaption,
+figure,
+header,
+footer,
+menu,
+nav {
+  display: block;
+}
+body {
+  background-color: #092d23;
+}
+.mark__gold {
+  color: #deb78f;
+}
+.mark__gold2 {
+  color: #deb78f;
+  font-weight: 700;
+}
+.page__header {
+  position: absolute;
+  width: 100%;
+  padding-top: 28px;
+  z-index: 3000;
+}
+.page__header .logo__header {
+  margin-left: 15px;
+  width: 155px;
+}
+@media screen and (min-width: 768px) {
+  .page__header .logo__header {
+    margin-left: 0;
+    width: fit-content;
+  }
+}
+.page__header .is--desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .page__header .is--desktop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .page__header .is--desktop .menu__desk {
+    display: flex;
+    align-items: center;
+    width: 202px;
+    justify-content: space-between;
+  }
+  .page__header .is--desktop .menu__desk .menu__link {
+    font: 400 15px 'Urbanist', sans-serif;
+    color: white;
+    transition: all 0.3s linear;
+  }
+  .page__header .is--desktop .menu__desk .menu__link:hover {
+    color: #deb78f;
+  }
+}
+.page__header .is--mobile .navbar__hamburguer {
+  margin-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+}
+.page__header .is--mobile .navbar__overlay {
+  background-color: #092d23;
+  z-index: 3001;
+  display: none;
+}
+.page__header .is--mobile .navbar__overlay.open {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow: hidden !important;
+  transition: all linear 0.5s;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content {
+  overflow-y: auto !important;
+  height: 90%;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__header {
+  margin: 30px 30px 106px 30px;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__header .overlay__logo {
+  width: 155px;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__header .overlay__close {
+  font-size: 30px;
+  color: white;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__menu {
+  margin: 0;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__menu .overlay__links a {
+  font: 400 15px 'Urbanist', sans-serif;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 19px;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__menu .overlay__button {
+  margin-top: 40px;
+  margin-bottom: 76px;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__menu .overlay__social {
+  width: 130px;
+}
+.page__header .is--mobile .navbar__overlay.open .overlay__content .overlay__menu .overlay__social a {
+  text-decoration: none;
+  font-size: 23px;
+  color: #deb78f;
+  cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .page__header .is--mobile {
+    display: none;
+  }
+}
+.btn__transparent {
+  border-radius: 5px;
+  border: 1px solid #deb78f;
+  background-color: transparent;
+  font: 700 18px 'Urbanist', sans-serif;
+  color: white;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  padding: 20px 42px;
+  transition: all 0.3s linear;
+}
+.btn__transparent:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+.btn__gold {
+  background-image: linear-gradient(250deg, #deb78f 0%, #bf874d 100%);
+  border-radius: 5px;
+  padding: 20px 42px;
+  font: 700 18px 'Urbanist', sans-serif;
+  color: white;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+  transition: all 0.3s linear;
+}
+.btn__gold i {
+  font-size: 22px;
+}
+.btn__gold:hover {
+  box-shadow: 0 0 8px rgba(9, 45, 35, 0.5);
+  color: white;
+}
+.page__footer {
+  background-color: #f7f7f6;
+  background-image: url('../img/bg-footer.svg'), linear-gradient(#092d23 20%, #f7f7f6 10%);
+  background-repeat: no-repeat;
+  background-size: 403px, 100%;
+  background-position: top 484px left -142px, top -100px left 0;
+}
+.page__footer .cta {
+  box-shadow: 0 0 36px rgba(0, 0, 0, 0.09);
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 30px 5px;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.page__footer .cta h2 {
+  font: 700 32px 'Urbanist', sans-serif;
+  color: #092d23;
+  line-height: 40px;
+  max-width: 482px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .page__footer .cta h2 {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+.page__footer .cta .button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page__footer .cta .button .btn__gold.btn__cta {
+  font: 700 12px 'Urbanist', sans-serif;
+  letter-spacing: 1.2px;
+  padding: 20px 32px;
+}
+.page__footer .cta .button .btn__gold.btn__cta i {
+  font-size: 16px;
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .page__footer .cta .button .btn__gold.btn__cta {
+    font: 700 18px 'Urbanist', sans-serif;
+    letter-spacing: 1.8px;
+    padding: 20px 42px;
+  }
+  .page__footer .cta .button .btn__gold.btn__cta i {
+    font-size: 22px;
+  }
+}
+.page__footer .cta .button p {
+  font: 700 14px 'Urbanist', sans-serif;
+  color: #092d23;
+  font-style: italic;
+  margin-top: 18px;
+}
+@media screen and (min-width: 768px) {
+  .page__footer .cta .button p {
+    margin-top: 10px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__footer .cta .button {
+    align-items: flex-end;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__footer .cta {
+    padding: 40px 70px;
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+.page__footer .footer__content {
+  padding-top: 72px;
+}
+.page__footer .footer__content .is--desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .page__footer .footer__content .is--desktop {
+    display: block;
+  }
+  .page__footer .footer__content .is--desktop .contact {
+    display: flex;
+    flex-direction: column;
+    height: 119px;
+    justify-content: space-between;
+  }
+  .page__footer .footer__content .is--desktop .contact a,
+  .page__footer .footer__content .is--desktop .contact p {
+    font: 500 16px 'Urbanist', sans-serif;
+    color: #092d23;
+    text-decoration: none;
+  }
+  .page__footer .footer__content .is--desktop .contact a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .page__footer .footer__content .is--desktop .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .page__footer .footer__content .is--desktop .links img {
+    margin-bottom: 30px;
+  }
+  .page__footer .footer__content .is--desktop .links .social {
+    display: flex;
+    width: 130px;
+    justify-content: space-between;
+  }
+  .page__footer .footer__content .is--desktop .links .social a {
+    color: rgba(9, 45, 35, 0.5);
+    font-size: 24px;
+  }
+  .page__footer .footer__content .is--desktop .links .social a:hover {
+    color: #092d23;
+  }
+  .page__footer .footer__content .is--desktop .location p {
+    font: 500 16px 'Urbanist', sans-serif;
+    color: #092d23;
+    line-height: 35px;
+    margin-bottom: 25px;
+  }
+  .page__footer .footer__content .is--desktop .location a {
+    font: 700 16px 'Urbanist', sans-serif;
+    color: #092d23;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .page__footer .footer__content .is--desktop .location a:hover {
+    text-shadow: 2px 2px 4px rgba(9, 45, 35, 0.3);
+  }
+}
+.page__footer .footer__content .is--mobile .links {
+  margin-bottom: 60px;
+}
+.page__footer .footer__content .is--mobile .links img {
+  margin-bottom: 30px;
+}
+.page__footer .footer__content .is--mobile .links .social {
+  display: flex;
+  width: 130px;
+  justify-content: space-between;
+}
+.page__footer .footer__content .is--mobile .links .social a {
+  color: #092d23;
+  font-size: 24px;
+}
+.page__footer .footer__content .is--mobile .contact {
+  height: 119px;
+  margin-bottom: 30px;
+}
+.page__footer .footer__content .is--mobile .contact a,
+.page__footer .footer__content .is--mobile .contact p {
+  font: 500 16px 'Urbanist', sans-serif;
+  color: #092d23;
+  text-decoration: none;
+}
+.page__footer .footer__content .is--mobile .contact a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.page__footer .footer__content .is--mobile .location p {
+  font: 500 16px 'Urbanist', sans-serif;
+  color: #092d23;
+  line-height: 35px;
+  margin-bottom: 29px;
+  text-align: center;
+}
+.page__footer .footer__content .is--mobile .location a {
+  font: 700 16px 'Urbanist', sans-serif;
+  color: #092d23;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+.page__footer .footer__content .is--mobile .location a:hover {
+  text-shadow: 2px 2px 4px rgba(9, 45, 35, 0.3);
+}
+@media screen and (min-width: 768px) {
+  .page__footer .footer__content .is--mobile {
+    display: none;
+  }
+}
+.page__footer .footer__content .copyrights {
+  margin-top: 60px;
+  padding-top: 39px;
+  margin-right: 30px;
+  margin-left: 30px;
+  padding-bottom: 37px;
+  border-top: 1px solid rgba(9, 45, 35, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page__footer .footer__content .copyrights p {
+  font: 400 14px 'Urbanist', sans-serif;
+  color: #092d23;
+  text-align: center;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 768px) {
+  .page__footer .footer__content .copyrights p {
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__footer .footer__content .copyrights {
+    margin-top: 108px;
+    padding-top: 41px;
+    padding-bottom: 48px;
+    margin-right: 0;
+    margin-left: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__footer {
+    background-image: url('../img/bg-footer.svg'), linear-gradient(#092d23 15%, #f7f7f6 10%);
+    background-position: top 105px right -120px, top 0 left 0;
+    background-size: 652px, 100%;
+  }
+}
+.button__whatsapp--floating {
+  display: inline-block;
+  z-index: 5000;
+  position: fixed;
+  bottom: 5px;
+  right: 9px;
+  padding: 7px 12px;
+  background-color: #2acc1e;
+  color: #13172d;
+}
+.button__whatsapp--floating i {
+  font-size: 36px;
+  color: #191d36;
+}
+.button__whatsapp--floating:hover i {
+  color: #FFFFFF;
+}
+.owl-carousel.owl-theme.services__carousel .card__service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 42px;
+  border: 3px solid #deb78f;
+  border-radius: 5px;
+  width: 270px;
+  height: 270px;
+  margin-bottom: 30px;
+}
+.owl-carousel.owl-theme.services__carousel .card__service img {
+  width: fit-content;
+  margin-bottom: 20px;
+}
+.owl-carousel.owl-theme.services__carousel .card__service h4 {
+  font: 700 18px 'Urbanist', sans-serif;
+  color: white;
+  margin-bottom: 15px;
+  text-align: center;
+}
+.owl-carousel.owl-theme.services__carousel .card__service p {
+  font: 400 12px 'Urbanist', sans-serif;
+  color: white;
+  line-height: 20px;
+}
+.owl-carousel.owl-theme.services__carousel .owl-dots {
+  margin-top: 29px;
+}
+.owl-carousel.owl-theme.services__carousel .owl-dots .owl-dot span {
+  width: 10px;
+  height: 10px;
+  background-color: #092d23;
+  border: 1px solid #deb78f;
+}
+.owl-carousel.owl-theme.services__carousel .owl-dots .owl-dot.active span {
+  background-color: #deb78f;
+}
+.owl-carousel.owl-theme.about__carousel img {
+  max-width: 500px;
+}
+.owl-carousel.owl-theme.about__carousel .owl-nav {
+  display: flex;
+  justify-content: flex-end;
+  height: 44px;
+  width: 100%;
+  position: absolute;
+  bottom: 5px;
+  right: 0;
+}
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-prev {
+  margin: 0;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #092d23;
+  background-color: #deb78f;
+  border-radius: 0;
+  border-top-left-radius: 5px;
+}
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-next {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #092d23;
+  background-color: #deb78f;
+  border-radius: 0;
+  border-bottom-right-radius: 5px;
+}
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-prev,
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-next {
+  margin: -1px;
+}
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-prev:hover,
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-next:hover {
+  border: 1px solid #fff;
+  color: #fff;
+}
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-prev span,
+.owl-carousel.owl-theme.about__carousel .owl-nav .owl-next span {
+  font-size: 30px;
+}
+@media screen and (min-width: 768px) {
+  .owl-carousel.owl-theme.about__carousel .owl-nav {
+    right: 21px;
+  }
+}
+.page__banner {
+  background-image: url('../img/bg-banner-mobile.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.page__banner .banner__content {
+  padding-top: 127px;
+  margin-bottom: 42px;
+}
+.page__banner .banner__content .title h1 {
+  font: 700 36px 'Urbanist', sans-serif;
+  color: white;
+  text-align: center;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .page__banner .banner__content .title h1 {
+    font-size: 46px;
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__banner .banner__content .title {
+    border-right: 1px solid #deb78f;
+    padding-right: 0;
+  }
+}
+.page__banner .banner__content .line hr {
+  background-color: #deb78f;
+  margin-right: 78px;
+  margin-left: 78px;
+}
+@media screen and (min-width: 768px) {
+  .page__banner .banner__content .line {
+    display: none;
+  }
+}
+.page__banner .banner__content .text p {
+  font: 400 18px 'Urbanist', sans-serif;
+  color: white;
+  line-height: 30px;
+  margin-top: 15px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .page__banner .banner__content .text p {
+    padding-top: 27px;
+    margin-top: 0;
+    text-align: left;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__banner .banner__content .text {
+    padding-left: 48px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__banner .banner__content {
+    padding-top: 297px;
+    margin-bottom: 167px;
+  }
+}
+.page__banner .click__down {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 85px;
+}
+@media screen and (min-width: 768px) {
+  .page__banner .click__down {
+    padding-bottom: 91px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__banner {
+    background-image: url('../img/bg-banner.webp');
+  }
+}
+.page__services {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.page__services .title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.page__services .title h2 {
+  font: 300 16px 'Urbanist', sans-serif;
+  color: #deb78f;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 19px;
+}
+.page__services .title h3 {
+  font: 700 36px 'Urbanist', sans-serif;
+  color: white;
+}
+.page__services .is--desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .page__services .is--desktop {
+    display: flex;
+  }
+  .page__services .is--desktop .card__service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 42px;
+    border: 3px solid #deb78f;
+    border-radius: 5px;
+    width: 270px;
+    height: 270px;
+    margin-bottom: 30px;
+  }
+  .page__services .is--desktop .card__service img {
+    width: fit-content;
+    margin-bottom: 20px;
+  }
+  .page__services .is--desktop .card__service h4 {
+    font: 700 18px 'Urbanist', sans-serif;
+    color: white;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  .page__services .is--desktop .card__service p {
+    font: 400 12px 'Urbanist', sans-serif;
+    color: white;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__services .is--mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__services {
+    padding-top: 80px;
+    padding-bottom: 70px;
+  }
+}
+.page__about {
+  background-color: #f7f7f6;
+  background-image: url('../img/bg-about.svg');
+  background-repeat: no-repeat;
+  background-position: top 21px right -183px;
+  background-size: 446px;
+  padding-top: 60px;
+  padding-bottom: 67px;
+}
+.page__about .about {
+  flex-direction: column-reverse;
+}
+.page__about .about .about__content {
+  padding-right: 30px;
+  padding-left: 30px;
+}
+.page__about .about .about__content h2 {
+  font: 300 16px 'Urbanist', sans-serif;
+  color: #deb78f;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.page__about .about .about__content h3 {
+  font: 700 36px 'Urbanist', sans-serif;
+  color: #092d23;
+  line-height: 40px;
+  margin-bottom: 25px;
+  max-width: 381px;
+}
+@media screen and (min-width: 768px) {
+  .page__about .about .about__content h3 {
+    font-size: 46px;
+    line-height: 50px;
+  }
+}
+.page__about .about .about__content p {
+  font: 400 15px 'Urbanist', sans-serif;
+  color: #505050;
+  line-height: 25px;
+  margin-bottom: 19px;
+  max-width: 430px;
+}
+.page__about .about .about__content .numbers {
+  margin-bottom: 21px;
+}
+.page__about .about .about__content .numbers .number__info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.page__about .about .about__content .numbers .number__info .number {
+  font: 900 60px 'Urbanist', sans-serif;
+  color: #deb78f;
+  margin-right: 14px;
+  margin-bottom: 0;
+}
+.page__about .about .about__content .numbers .number__info .info {
+  font: 500 15px 'Urbanist', sans-serif;
+  color: #092d23;
+  max-width: 94px;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .page__about .about .about__content .numbers .number__info {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__about .about .about__content .numbers {
+    max-width: 455px;
+    margin-bottom: 40px;
+  }
+}
+.page__about .about .about__content .btn__about {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) {
+  .page__about .about .about__content .btn__about {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__about .about .about__content {
+    padding-left: 65px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__about .about {
+    flex-direction: row;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__about {
+    padding-top: 153px;
+    padding-bottom: 171px;
+    background-size: 792px;
+    background-position: top 21px right -252px;
+  }
+}
+.page__team {
+  background-color: #092d23;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.page__team .team__content {
+  border-radius: 5px;
+  background-color: #08271e;
+  padding: 15px 0 40px 0;
+  position: relative;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.page__team .team__content .team__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page__team .team__content .team__info .detail__team {
+  position: absolute;
+  top: -237px;
+  right: -20px;
+}
+@media screen and (min-width: 768px) {
+  .page__team .team__content .team__info .detail__team {
+    top: 19px;
+    right: -57px;
+  }
+}
+.page__team .team__content .team__info h2 {
+  font: 700 36px 'Urbanist', sans-serif;
+  color: white;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .page__team .team__content .team__info h2 {
+    margin-top: 44px;
+    text-align: left;
+    margin-bottom: 15px;
+  }
+}
+.page__team .team__content .team__info h3 {
+  font: 300 16px 'Urbanist', sans-serif;
+  color: #deb78f;
+  letter-spacing: 3.2px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .page__team .team__content .team__info h3 {
+    letter-spacing: 8px;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+}
+.page__team .team__content .team__info p {
+  font: 400 15px 'Urbanist', sans-serif;
+  color: white;
+  line-height: 25px;
+  margin-bottom: 30px;
+  max-width: 430px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .page__team .team__content .team__info p {
+    text-align: left;
+  }
+}
+.page__team .team__content .team__info .social {
+  display: flex;
+  width: 130px;
+  justify-content: space-between;
+}
+.page__team .team__content .team__info .social a {
+  text-decoration: none;
+  font-size: 23px;
+  color: #deb78f;
+}
+@media screen and (min-width: 768px) {
+  .page__team .team__content .team__info .social a {
+    color: rgba(222, 183, 143, 0.5);
+  }
+  .page__team .team__content .team__info .social a:hover {
+    color: #deb78f;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__team .team__content .team__info {
+    padding-left: 70px;
+    align-items: flex-start;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__team .team__content {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .page__team {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}

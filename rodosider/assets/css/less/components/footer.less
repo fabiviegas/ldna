@@ -1,0 +1,163 @@
+// out: false
+
+.page__footer {
+    padding-top: 60px;
+    padding-bottom: 53px;
+    background-color: white;
+    background-image: url('../img/footer/bg-footer.svg');
+    background-repeat: no-repeat;
+    background-position: bottom 0 center;
+
+    .links__footer {
+        padding-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .social,
+        .nav__footer,
+        .services__footer,
+        .contact__footer,
+        .address__footer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 25px;
+
+            .logo__footer {
+                margin-bottom: 31px;
+            }
+
+            .social__links {
+                display: flex;
+
+                .link {
+                    margin-right: 9px;
+
+                    img {
+                        width: fit-content;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    
+                    transition: all linear .15s;
+                    &:hover {
+                        cursor: pointer;                        
+                        transform: translateY(-3px);
+
+                        img {
+                            filter: brightness(0) saturate(100%) invert(14%) sepia(73%) saturate(4212%) hue-rotate(344deg) brightness(93%) contrast(113%); 
+                        }
+                    }
+                    
+                }
+            }
+
+            .nav__title {
+                font: 400 16px @fontM;
+                color: #191919;
+                letter-spacing: 1.6px;
+                margin-bottom: 18px;
+                text-transform: uppercase;
+            }
+
+            .nav__link {
+                font: 400 14px @fontM;
+                color: #656565;
+                margin-bottom: 15px;                
+
+                &:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 4px;
+                }
+            }
+
+            .nav__link.address {                
+                line-height: 25px;                
+            }
+        }
+    }
+
+    .copyrights {
+        border-top: 1px solid #d9d9d9;
+        padding-top: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+
+        .customer {
+            margin-bottom: 32px;
+
+            p {
+                font: 400 14px @fontM;
+                color: #191919;
+                text-align: center;
+            }
+        }
+
+        .ldna {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 86px;
+        padding-bottom: 40px;
+        position: relative;
+        background-position: bottom 0 right 0;
+
+        .links__footer {
+            padding-bottom: 50px;
+            flex-direction: row;
+            align-items: flex-start;
+
+            .nav__footer,
+            .services__footer,
+            .contact__footer,
+            .address__footer {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                text-align: left;
+            }
+
+            .social,
+            .nav__footer,
+            .services__footer,
+            .contact__footer,
+            .address__footer {
+                margin-bottom: 0;
+            }
+
+            .nav__footer {
+                padding-left: 40px;
+            }
+
+            .btn__top {
+                position: absolute;
+                top: 86px;
+                right: 85px;
+            }
+        }
+
+        .copyrights {
+            margin-left: -15px;
+            margin-right: -15px;
+
+            .customer {
+                margin-bottom: 0;
+                
+                p {
+                    text-align: left;
+                }
+            }
+
+            .ldna {
+                justify-content: flex-end;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+// out: false
+
+// * HEMIZE Project
+@import "__pallete.less";
+
+.page__contact {
+    padding-top: 45px;
+    padding-bottom: 50px;
+
+    .contact__header {
+        margin-bottom: 40px;
+        h2 {
+            font: 400 36px/50px @roboto;
+            color: @darkBlue;
+        }
+    }
+
+    input[type="tel"],
+    textarea {
+        margin-top: 20px;
+    }
+
+    .form__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+        gap: 30px;
+    }
+
+                                    // ? RESPONSIVE
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+
+        input[type="tel"],
+        textarea {
+            margin-top: 0;
+        }
+    }
+}

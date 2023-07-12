@@ -1,0 +1,139 @@
+// out: false
+
+.page__banner {
+    position: relative;
+    background-image: url('../img/banner-mobile.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    .owl-carousel.owl-theme.banner__carousel {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+        
+            .owl-nav {
+                display: flex;
+                justify-content: space-between;
+                margin-left: 6%;
+                width: 86%;
+                position: absolute;
+                top: calc(48% - 21px); 
+                z-index: 11;
+
+                .owl-next,
+                .owl-prev {
+                    &:hover {
+                        background-color: transparent;
+
+                        img {
+                            filter: brightness(0) saturate(100%) invert(52%) sepia(100%) saturate(777%) hue-rotate(343deg) brightness(94%) contrast(95%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .content { 
+
+        h2 {            
+            font: 400 49px @fontA;
+            color: white;
+            line-height: 62px;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            padding-top: 190px;
+            margin-left: 50px;
+
+            img {
+                width: 44px;
+                margin-top: -15px;
+                margin-left: 5px;
+            }
+        }
+
+        p {
+            font: 400 16px @fontO;
+            color: white;
+            margin-bottom: 28px;
+            width: 175px;
+            margin-left: 50px;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        .button {
+            margin-bottom: 150px;
+            margin-left: 50px;
+
+            img {
+                width: 19px;
+                margin-right: 10px;
+                
+            }
+        }        
+
+        @media screen and (min-width: 768px) {
+            position: absolute;
+            max-width: 70%;
+            top: 222px;
+            left: 170px;
+            z-index: 10;
+
+            h2 {
+                font: 400 66px @fontA;                
+                line-height: 84px;  
+                margin-left: 0; 
+                padding-top: 0;
+                
+                img {
+                    width: fit-content;
+                }
+            }
+
+            p {
+                font: 400 22px @fontO;
+                color: white;
+                margin-bottom: 20px;
+                width: 270px;
+                margin-left: 0;  
+
+                span {
+                    font-weight: 700;
+                }
+            }
+
+            .button {
+                margin-left: 0;
+                margin-bottom: 220px;
+
+                img {
+                    width: fit-content;
+                    margin-right: 14px;
+                }
+            }
+        }
+    }
+
+    .divider {
+        position: absolute;
+        width: 100%;
+        height: 104px;
+        object-fit: cover;
+        bottom: -50px; 
+        z-index: 10;
+        
+        @media screen and (min-width: 768px) {
+            height: 151px;
+            bottom: -100px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: none; 
+    }
+}

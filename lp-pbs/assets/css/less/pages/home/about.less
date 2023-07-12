@@ -1,0 +1,118 @@
+// out: false
+
+.page__about {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url('../img/bg-about.svg');
+    background-repeat: no-repeat;
+    background-position: right 0 top 27px;
+
+    .wrapper {
+        margin-left: 0;
+        margin-right: 0;
+
+        .photo {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: flex;
+                justify-content: center;
+            }
+        }   
+
+        .content {
+            
+
+            .title {
+                font: 300 15px @fontA;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: #28b36f;
+                margin-bottom: 14px;
+
+                @media screen and (min-width: 768px) {
+                    margin-top: 23px;
+                }
+            }
+
+            h3 {
+                font: 700 34px @fontA;
+                line-height: 45px;
+                margin-bottom: 20px;
+                color: white;
+                max-width: 380px;
+            }
+
+            .text {
+                font: 300 15px @fontA;
+                margin-bottom: 40px;
+                color: white;
+                max-width: 416px;
+                line-height: 25px;
+
+                span {
+                    font-weight: 700; 
+                }
+            }
+
+            .info {
+                margin-bottom: 36px;
+
+                .number {
+                    display: flex;
+                    margin-bottom: 12px;
+
+                    img {
+                        width: fit-content;
+                        margin-right: 8px;
+                    }
+
+                    h2 {
+                        font: 700 34px @fontA;
+                        color: white;
+                    }
+                }
+
+                .info__title {
+                    font: 300 15px @fontA;
+                    letter-spacing: 3px;
+                    text-transform: uppercase;
+                    color: white;
+                    max-width: 168px;
+
+                    @media screen and (min-width: 768px) {
+                        max-width: 250px;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }            
+        }
+
+        .photo__mobile {
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 297px;
+            }
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 145px;
+        padding-bottom: 118px; 
+        background-position: right 80px top 178px;
+    }
+}

@@ -1,0 +1,146 @@
+// out: false
+
+.page__testimonials {
+    position: relative;
+    padding-top: 69px;
+    padding-bottom: 131px;
+    background-color: white;
+
+    .bg__detail {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: absolute;
+            height: 90px;
+            top: -28px;
+            z-index: 1001;
+            right: 106px;
+        }
+    }
+
+    .title {
+        .title__content {
+            display: flex;
+            flex-direction: column;            
+
+            h2 {
+                font: 700 36px @fontT;
+                color: #283b8b; 
+                line-height: 45px;
+                margin-bottom: 15px;                
+                text-align: center;
+                max-width: 215px;
+                margin-left: auto;
+                margin-right: auto;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    margin-top: 28px;
+                }
+            }
+
+            p {
+                font: 400 16px @fontT;
+                color: #090e23;
+                line-height: 25px;
+                width: 296px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    width: 170px;
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 215px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+        }
+    }
+
+    .testimonials {
+        padding-left: 0;
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.testimonials__carousel {
+
+            .card__test {
+                position: relative;
+                padding: 40px 40px 40px 40px;
+                margin-top: 40px;
+                border-radius: 10px;
+                border: 2px solid #283b8b;
+                height: 360px;
+                max-width: 385px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+
+                .quotes {
+                    position: absolute;
+                    width: fit-content;
+                    left: 25px;
+                    top: -17px;
+                    z-index: 1001;
+                }
+
+                .card__text {
+                    font: 400 15px @fontT;
+                    color: #090e23;
+                    line-height: 25px;
+                    margin-bottom: 20px;
+                }
+
+                .card__name {
+                    font: 700 16px @fontT;
+                    color: #090e23;
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-top: 30px;
+                    height: 333px;
+                }
+            }
+
+            .owl-nav {
+                position: absolute;
+                left: 130px;
+                bottom: -80px;
+
+                .owl-prev,
+                .owl-next {
+                    &:hover {
+                    background: none;
+                    
+                    img {
+                            filter: brightness(0) saturate(100%) invert(65%) sepia(24%) saturate(6990%) hue-rotate(343deg) brightness(98%) contrast(88%);
+                    }
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    left: -270px;
+                    top: 260px; 
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 109px;
+        padding-bottom: 98px;   
+    }
+}

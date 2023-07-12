@@ -1,0 +1,89 @@
+//out: false
+
+.page__services {
+
+    padding-top: 80px;
+    padding-bottom: 84px;
+    background-image: url('../img/bg-texture.webp');
+    background-size: cover;
+
+    h2 {
+        margin-top: 35px;
+        font: 400 32px @fontA;
+        color: white;
+        text-align: center;
+        text-transform: uppercase;
+
+        @media screen and (min-width: 768px) {
+            font-size: 56px;
+            margin-top: 100px;
+        }
+    }
+
+    h3 {
+        font: 400 16px @fontO;
+        color: white;
+        margin-bottom: 43px;
+        text-align: center;
+
+        span {
+            font-weight: 700;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+        }
+    }
+
+    .cards {
+        gap: 28px;
+        
+        .card__service {
+            height: 444px;
+            width: 300px;
+            padding: 45px 47px;
+            border-radius: 28px;
+
+            img {
+                margin-bottom: 22px;
+            }
+
+            h4 {
+                font: 700 26px @fontO;
+                color: white;
+                text-transform: uppercase;
+                margin-bottom: 22px;
+            }
+
+            p {
+            font: 400 14px @fontO;
+            color: white;
+            
+            span {
+                font-weight: 700;
+            }
+            }
+
+            &.card--1 {
+                background-color: #bd3100;
+            }
+
+            &.card--2 {
+                background-color: #2d4e57;
+            }
+
+            &.card--3 {
+                background-color: #ea7d24;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            gap: 0;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 80px;
+        padding-bottom: 110px;
+    }
+}

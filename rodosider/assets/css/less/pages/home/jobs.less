@@ -1,0 +1,124 @@
+//out: false
+
+.page__jobs {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-image: url('../img/jobs/bg-jobs-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: top 279px center;
+
+    .title {
+        padding-bottom: 40px;
+        
+        h2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font: 700 36px @fontM;
+            color: white;
+
+            img {
+                margin-bottom: 20px;
+                width: fit-content;
+            }
+        }
+    }
+
+    .carousel {
+        padding-left: 0;
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.jobs__carousel {
+
+            .card__job {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 220px;
+                height: 278px;
+                border-radius: 10px;
+                border: 1px solid #7e7e7e;
+                background-color: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(10px);
+                padding: 30px;                
+
+                .card__icon {
+                    width: fit-content;
+                    margin-bottom: 19px;
+                }
+
+                h3 {
+                    font: 700 18px @fontM;
+                    color: white;
+                    line-height: 25px;
+                    text-align: center;
+                }
+
+                p {
+                    font: 500 14px @fontM;
+                    color: white;
+                    line-height: 20px;
+                    text-align: center;
+                    margin-top: 9px;
+                }
+
+                .card__dots {
+                    width: fit-content;
+                    position: absolute;
+                    bottom: 20px;
+                    left: calc(50% - 12px);
+                }
+
+                transition: all linear .15s;
+                &:hover {
+                    background-color: white;
+
+                    .card__icon,
+                    .card__dots {
+                        filter: brightness(0) saturate(100%) invert(10%) sepia(84%) saturate(6421%) hue-rotate(350deg) brightness(84%) contrast(102%);
+                    }
+
+                    h3,
+                    p {
+                        color: #191919;
+                    }
+                }
+            }
+
+            .owl-dots {
+                margin-top: 30px;
+
+                .owl-dot {
+                    span {
+                        width: 12px;
+                        height: 12px;
+                        background-color: white;
+                        border: 2px solid white;
+                        margin: 5px 5px;
+                    }
+            
+                    &.active {
+                        span {
+                            background-color: #c00415;
+                            border: 2px solid white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-image: url('../img/jobs/bg-jobs.svg');
+        background-position: top 293px center;
+
+        .carousel {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

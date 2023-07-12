@@ -1,0 +1,257 @@
+// out: false
+
+.page__cases {
+    background-image: url('../img/divider-2.webp'), url('../img/bg-texture.webp');
+    background-repeat: no-repeat;
+    background-position: top 0 left -60px, top 0 left 0;
+    background-size: auto 56px, cover; 
+    padding-bottom: 54px; 
+
+    .title,
+    .button {
+        margin-top: 100px;
+        margin-bottom: 24px;
+
+        @media screen and (min-width: 768px) {
+            margin-top: 177px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .button {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            margin-top: 177px;
+            margin-bottom: 60px;
+        }
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h2 {
+            font: 400 32px @fontA;
+            color: white;
+            text-transform: uppercase;
+            margin-right: 15px;
+        }
+
+        h3 {
+            font: 400 16px @fontO;
+            color: white; 
+            width: 150px;
+        }
+
+        @media screen and (min-width: 768px) {
+
+            h2 {
+                font-size: 56px;
+                margin-right: 38px;
+            }
+
+            h3 {
+                font-size: 20px;
+                width: 184px;
+            }
+        }
+    }
+
+    .box__cases {  
+        display: none;
+        
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+
+            .card__case {
+                position: relative;
+                transition: all linear .2s;            
+                overflow: hidden;
+
+                .photo__case {
+                    z-index: 1;
+                    transition: all linear .2s; 
+                }
+
+                .heading {
+                    position: absolute;
+                    padding: 30px 40px;
+                    z-index: 10;
+                    width: 100%;
+                    top: 0;
+                    left: 0;
+
+                    .description {
+                        display: flex;
+                        align-items: flex-start;
+
+                        img {
+                            margin-right: 15px;
+                        }
+
+                        p {
+                        display: none;
+                        
+                        }
+                    }
+                }
+
+                .case__title {
+                    display: none;
+                }
+                
+                
+                transition: all linear .2s;
+                &:hover {
+                    cursor: pointer;
+
+                    .photo__case {
+                        transform: scale(1.2);
+                        filter: brightness(50%); 
+                    }
+
+                    .description {
+                        p {
+                            display: block;
+                            font: 400 14px @fontO;
+                            color: white;
+                            width: 72px;
+                        }
+                    }
+
+                    .case__title {
+                        position: absolute;
+                        width: fit-content;
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        justify-content: center;
+                        align-items: center;
+                        z-index: 10;
+                        font: 400 56px @fontA;
+                        text-transform: uppercase;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    .owl-carousel.owl-theme.cases__carousel {
+        
+        .card__case {
+            position: relative;
+            transition: all linear .2s;            
+            overflow: hidden;
+            margin-bottom: 10px;
+
+            .photo__case {
+                z-index: 1;
+                transition: all linear .2s; 
+            }
+
+            .heading {
+                position: absolute;
+                padding: 16px 18px;
+                z-index: 10;
+                width: 100%;
+                top: 0;
+                left: 0;
+
+                .description {
+                    display: flex;
+                    align-items: center;
+
+                    img {
+                        margin-right: 15px;
+                        width: 18px;
+                    }
+
+                    p {
+                        display: none;                    
+                    }
+                }
+            }
+
+            .case__title {
+                display: none;
+            }
+            
+            transition: all linear .2s;
+            &:hover {
+                cursor: pointer;
+
+                .photo__case {
+                    transform: scale(1.2);
+                    filter: brightness(50%); 
+                }
+
+                .description {
+                    p {
+                        display: block;
+                        font: 400 12px @fontO;
+                        color: white;
+                    }
+                }
+
+                .case__title {
+                    position: absolute;
+                    width: fit-content;
+                    display: flex;
+                    width: 100%;
+                    height: 100%;
+                    top: 0;
+                    left: 0;
+                    justify-content: center;
+                    align-items: center;
+                    z-index: 10;
+                    font: 400 36px @fontA;
+                    text-transform: uppercase;
+                    color: white;
+                }
+            }
+        }
+
+        .owl-dot {
+            span {
+                width: 10px;
+                height: 10px;
+                background-color: transparent;
+                border: 1px solid white;
+                margin: 5px 5px;
+            }
+    
+            &.active {
+                span {
+                    background-color: white;
+                    border: 1px solid transparent;
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    .button__mobile {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-size: auto auto, cover;
+        padding-bottom: 0;
+    }
+}

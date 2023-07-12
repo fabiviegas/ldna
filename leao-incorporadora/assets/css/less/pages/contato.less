@@ -1,0 +1,144 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.contact {
+    padding-top: 45px;
+    
+    .contact__header {
+
+        h2 {
+            .title2();
+            margin-bottom: 30px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-top: 45px;
+            margin-bottom: 0;
+        }
+    }
+
+    .form__standard {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="number"],
+        input[type="date"],
+        textarea {
+            padding: 20px 30px;
+            width: 100%;
+            background-color: rgb(243, 243, 243);
+            border-radius: 5px;
+            font: 400 15px @roboto;
+            color: rgb(77, 77, 77);
+            border: 1px solid transparent;
+            caret-color: transparent;
+            
+            &:hover {
+                border-color: white;
+                outline: 1px solid transparent;
+            }
+    
+            &:focus-visible {
+                border-color: @lightGray;
+                outline: 1px solid @lightGray;
+            }
+        }
+    
+        button[type="submit"] {
+            
+            width: 136px;
+            background-color: @richBlack;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            font: 700 16px @roboto;
+            border: none;
+
+            .--transition();
+            &:hover {
+                background-color: @msuGreen;
+                color: @lightOrange;
+                cursor: pointer;
+            }
+    
+            &:focus-visible {
+                outline: 1px solid @lightOrange;
+            }
+        }
+    
+        .util--mt {
+            margin-top: 20px;
+        }
+
+        input[type="tel"],
+        textarea {
+            margin-top: 20px;
+
+            
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 45px;
+            padding-bottom: 100px;
+    
+            input[type="tel"],
+            textarea {
+                margin-top: 0;
+            }
+        }
+    }
+
+    .form__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 30px;
+        margin-bottom: 48px;
+        gap: 30px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.page__info {
+    .container {
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+        h2 {
+            padding-top: 30px;
+            padding-bottom: 10px;
+            font: 700 36px sans-serif;
+            color: black;
+            text-transform: uppercase;
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                font-size: 28px;
+            }
+        }
+
+        p {
+            margin-bottom: 30px;
+            text-align: center;
+            color: rgb(145, 145, 145);
+            font: 400 14px sans-serif;
+            text-align: center;
+        }
+
+        .btn__contact {
+            width: 280px;
+        }
+
+                                        // ? RESPONSIVE
+        @media screen and (min-width: 768px) {
+            margin-top: 100px;
+            margin-bottom: 95px;
+        }
+    }
+}
+ 

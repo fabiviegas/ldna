@@ -1,0 +1,240 @@
+// out: false
+
+.page__testimonials {
+    position: relative;
+    padding-top: 64px;
+    padding-bottom: 65px;   
+    background-color: #bd3100;
+    
+    .detail__bg,
+    .detail__bg2 {
+        position: absolute;
+        z-index: 10;
+        object-fit: cover;
+    }
+
+    .detail__bg {        
+        top: -62px;
+        left: -34px;         
+
+        img {
+            width: 104px;
+            transform: rotate(20deg);
+        }
+
+        @media screen and (min-width: 768px) {            
+            top: -171px;
+            left: -50px;             
+
+            img {
+                width: fit-content;
+                transform: rotate(0);
+            }
+        }
+    }
+
+    .detail__bg2 {        
+        bottom: -85px;
+        right: 0;
+        width: 70px;
+        overflow: hidden;     
+
+        img {
+            width: 80px;
+            transform: rotate(-60deg);
+            object-fit: cover;
+            object-position: top 20px left 0;
+        }
+
+        @media screen and (min-width: 768px) {            
+            bottom: -113px; 
+            width: fit-content;      
+
+            img {
+                width: fit-content;
+                transform: rotate(0);
+                object-position: top 0 left 0;
+            }
+        }
+    }
+
+    .title { 
+        display: flex;
+        justify-content: center;       
+
+        .title__content {  
+            width: 205px;                   
+
+            h2 {
+                font: 400 32px @fontA;
+                color: white; 
+                margin-bottom: 36px;                 
+                text-transform: uppercase; 
+                line-height: 40px;  
+                text-align: center;          
+                
+                @media screen and (min-width: 768px) {
+                    margin-top: 20px;
+                    font-size: 56px;
+                    margin-left: 30px; 
+                    line-height: 72px;
+                    margin-bottom: 15px;
+                    text-align: left; 
+                }
+            }            
+
+            @media screen and (min-width: 768px) {
+                width: 215px;                
+            }
+        }
+        @media screen and (min-width: 768px) {
+            justify-content: flex-start;                
+        }
+    }
+
+    .testimonials {
+        padding-left: 0;
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.testimonials__carousel {
+            z-index: 11;
+            
+            .card__test {
+                position: relative;
+                padding: 44px 40px 32px 40px;
+                border-radius: 30px;                        
+                height: 440px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+                margin-top: 20px;                
+
+                .quotes {
+                    position: absolute;
+                    width: 44px;
+                    left: 50px;
+                    top: -11px;
+
+                    @media screen and (min-width: 768px) {
+                        width: fit-content;
+                        left: 50px;
+                        top: -18px;
+                        z-index: 10;
+                    }
+                }
+
+                .card__text {
+                    font: 400 14px @fontO;
+                    color: #0a110c;
+                    line-height: 19px;
+                    margin-bottom: 14px;
+
+                    span {
+                        font-weight: 700;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 15px;
+                        margin-bottom: 23px;
+                    }
+                }
+
+                .card__name {
+                    font: 600 16px @fontO;
+                    color: #153158;
+                    margin-bottom: 5px;
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 22px;
+                        margin-bottom: 6px;
+                    }
+                }
+
+                .card__job {
+                    display: flex;
+                    font: 400 14px @fontO;
+                    color: #2d4e57;
+
+                    img {
+                        width: fit-content;
+                        margin-right: 7px;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        font-size: 15px;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    padding: 72px 50px 36px 50px;
+                    margin-top: 20px;
+                    margin-bottom: 0;
+                    border-radius: 38px;
+                    height: 409px;
+                    width: 371px; 
+                }
+            }
+
+            .owl-dots {
+                margin-top: 30px;
+        
+                .owl-dot {
+                    span {
+                        width: 10px;
+                        height: 10px;
+                        background-color: transparent;
+                        border: 1px solid white;
+                        margin: 5px 5px;
+                    }
+            
+                    &.active {
+                        span {
+                            background-color: white;
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .owl-nav {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                
+                    position: absolute;
+                    left: -371px;
+                    bottom: 53px;                    
+                    display: flex;
+                    justify-content: space-between;
+
+                    .owl-prev,
+                    .owl-next {
+                        &:hover {
+                            background: none;
+                        
+                            img {
+                                filter: brightness(0) saturate(100%) invert(59%) sepia(89%) saturate(2583%) hue-rotate(350deg) brightness(99%) contrast(86%);
+                            }
+                        }
+                    }                    
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+    }
+
+    @media screen and (min-width: 768px) { 
+        padding-top: 100px;       
+        padding-bottom: 100px;   
+    }
+}

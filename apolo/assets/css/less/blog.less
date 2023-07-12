@@ -1,0 +1,227 @@
+// out: false
+
+@import "__pallete.less"; 
+
+.page__blog {
+    .container {
+        .blog__menu {
+            font-family: @lato;
+            text-transform: uppercase;
+            text-align: center;
+
+            .categories {
+                color: rgb(0, 0, 0);
+                font-size: 18px;
+                font-weight: 900;
+                letter-spacing: 1.8px;
+                padding-bottom: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            .cat__selected {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-weight: 900;
+                padding-bottom: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            .cat__unselected {
+                color: rgb(135, 135, 135);
+                font-size: 16px;
+                font-weight: 700;
+                padding-bottom: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                text-align: left;
+            }
+        }
+
+        .posts__list {
+            .post {
+                background-color: white;
+                font-family: @lato;
+                color: black;
+                padding: 20px;
+                margin-bottom: 20px;
+                border: 1px solid rgb(245, 245, 245);
+                flex-direction: column;
+
+                
+
+                .post__title {
+                    font-size: 18px;
+                    letter-spacing: 1.8px;
+                    text-transform: uppercase;
+                    font-weight: 900;
+                    margin-bottom: 30px;
+                    margin-top: 20px;
+                }
+
+                .dots__black {
+                    width: fit-content;
+                }
+
+                .dots__white {
+                    display: none;
+                }
+
+                &:hover {
+                    background-color: @umber;
+                    color: white;
+
+                    .dots__black {
+                        display: none;
+                    }
+
+                    .dots__white {
+                        display: block;
+                        width: fit-content;
+                    }
+                }
+
+                @media screen and(min-width: 990px) {
+                    flex-direction: row;
+                    margin-bottom: 30px;
+
+                    .photo__blog {
+                        padding-right: 30px;
+                    }
+
+                    .post__title {
+                        font-size: 22px;
+                        letter-spacing: 2.2px;
+                    }
+                }
+            }
+
+            .pages {
+                margin-top: 60px;
+                font-family: @lato;
+                font-size: 20px;
+
+                .page__active {
+                    color: rgb(80, 80, 80);
+                    font-weight: 900;
+                    padding: 14px;
+                    background-color: white;
+                    margin-right: 10px;
+                }
+                .page__inactive {
+                    color: rgb(161, 161, 161);
+                    font-weight: 400;
+                    padding: 14px;
+                    background-color: rgb(245, 245, 245);
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+.page__post {
+    .container {
+        font-family: @lato;
+
+        .post__title {
+            color: rgb(0, 0, 0);
+            font-size: 22px;
+            font-weight: 900;
+            letter-spacing: 2.2px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 28px;
+                letter-spacing: 2.8px;
+                margin-bottom: 30px;
+            }
+        }
+
+        .post__note {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            flex-direction: column;
+
+            .date {
+                color: rgb(171, 171, 171);
+                font-size: 16px;
+                font-weight: 400;
+                letter-spacing: 1.6px;
+                text-transform: uppercase;
+                margin-bottom: 10px;                
+
+                @media screen and (min-width: 768px) {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .links__social {
+                width: 190px;
+
+                .share {
+                    color: rgb(171, 171, 171);
+                    font-size: 14px;
+                    font-weight: 400;
+                    letter-spacing: 1.4px;
+                    text-transform: uppercase;
+                    margin-bottom: 0;  
+                    
+                    @media screen and (min-width: 768px) {
+                        font-size: 18px;
+                        letter-spacing: 1.8px;
+                    }
+                }
+
+                .icon__social {
+                    height: 16px;
+                }
+                
+                @media screen and (min-width: 768px) {
+                    width: 247px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-top: 30px;
+                margin-bottom: 40px;
+                flex-direction: row;
+            }
+        }
+
+        .post__content {
+            color: rgb(77, 77, 77);
+            font-size: 14px;
+            line-height: 25px;
+        }
+    }
+}
+
+.blog.related__posts {
+    .blog__title.related__title {
+        font-size: 40px;
+        line-height: 45px;
+        margin-bottom: -10px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 90px; 
+        }
+    }
+}

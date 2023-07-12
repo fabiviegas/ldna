@@ -1,0 +1,154 @@
+// out: false
+
+.page__footer {
+
+    .footer__content {
+        padding-top: 53px;
+        padding-bottom: 60px;
+        background-color: #000a1c;
+        background-image: url('../img/bg-footer.svg');
+        background-repeat: no-repeat;
+        background-position: bottom -87px right -75px;
+
+        .content {
+
+            .logo__footer {                
+                margin-bottom: 22px;
+                display: flex;
+                justify-content: center;
+                
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
+
+            .links__social {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 30px;
+
+                .social__box {
+                    display: flex;
+                    justify-content: space-between;
+                    width: 150px;
+
+                    a {
+                        img {
+                        width: fit-content;
+                        }
+
+                        &:hover {
+                            img {
+                                filter: brightness(0) saturate(100%) invert(64%) sepia(0%) saturate(75%) hue-rotate(153deg) brightness(85%) contrast(94%);
+                            }
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
+
+            .links__contact {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 20px;
+
+                .contact {
+                    font: 400 15px @fontT;
+                    color: white;
+                    line-height: 25px;
+                    text-align: center;
+
+                    img {
+                        width: 18px;
+                        margin-right: 11px;
+                    }
+
+                    &:hover {
+                        color: white;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        text-align: left;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
+
+            .link__map {
+                display: flex;
+                justify-content: center;
+
+                .address {
+                    display: flex;
+                    align-items: center;
+                    font: 400 15px @fontT;
+                    color: white;
+                    line-height: 20px;
+
+                    img {
+                        width: fit-content;
+                        margin-right: 10px;
+                    }
+
+                    &:hover {
+                        color: white;
+                        text-decoration: underline;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                align-items: center;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 90px;
+            padding-bottom: 90px;            
+            background-position: bottom -61px right 0;
+        }
+    }
+
+    .footer__copyrights {
+        padding-top: 26px;
+        padding-bottom: 20px;
+        background-color: white;
+
+        .text {
+            p {
+                font: 400 14px @fontT;
+                color: #636363;
+                text-align: center;
+                margin-bottom: 20px;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .ldna {
+            display: flex;
+            justify-content: center;
+
+            @media screen and (min-width: 768px) {
+                justify-content: flex-end;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 26px;
+            padding-bottom: 80px; 
+        }
+    }
+}

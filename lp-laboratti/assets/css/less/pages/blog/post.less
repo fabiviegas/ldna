@@ -1,0 +1,96 @@
+// out: false
+
+.blog__post {
+    background-color: white;    
+    padding-bottom: 48px;    
+
+    .content {
+        padding-top: 48px;
+        border-top: 1px solid #c8c3c3;        
+
+        h3 {
+            font: 700 28px @fontT;
+            color: #283b8b;
+            line-height: 35px;
+            margin-bottom: 20px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 36px;
+                line-height: 45px;
+            }
+        }
+
+        .photo__blog {
+            margin-bottom: 10px;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 18px;
+            }
+        }
+
+        .post__footer {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            justify-content: space-between;
+            
+            p {
+                font: 400 18px @fontT;
+                color: #283b8b;
+            }
+
+            .social__links {
+                display: flex;
+                width: 127px;
+                align-items: center;
+                justify-content: space-between;
+
+                a {
+                    &:hover {
+                        img {
+                            filter: brightness(0) saturate(100%) invert(59%) sepia(18%) saturate(4050%) hue-rotate(342deg) brightness(97%) contrast(89%); 
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 42px;
+            }
+        }
+
+        .post__text {
+            font: 400 14px @fontT;
+            color: #4d4d4d;
+            text-align: left;
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 100px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {        
+        padding-bottom: 100px;
+    }
+}
+
+.related__posts {
+    background-color: #f5f5f5;
+    padding-top: 70px;
+    padding-bottom: 100px;
+
+    h3 {
+        font: 700 28px @fontT;
+        color: #283b8b;
+        line-height: 35px;
+        margin-bottom: 30px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+            line-height: 45px;
+            text-align: left;
+        }
+    }
+}

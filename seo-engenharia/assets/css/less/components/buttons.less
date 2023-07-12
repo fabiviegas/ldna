@@ -1,0 +1,60 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.btn__green {
+    display: block;
+    background-color: @lemonGreen;
+    font: 700 18px @maven;
+    text-align: center;
+    text-transform: uppercase;
+    color: @stoneGray;
+    border-radius: 33px;
+    padding: 22px 0;
+
+    i {
+        font-size: 20px;
+    }
+
+    .--transition();
+    &:hover {
+        background-color: @stoneGray;
+        color: @lemonGreen;
+    }
+}
+
+.btn__gray {
+    display: block;
+    background-color: @stoneGray;
+    font: 700 16px @maven;
+    border-radius: 33px;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 22px 0;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    
+    .--transition();
+    &:hover {
+        background-color: @lemonGreen;
+        color: @stoneGray;
+        border: 1px solid @lemonGreen;
+    }
+}
+
+.btn__light {
+    display: block;
+    background-color: rgb(241, 241, 241);
+    border-radius: 33px;
+    color: @stoneGray;
+    font: 700 18px @maven;
+    padding: 22px 0;
+    text-align: center;
+    text-transform: uppercase;
+
+    .--transition();
+    &:hover {
+        background-color: @stoneGray;
+        color: rgb(241, 241, 241);
+    }
+}

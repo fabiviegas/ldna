@@ -1,0 +1,67 @@
+//out: false
+
+.page__about {
+    margin-top: 60px;    
+    background-color: white;
+    background-image: url('../img/bg-about-mobile.webp');
+    background-repeat: no-repeat;
+    background-position: left -20px top 0;
+
+    .about__box {
+        padding-left: 0;
+        padding-right: 0;
+
+        .about__content {
+            padding: 36px 23px 56px 64px;
+            background-color: white;
+            border-radius: 5px;
+            margin-top: 395px;
+
+            h2 {
+                position: relative;
+                font: 700 28px @fontT;
+                color: #000a1c;
+                line-height: 40px;
+                margin-bottom: 20px;
+                
+                .title__detail {
+                    position: absolute;
+                    left: -28px;
+                    top: 8px;
+                } 
+
+                @media screen and (min-width: 768px) {
+                    max-width: 430px;
+                }
+            }   
+
+            p {
+            font: 400 14px @fontT;
+            color: #636363;
+            margin-bottom: 28px; 
+
+            @media screen and (min-width: 768px) {
+                    max-width: 470px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                margin-top: 30px;
+                padding: 60px 27px 81px 103px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: url('../img/bg-about.webp');
+        margin-top: 100px;
+        margin-bottom: 100px;
+        background-size: 517px 548px;
+        background-position: top 0 left 150px;
+    }
+}

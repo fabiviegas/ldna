@@ -1,0 +1,41 @@
+// out: false
+
+// * HEMIZE Project
+@import "__pallete.less";
+
+.col__cards {
+    a {
+        .card {
+            transition: all .3s linear;
+        }
+
+        .news {
+            .card-subtitle {
+                margin-bottom: 12px;
+                color: rgb(0, 31, 48);
+                font: 400 14px @roboto;
+                letter-spacing: 1.4px;
+            }
+            .card-description {
+                color: rgb(0, 31, 48);
+                font: 400 22px/30px @roboto;
+            }
+    
+            .icon__dots,
+            .icon__dotsbx {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+        }
+        
+        &:hover {
+            .card-subtitle {
+                color: rgb(252, 204, 128);
+            }
+            .card-description {
+                color: #fff;
+            }
+        }
+    }    
+}
+

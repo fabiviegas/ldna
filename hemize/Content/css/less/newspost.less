@@ -1,0 +1,75 @@
+// out: false
+
+// * HEMIZE Project
+@import "__pallete.less";
+
+.blog__post {
+    margin-top: 63px;
+    margin-bottom: 100px;
+
+    .row {
+        justify-content: center;
+    }
+
+    h3 {
+        color: rgb(4, 47, 70);
+        font: 400 28px/50px @roboto;
+        margin-bottom: 30px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+        }
+    }
+
+    img {
+        margin-bottom: 44px;
+    }
+
+    aside {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 40px;
+
+        time {
+            color: rgb(0, 31, 48);
+            font: 400 20px/30px @roboto;
+        }
+
+        .social {
+            display: flex;
+            align-items: center;
+            gap: 19px;
+
+            span {
+                color: rgb(0, 31, 48);
+                font: 400 14px @robotoCond;
+                letter-spacing: 1.4px;
+                text-transform: uppercase;
+            }
+
+            a {
+                color: rgb(161, 161, 161);
+                &:hover {
+                    color: rgb(0, 31, 48);
+                }
+            }
+        }
+    }
+
+    p {
+        color: rgb(77, 77, 77);
+        font: 400 14px/25px @roboto;
+        margin-bottom: 40px;
+    }
+}
+
+.news.rel {
+    background-color: rgb(245, 245, 245);
+    
+    .container {
+    background-color: rgb(245, 245, 245);
+    background-image: none;
+    }
+}

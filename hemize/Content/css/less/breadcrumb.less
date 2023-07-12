@@ -1,0 +1,65 @@
+// out: false
+
+@import "__pallete.less"; 
+
+.subheader {
+    background-color: @prussianBlue;
+    background-image: url('../img/bg-banner.svg');
+    background-repeat: no-repeat;
+    background-size: 234px;
+    background-position: top -93px right -25px;
+    font-family: @roboto;
+
+    .container {
+
+        .row {
+
+            display: flex;
+            flex-direction: column;
+
+            .page__title {
+                
+                color: rgb(255, 255, 255);
+                font-size: 38px;
+                margin-bottom: 20px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 46px;
+                    margin-bottom: 0;
+                }
+            }
+
+            .second__nav {
+
+                display: flex;
+                align-items: center;
+
+                font-size: 15px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+
+                .back__home {
+                    color: rgb(255, 255, 255);
+                    margin-bottom: 0;
+                    transition: all .3s linear;
+                    text-decoration: underline 1px transparent;
+                    text-underline-offset: 5px;
+                    &:hover {
+                        text-decoration: underline 1px @goldCrayola;
+                    }
+                }
+                .icon__right {
+                    width: 14px;
+                }
+                .this__section {
+                    color: @goldCrayola;
+                    margin-bottom: 0;
+                }
+            }
+
+            @media screen and (min-width: 524px) {
+                flex-direction: row;
+            }
+        }
+    }
+}

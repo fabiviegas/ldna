@@ -1,0 +1,68 @@
+//out: false
+
+@import "__pallete";
+
+.projeto__infos {
+    .container {
+
+        .col__infos {
+        
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+            .info__category {
+                color: @prussianBlue;
+                font-family: @robotoCond;
+                font-size: 16px;
+                text-transform: uppercase;
+                padding-bottom: 11px;
+            }
+
+            .info {
+                color: @darkBlue;
+                font-family: @roboto;
+                font-size: 26px;
+                padding-bottom: 40px;
+            }
+        }
+
+        .col__infos {
+
+            .tag {
+            
+                display: inline-block;
+                font-family: @roboto;
+                font-size: 15px;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                padding: 20px 55px;
+                height: 58px;
+                margin-bottom: 40px;
+                width: 258px;
+                
+
+                &.open {
+                    color: rgb(255, 255, 255);
+                    background-color: rgb(105, 212, 130);
+                }
+
+                &.closed {
+                    color: @prussianBlue;
+                    background-color: rgb(235, 235, 235);
+                }
+            }
+
+            .button__whats {
+                display: flex;
+                width: 191px;
+            }
+        }
+    }
+}
+
+.projects.others {
+
+    background-color: rgb(245, 245, 245);
+    background-image: none;
+}

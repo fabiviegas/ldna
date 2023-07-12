@@ -1,0 +1,324 @@
+// out: false
+
+@import "__pallete.less";
+
+.owl-carousel.owl-theme.services__carousel {
+    margin-top: -30px;
+
+    img {
+        width: fit-content;
+    }
+
+    .courses {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 8px 4px 33px rgba(0, 0, 0, 0.1);
+
+        .course__description {
+            padding: 30px 20px 15px 20px;
+
+            .course__title {
+                font-family: @lexend;
+                font-size: 20px;
+                font-weight: 700;
+                line-height: 25px;
+                text-align: center;
+                color: black;                
+                padding-bottom: 20px;
+                border-bottom: 1px solid rgb(236, 236, 236);
+
+                .mark__course {
+                    color: @blue;
+                }
+
+                @media screen and (min-width: 768px) {
+                    font-size: 33px;
+                    line-height: 45px;
+                    padding: 0 40px 30px 40px;
+                }
+            }
+
+            .list {
+                padding-top: 20px;
+            
+                .course__topics {
+                    padding-bottom: 15px;
+
+                    .icon__courses {
+                        width: 13px;
+
+                        @media screen and (min-width: 768px) {
+                            width: fit-content;
+                        }
+                    }
+
+                    .course__list {
+                        font-family: @lexend;
+                        color: @gray;
+                        font-size: 14px;
+                        font-weight: 600;
+                        padding-left: 12px;
+                        padding-right: 4px;
+                        
+                    }
+
+                    .icon__plus {
+                        width: 11px;
+
+                        @media screen and (min-width: 768px) {
+                            width: fit-content;
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    .course__topics {
+                        padding-bottom: 25px;
+
+                        .course__list {
+                            font-size: 18px;
+                            padding-left: 16px;
+                            padding-right: 12px;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                padding: 60px;
+            }
+        }
+
+        .buy__course {
+            background-color: @orange;
+            text-align: center;
+            font-family: @lexendE;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: white;
+            padding-top: 16px;
+            padding-bottom: 16px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+
+            @media screen and (min-width: 768px) {
+                font-size: 26px;
+                padding-top: 30px;
+                padding-bottom: 30px;
+            }
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        top: calc(50% - 36px);
+        overflow: hidden;
+        
+        i {
+            color: @blue;
+        }
+
+        .owl-prev,
+        .owl-next {
+            border-radius: 100%;
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.09);
+            background-color: white;
+            width: 42px;
+            height: 41px;
+            font-size: 12px;
+
+            @media screen and (min-width: 768px) {
+                width: 72px;
+                height: 73px;
+                font-size: 20px;
+            }
+        }
+
+        .owl-prev {
+            margin-left: -8px;
+
+            @media screen and (min-width: 768px) {
+                margin-left: -17px;  
+            }
+        }
+
+        .owl-next {
+            margin-right: -8px;
+
+            @media screen and (min-width: 768px) {
+                margin-left: -17px;  
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            overflow: visible;
+        }
+
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-top: -48px;
+    }
+}
+
+.owl-carousel.owl-theme.about__carousel {
+    
+    img {
+        width: fit-content;        
+    }
+
+    .owl-nav {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        top: calc(50% - 36px);
+        
+        i {
+            color: @blue;
+        }
+
+        .owl-prev,
+        .owl-next {
+            border-radius: 100%;
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.09);
+            background-color: white;
+            width: 45px;
+            height: 46px;
+            font-size: 13px;
+
+            @media screen and (min-width: 768px) {
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+            }
+        }
+
+        .owl-prev {
+            margin-left: -16px;
+
+            @media screen and (min-width: 768px) {
+                margin-left: -7px;
+            }  
+        }
+
+        .owl-next {
+            margin-right: -16px;
+
+            @media screen and (min-width: 768px) {
+                margin-left: -19px;
+            } 
+        }
+    }
+}
+
+.owl-carousel.owl-theme.testimonials__carousel {
+
+    img {
+        width: fit-content;
+    }
+
+    .item {
+        .baloon {
+
+            color: black;
+            font-family: @lexend;
+            box-shadow: 0 0 46px rgba(0, 0, 0, 0.06);
+            background: white;
+            border-radius: 15px;
+            width: 100%;
+            position: relative;
+            
+            &:after{
+            
+                content: "";
+                width: 0;
+                height: 0;
+                position: absolute;
+                border-left: 20px solid transparent;
+                border-right: 20px solid transparent;
+                border-top: 20px solid white;
+                bottom: -20px;
+                left: calc(50% - 20px);
+            }
+
+            .testimonial__text {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+                text-align: center;
+                padding: 46px 25px 25px 19px;
+
+                @media screen and (min-width: 768px) {
+                    line-height: 25px;
+                    padding: 67px 35px 35px 30px;
+                }
+            }
+
+            .testimonial__name {
+                font-size: 18px;
+                font-weight: 700;
+                text-align: center;
+                padding-bottom: 50px;
+
+                .mark__test {
+                    color: @blue;
+                }
+            }
+
+            
+        }
+
+        .photo__testimonial {
+            margin-top: 38px;
+        }
+    }
+
+    .owl-nav {
+        position: absolute;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        top: 20%;
+
+        i {
+            color: @blue;
+        }
+
+        .owl-prev,
+        .owl-next {
+            border-radius: 100%;
+            box-shadow: 0 0 16px rgba(0, 0, 0, 0.09);
+            background-color: white;
+            width: 45px;
+            height: 46px;
+            font-size: 13px;
+
+            @media screen and (min-width: 768px) {
+                width: 60px;
+                height: 60px;
+                font-size: 20px;
+            }
+        }
+
+        .owl-prev {
+            margin-left: -13px;
+
+            @media screen and (min-width: 768px) {
+                margin-left: -98px;
+            }
+        }
+
+        .owl-next {
+            margin-right: -13px;
+
+            @media screen and (min-width: 768px) {
+                margin-right: -98px;
+            }
+        }
+    }
+}

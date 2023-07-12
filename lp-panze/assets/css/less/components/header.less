@@ -1,0 +1,159 @@
+// out: false
+
+.page__header {
+    position: absolute;
+    z-index: 3000;
+    padding-top: 30px;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    .logo {        
+        margin-left: 15px;
+
+        img {
+            width: 153px;
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-left: 0;  
+            
+            img {
+                width: fit-content;
+            }
+        }
+    }
+
+    .is--desktop {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .links {
+                display: flex;
+                width: 553px;
+                justify-content: space-between;
+
+                a {
+                    color: white;
+                    font: 400 16px @fontO;  
+                    padding: 5px 22px 7px 22px; 
+                    background-color: transparent; 
+                    border-radius: 16px;    
+                    transition: all linear .2s;                
+
+                    &:hover {
+                        color: white;
+                        background-color: #ea7d24;             
+                    }
+                }
+            }
+
+            .social {
+
+                display: flex;
+                justify-content: space-between;
+                width: 170px;
+
+                a {
+                    &:hover {
+                        img {
+                            filter: brightness(0) saturate(100%) invert(52%) sepia(100%) saturate(777%) hue-rotate(343deg) brightness(94%) contrast(95%);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+        display: flex;
+        justify-content: flex-end;
+
+        .navbar__hamburguer {
+            margin-right: 15px;          
+            border-radius: 14px;
+            background-color: #ea7d24;
+            width: 47px;
+            height: 47px;
+
+            img {
+                padding: 14px 11px 14px 10px;
+            }
+        }
+
+        .navbar__overlay {
+            background-color: #ea7d24;            
+            z-index: 3001;
+            display: none;
+        
+            &.open {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 95%;
+                position: fixed;                                
+                top: 0;
+                right: 0;                
+                overflow: hidden !important;
+                transition: all linear 0.5s;
+                border-bottom-left-radius: 50px;
+        
+                .overlay__content {                    
+                    overflow-y: auto !important;
+                    height: 90%;
+
+                    .overlay__header {
+                        margin: 52px 53px 69px 37px;
+
+                        .overlay__logo {
+                            width: 142px;
+                        } 
+                    }
+
+                    .overlay__menu {
+                        margin: 0;
+
+                        .overlay__links {
+                            margin-left: 65px;
+
+                            a {
+                                font: 400 16px @fontO;
+                                color: white;
+                                text-decoration: none;
+                                padding-bottom: 15px;
+                                border-bottom: 1px solid white;
+                                margin-bottom: 16px;
+                                width: 164px;
+
+                                &:last-child {
+                                    border-bottom: none;
+                                    padding-bottom: 0;
+                                    margin-bottom: 0;
+                                }
+                            }
+                        }
+
+                        .overlay__social {
+                            width: 166px;
+                            margin-top: 63px;
+                            margin-left: 65px;
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 38px;
+    }
+}
+

@@ -1,0 +1,119 @@
+// out: false
+
+@import "__pallete.less";
+
+.fake__button {
+    display: inline-block;
+    font-family: @roboto;
+    color: @goldCrayola;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border: 1px solid @goldCrayola;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    transition: all .3s linear;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    &:hover {
+        color: rgb(0, 31, 48);
+        background-image: linear-gradient(90deg, rgb(217, 184, 130) 0%, rgb(196, 157, 95) 100%);
+    }
+}
+
+.fake__button2 {
+    display: inline-block;
+    font-family: @roboto;
+    color: @prussianBlue;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    background-color: @goldCrayola;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    transition: all .3s linear;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    &:hover {
+        color: @prussianBlue;
+        background-color: lighten(hsl(37, 95%, 75%), 8%);
+        transform: translateY(-4px);
+    }
+}
+
+.fake__button3 {
+    display: inline-block;
+    font-family: @roboto;
+    color: @prussianBlue;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+    border: 1px solid @prussianBlue;
+    padding: 20px 40px;
+    text-transform: uppercase;
+    background-color: rgb(255, 255, 255);
+    transition: all .3s linear;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 30px;
+    }
+
+    &:hover {
+        border: 1px solid @frenchBistre;
+        color: @prussianBlue;
+        background-color: lighten(hsl(37, 95%, 75%), 8%);
+        transform: translateY(-4px);
+    }
+}
+
+.button__blue {
+    width: fit-content;
+    padding: 20px 90px;
+    background-image: linear-gradient(180deg, rgb(6, 53, 78) 0%, rgb(0, 31, 48) 100%);
+    border: 1px solid transparent;
+
+    color: white;
+    font: 400 15px @roboto;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    
+    &:hover {
+        color: white;
+        background-image: linear-gradient(90deg, lighten(hsl(201, 86%, 16%), 16%) 0%, hsl(201, 100%, 9%) 100%);
+    }
+}
+
+.button__whats {
+
+    background-color: rgb(42, 204, 30);
+    padding: 12px 20px;
+    
+    i {
+        font-size: 35px;
+        color: rgb(25, 29, 54);
+    }
+
+    .button__text {
+        color: rgb(25, 29, 54);
+        
+        
+        .text1 {
+            font-family: @roboto;
+            font-weight: 600;
+            font-size: 11px;
+            letter-spacing: -0.18px;
+            text-transform: uppercase;
+            margin-bottom: -6px;
+        }
+        .text2 {
+            font-family: @robotoCond;
+            font-weight: 900;
+            font-size: 18px;
+            letter-spacing: 1.53px;
+            text-transform: uppercase;
+        }
+    }
+}

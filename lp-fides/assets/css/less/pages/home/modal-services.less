@@ -1,0 +1,92 @@
+// out: false
+
+.modal.modal__service {
+    backdrop-filter: blur(4px);
+    z-index: 3001;
+
+    .modal-dialog {
+                
+        .modal-content {
+            padding-top: 60px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-bottom: 30px;
+            border-radius: 30px;
+            
+            .button__close {
+                appearance: none;
+                border: none;
+                background-color: transparent;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 0;                
+
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(0) saturate(100%) invert(33%) sepia(99%) saturate(839%) hue-rotate(165deg) brightness(104%) contrast(102%);
+                }                
+
+                @media screen and (min-width: 768px) {
+                    top: 40px;
+                    right: 40px; 
+                }
+            }
+
+            .heading {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 30px;
+
+                .icon {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 29px;
+                }
+    
+                h3 {
+                    color: #00376D;
+                    font: 800 26px @fontR;
+                    text-align: center;
+                    
+                    span {
+                        color: #0086CB;
+                    }
+                }
+            }
+
+            p {
+                font: 400 14px/25px @fontR;
+                color: #545454;
+                text-align: center;
+            }
+
+            .btn__modal {
+                margin-top: 30px;
+                width: 100%;
+
+                &:hover {
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(7500%) hue-rotate(333deg) brightness(98%) contrast(110%);
+                    }
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-top: 87px;
+                padding-left: 80px;
+                padding-right: 80px;
+                padding-bottom: 80px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .modal-dialog {
+            min-width: 574px;
+        }
+    }
+}

@@ -1,0 +1,163 @@
+// out: false
+
+.page__testimonials {
+    position: relative;
+    padding-bottom: 60px;   
+
+    .title {
+        .title__content {
+            display: flex;
+            flex-direction: column; 
+            align-items: center;                  
+
+            h2 {
+                font: 300 15px @fontA;
+                color: #28b36f; 
+                margin-bottom: 15px;                
+                text-align: center;
+                letter-spacing: 3px;
+                text-transform: uppercase;                
+                
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    margin-top: 80px;
+                }
+            }
+
+            h3 {
+                font: 700 34px @fontA;
+                color: white; 
+                margin-bottom: 15px;                
+                text-align: center;
+                width: 184px;
+                
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    width: fit-content;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                width: 215px;
+                align-items: flex-start;
+            }
+        }
+    }
+
+    .testimonials {
+        padding-left: 0;
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.testimonials__carousel {
+
+            .card__test {
+                position: relative;
+                padding: 50px 36px 31px 28px;
+                margin-top: 40px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;  
+                box-shadow: 0 0 36px rgba(0, 0, 0, 0.09);        
+                height: 452px;
+                width: 298px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: white;
+                margin-bottom: 30px;
+
+                .quotes {
+                    position: absolute;
+                    width: fit-content;
+                    left: -16px;
+                    top: -67px;
+                    z-index: 1001;
+                }
+
+                .card__text {
+                    font: 300 14px @fontA;
+                    color: #091426;
+                    line-height: 20px;
+                    margin-bottom: 30px;
+                }
+
+                .card__name {
+                    font: 600 22px @fontA;
+                    color: #153158;
+                }
+
+                .card__location {
+                    font: 300 15px @fontA;
+                    color: #28b36f;
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-top: 30px;
+                    margin-bottom: 0;
+                    height: 390px;
+                    width: 376px;
+                    padding: 55px 44px 40px 37px;
+                }
+            }
+
+            .owl-dots {
+        
+                .owl-dot {
+                    span {
+                        width: 10px;
+                        height: 10px;
+                        background-color: transparent;
+                        border: 1px solid #28b36f;
+                        margin: 5px 5px;
+                    }
+            
+                    &.active {
+                        span {
+                            background-color: #28b36f;
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .owl-nav {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                
+                    position: absolute;
+                    left: -288px;
+                    bottom: 67px;
+                    width: 100px;
+                    height: 30px;
+                    display: flex;
+                    justify-content: space-between;
+
+                    .owl-prev,
+                    .owl-next {
+                        &:hover {
+                            background: none;
+                        
+                            img {
+                                filter: brightness(0) saturate(100%) invert(64%) sepia(14%) saturate(1472%) hue-rotate(83deg) brightness(101%) contrast(91%);
+                            }
+                        }
+                    }                    
+                }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        
+    }
+
+    @media screen and (min-width: 768px) {        
+        padding-bottom: 98px;   
+    }
+}

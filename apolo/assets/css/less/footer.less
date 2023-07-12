@@ -1,0 +1,109 @@
+// out: false
+
+@import "__pallete.less"; 
+
+.page__footer {
+    background-image: url('../img/bg-footer.webp');
+    background-size: cover;
+    background-repeat: repeat;
+    font-family: @lato;
+    color: rgb(255, 255, 255);
+
+    .footer__line {
+        flex-direction: column;
+        align-items: center;  
+
+        .footer__content {
+
+            align-items: center;
+
+            .logo__footer {
+                width: 200px;
+            }
+
+            .footer__description {
+                font-size: 13px;
+                font-weight: 400;
+                text-transform: uppercase;
+                text-align: center;
+
+                @media screen and (min-width: 990px) {
+                    text-align: left;
+                }
+            }
+
+            .socials__bndes {
+                width: 100%;
+                justify-content: space-between;
+
+                .social__links {
+                    @media screen and (min-width: 768px) {
+                        padding-bottom: 21px;
+                    }
+                }
+                .logo__bndes {
+                    width: 130px;
+                }
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                @media screen and (min-width: 990px) {
+                    align-items: flex-start;
+                }
+            }
+
+            @media screen and (min-width: 990px) {
+                align-items: flex-start;
+                
+            }
+        }
+
+        .links {
+
+            align-items: center;
+
+            .footer__links {
+                font-size: 15px;
+                font-weight: 500;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+                line-height: 33px;
+                color: rgb(255, 255, 255);
+                padding-bottom: 5px;
+                text-align: center;
+
+                @media screen and (min-width: 990px) {
+                    text-align: left;
+                    padding-bottom: 21px;
+                }
+            }
+
+            .copyrights {
+                font-size: 12px;
+                font-weight: 400;
+                text-transform: uppercase;
+                margin-bottom: 21px;
+                text-align: center;
+
+                @media screen and (min-width: 990px) {
+                    text-align: left;
+                }
+            }
+
+            .btn__white3.btn__footer {
+                margin-bottom: 21px;
+            }
+
+            @media screen and (min-width: 990px) {
+                align-items: flex-start;
+            }
+        }
+
+        @media screen and (min-width: 990px) {
+            flex-direction: row;
+        }
+    }
+}

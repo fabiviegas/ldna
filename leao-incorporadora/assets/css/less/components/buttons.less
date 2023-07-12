@@ -1,0 +1,58 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.btn__green {
+    display: block;
+    width: fit-content;
+    background-color: @richBlack;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    font: 700 16px @roboto;
+    border: none;
+
+    .--transition();
+    &:hover {
+        background-color: @msuGreen;
+        color: @lightOrange;
+        cursor: pointer;
+    }
+}
+
+.btn__gray {
+    display: block;
+    width: fit-content;
+    background-color: @lightGray;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    color: @richBlack;
+    text-align: center;
+    text-transform: uppercase;
+    font: 400 16px 'Abel', sans-serif;
+
+    .--transition();
+    &:hover {
+        background-color: @richBlack;
+        color: @lightGray;
+    }
+}
+
+.btn__orange {
+    display: block;
+    width: fit-content;
+    background-color: @lightOrange;
+    padding: 20px 30px;
+    color: @richBlack;
+    text-align: center;
+    text-transform: uppercase;    
+    font: 700 16px @roboto;
+
+    .--transition();
+    &:hover {
+        background-color: lighten(hsl(29, 87%, 82%), 5%);
+        color: @richBlack;
+    }
+}

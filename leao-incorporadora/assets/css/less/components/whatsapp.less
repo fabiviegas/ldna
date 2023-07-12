@@ -1,0 +1,26 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+@lime_green: rgb(42, 204, 30);
+
+.button__whatsapp--floating {
+    display: inline-block;
+    z-index: 175;
+    position: fixed;
+    bottom: 5px;
+    right: 9px;    
+    padding: 7px 12px;
+    background-color: @richBlack;
+    
+    i {
+        font-size: 36px;
+        color: white;
+    }
+    
+    &:hover {
+        i {
+            color: @lightOrange;
+        }
+    }
+}

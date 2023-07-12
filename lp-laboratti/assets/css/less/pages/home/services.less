@@ -1,0 +1,163 @@
+// out: false
+
+.page__services {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: white;
+
+    .title {
+        text-align: center;
+        margin-bottom: 40px;
+
+        h2 {
+            font: 700 36px @fontT;
+            color: #283b8b;
+            line-height: 55px;
+            margin-bottom: 8px;
+        }
+
+        p {
+            max-width: 600px;
+            font: 400 16px @fontT;
+            color: #090e23;
+            line-height: 25px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    .services__list {
+        display: none;        
+
+        @media screen and (min-width: 768px) {
+            background-image: url('../img/bg-services.webp');
+            background-repeat: no-repeat;
+            background-position: top 0 center;
+            background-size: contain;
+            display: flex;
+            padding: 20px 30px;
+
+            .service {
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                margin-right: 36px;
+
+                picture {
+                    background-color: white;
+                    width: 130px;
+                    height: 130px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center; 
+                    transition: all linear .2s;
+                    
+                    .icon__white {
+                        display: none;
+                    }                
+                }
+
+                h3 {
+                    font: 600 18px @fontT;
+                    color: #283b8b;
+                    text-align: center;
+                    margin-top: 30px; 
+                    transition: all linear .2s;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    picture {
+                        background-color: #283b8b;
+
+                        .icon__blue {
+                            display: none;
+                        }
+
+                        .icon__white {
+                            display: block;
+                        }
+                    }
+
+                    h3 {
+                        color: #283b8b;
+                        font: 700 18px @fontT;
+                    }
+                }
+            }
+        }
+    }
+
+    .services__mobile {
+
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.services__carousel {
+            background-image: url('../img/bg-services.webp');
+            background-repeat: no-repeat;
+
+            .owl-dots {
+    
+                .owl-dot {
+                    span {
+                        width: 10px;
+                        height: 10px;
+                        background-color: white;
+                        border: 1px solid #283b8b;
+                        margin: 5px 5px;
+                    }
+            
+                    &.active {
+                        span {
+                            background-color: #283b8b;
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+            }
+
+            .service {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 18px;
+                margin-bottom: 20px;
+
+                picture {
+                    background-color: white;
+                    width: 131px;
+                    height: 131px;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;                   
+                    
+                    .icon__blue {
+                        width: 64px;
+                    }
+                }
+
+                h3 {
+                font: 700 18px @fontT;
+                color: #283b8b;
+                text-align: center;
+                margin-top: 30px; 
+                }                
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 69px;
+    }
+}

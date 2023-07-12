@@ -1,0 +1,116 @@
+// out: false
+
+.modal.modal__service {
+    backdrop-filter: blur(4px);
+    z-index: 3001;
+
+    .modal-dialog {
+
+        .modal-content {
+            padding-top: 60px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-radius: 30px;            
+            
+            .button__close {
+                appearance: none;
+                border: none;
+                background-color: transparent;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 0;                
+
+                &:hover {
+                    cursor: pointer;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(49%) sepia(26%) saturate(1991%) hue-rotate(338deg) brightness(98%) contrast(84%);
+                    }
+                }
+
+                &:focus-visible {
+                    outline: #e66c36 auto 1px;
+                }
+
+                @media screen and (min-width: 768px) {
+                    top: 40px;
+                    right: 40px; 
+                }
+            }
+
+            .heading {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 49px;
+
+                .icon {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 29px;
+                }
+    
+                h3 {
+                    font: 800 36px @fontR;
+                    color: #1c1c1c;
+                    text-align: center;                    
+                }
+            }
+
+            p {
+                font: 400 18px @fontR;
+                line-height: 30px;
+                color: #515151;
+                text-align: center;
+            }
+
+            a {                
+                margin-bottom: 60px;
+                margin-top: 43px;
+                width: fit-content;
+                font: 800 18px @fontR;
+                color: white;
+                padding: 15px 20px;                              
+                display: flex;                
+                align-items: center;
+                gap: 15px;
+                border-radius: 37px;
+                border: 0;
+                background-color: #25D366;
+                text-transform: uppercase;
+                margin-left: auto;
+                margin-right: auto;
+                
+                img {
+                    width: 25px;                    
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                    background-color: #e66c36;
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 106px;
+                    margin-top: 65px;
+                    padding: 18px 66px;                     
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-top: 138px;
+                padding-left: 95px;
+                padding-right: 95px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .modal-dialog {
+            min-width: 770px;
+        }
+    }
+}

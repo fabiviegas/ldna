@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="90.484" height="90.484" viewBox="0 0 90.484 90.484">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Retângulo_6534" data-name="Retângulo 6534" width="90.484" height="90.484" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="icon-close" transform="translate(-0.375 90.144) rotate(-90)">
+    <g id="Grupo_8961" data-name="Grupo 8961" transform="translate(-0.34 0.375)" clip-path="url(#clip-path)">
+      <circle id="Elipse_5" data-name="Elipse 5" cx="40.562" cy="40.562" r="40.562" transform="translate(3.12 4.68)" fill="#2d2d2d"/>
+      <path id="Caminho_25319" data-name="Caminho 25319" d="M43.457,0A43.457,43.457,0,1,0,86.914,43.457,43.457,43.457,0,0,0,43.457,0m0,81.481A38.025,38.025,0,1,1,81.482,43.457,38.026,38.026,0,0,1,43.457,81.481" transform="translate(2.322 1.742)" fill="#ea7d24" fill-rule="evenodd"/>
+      <g id="Grupo_9093" data-name="Grupo 9093" transform="translate(34.245 29.742) rotate(45)">
+        <path id="Linha_72" data-name="Linha 72" d="M35.629,4H2A2,2,0,0,1,2,0H35.629a2,2,0,1,1,0,4Z" transform="translate(0)" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+      <g id="Grupo_9094" data-name="Grupo 9094" transform="translate(60.854 32.573) rotate(135)">
+        <path id="Linha_72-2" data-name="Linha 72" d="M35.629,4H2A2,2,0,1,1,2,0H35.629a2,2,0,1,1,0,4Z" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>

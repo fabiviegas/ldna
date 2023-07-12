@@ -1,0 +1,125 @@
+// out: false
+
+.page__team {    
+    padding-bottom: 60px;
+    background-color: white;
+
+    .title {
+        margin-bottom: 40px;
+
+        h2 {
+           font: 700 36px @fontT;
+           color: #283b8b;
+           line-height: 50px;
+           text-align: center; 
+           margin-bottom: 8px;
+        }
+
+        p {
+           font: 400 16px @fontT;
+           color: #090e23; 
+           line-height: 25px;
+           max-width: 600px;
+           text-align: center;
+           margin-left: auto;
+           margin-right: auto;
+        }
+    }
+
+    .team {
+        padding-left: 0;
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.team__carousel {
+
+            .owl-dots {
+        
+                .owl-dot {
+                    span {
+                        width: 10px;
+                        height: 10px;
+                        background-color: white;
+                        border: 1px solid #283b8b;
+                        margin: 5px 5px;
+                    }
+            
+                    &.active {
+                        span {
+                            background-color: #283b8b;
+                            border: 1px solid transparent;
+                        }
+                    }
+                }
+            }
+
+            .item {
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    figure {
+
+                        img {
+                            margin-bottom: 23px;
+                        }
+
+                        figcaption {
+                            display: none;
+                        }
+
+                        .text__overlay {
+                            font: 600 16px @fontT;
+                            color: white;
+                        }
+                    }
+
+                    .name {
+                    font: 700 18px @fontT;
+                    color: #283b8b; 
+                    margin-bottom: 30px;
+                    }
+
+                    &:hover {
+
+                        figure {
+                            position: relative;
+
+                            figcaption {
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                z-index: 1000;
+                                background-image: url('../img/team-overlay.png');
+                                background-repeat: no-repeat;
+                                background-size: contain;
+                                top: 0;
+                                left: 0;
+
+                                .icon__plus {
+                                    width: fit-content;
+                                    margin-bottom: 6px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }        
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 78px;
+        padding-bottom: 97px;   
+    }
+}

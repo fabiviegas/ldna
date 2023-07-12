@@ -1,0 +1,110 @@
+// out: false
+
+.page__about {    
+    padding-bottom: 60px;
+    background-image: url('../img/bg-about.webp'), url('../img/bg-numbers-mobile.webp');
+    background-repeat: no-repeat;
+    background-position: top 0 center, bottom 0 left -88px;
+
+    .photo {
+        display: none;
+    }
+        
+    .content {  
+        padding-top: 576px;  
+        padding-bottom: 94px;
+        padding-left: 30px;
+        padding-right: 30px;       
+
+        .title {
+            display: flex;
+            flex-direction: column;
+            font: 800 36px @fontR;
+            color: #1c1c1c;
+            line-height: 50px;
+            margin-bottom: 20px;            
+
+            img {
+               width: fit-content;
+               margin-bottom: 19px; 
+            }
+        }            
+
+        .text {
+            font: 400 18px @fontR;
+            color: #515151;
+            line-height: 30px;
+        }         
+    }
+
+    .numbers {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 200px;
+        margin-top: 58px;
+        margin-bottom: 166px;
+        margin-left: 20px;
+
+        .info {
+            margin-bottom: 33px;
+
+            h2 {
+                font: 800 60px @fontR;
+                color: white;
+                line-height: 50px;
+                text-align: center;
+            }
+            p {
+               font: 400 18px @fontR;
+               color: white;
+               line-height: 37px;
+               text-align: center; 
+            }
+        }
+    }
+    
+
+    @media screen and (min-width: 768px) {        
+        padding-bottom: 118px; 
+        background-image: url('../img/bg-numbers.webp');
+        background-position: bottom 15px left calc(50% + 118px); 
+        
+        .content {
+            padding-top: 0;
+            padding-bottom: 0;
+            padding-left: 15px;
+            padding-right: 15px;
+
+            .title {
+                margin-top: 16px;
+                margin-bottom: 28px;
+                max-width: 419px;
+            }
+
+            .text {
+                max-width: 475px; 
+            }
+        }
+
+        .photo {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .numbers {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            margin-top: 90px;
+            margin-right: 80px;
+            margin-bottom: 0;
+            margin-left: 30px;
+
+            .info {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

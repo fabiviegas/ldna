@@ -1,0 +1,101 @@
+//out: false
+
+.about__description {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: white;
+
+    .content--1,
+    .content--2 {
+        
+        .text {
+            padding-left: 30px;
+            padding-right: 30px;
+
+            h2 {
+                display: flex;
+                flex-direction: column;
+                font: 700 36px @fontM;
+                color: #191919;
+                line-height: 45px;
+                margin-bottom: 17px;
+    
+                img {
+                    margin-bottom: 20px;
+                    width: fit-content;
+                }
+            }
+
+            p {
+                font: 300 16px @fontR;
+                color: #6b6b73;
+                line-height: 25px;
+                margin-bottom: 40px;
+    
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .photo {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    .content--1 {
+        margin-bottom: 40px;
+    }
+
+    .content--2 {
+        flex-direction: column-reverse;
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 86px;
+        padding-bottom: 69px;
+
+        .content--1,
+        .content--2 {
+
+            .text {
+                padding-left: 15px;
+                padding-right: 15px;
+
+                h2 {
+                    margin-bottom: 22px;
+                    max-width: 380px;
+                }
+
+                p {
+                    margin-bottom: 0;
+                    max-width: 454px;
+                }
+            }
+
+            .photo {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        
+        }
+
+        .content--1 {
+            margin-bottom: 74px;
+            align-items: flex-end;
+        }
+
+        .content--2 {
+            align-items: center;
+            flex-direction: row;
+            
+            .text {
+                .text2 {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+}

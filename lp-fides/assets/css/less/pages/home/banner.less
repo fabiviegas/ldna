@@ -1,0 +1,63 @@
+// out: false
+
+.page__banner {
+    background-image: url('../img/banner-mobile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 260px;
+    padding-bottom: 26px;
+
+    .banner__content {
+        padding-left: 29px;
+        padding-right: 29px;
+        
+        h2 {
+            font: 800 36px @fontR;
+            color: white;
+            margin-bottom: 5px; 
+            
+            span {
+                color: #5acafb;
+            }
+        }        
+
+        p {
+            font: 400 15px @fontR;
+            color: white;
+            line-height: 25px;
+            margin-bottom: 49px;
+            max-width: 275px;            
+        }        
+    } 
+    
+    .click__down {
+        .title__down {
+            font: 500 16px @fontR;
+            color: white;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: url('../img/banner-desktop.png');
+        padding-bottom: 39px;
+
+        .banner__content {
+            padding-left: 15px;
+            padding-right: 15px;
+            
+            h2 {
+                font-size: 46px;
+                margin-bottom: 19px;
+            }
+            p {
+                font-size: 18px;
+                max-width: 367px;
+                margin-bottom: 80px;
+            }
+        }
+    }
+}

@@ -1,0 +1,187 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.page__footer {
+    background-image: linear-gradient(91deg, rgb(10, 53, 48) 0%, rgb(18, 90, 81) 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 585px;
+
+    .infos {
+        padding-top: 61px;
+        padding-bottom: 68px;
+
+        .nav__footer {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .logo__footer {
+                margin-bottom: 19px;
+                width: 170px;
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 50px;
+                }
+            }
+
+            .social.is--mobile {
+                display: flex;
+                width: 164px;
+                justify-content: space-between;
+                margin-bottom: 41px;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            .menu {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 20px;
+
+                .link {
+                    font: 300 15px @roboto;
+                    color: white;
+                    margin-bottom: 21px;
+
+                    &:hover {
+                        color: @lightOrange;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    width: 532px;
+                    justify-content: space-between;
+                    margin-bottom: 0;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                align-items: flex-start;
+            }
+        }
+
+        .contacts {
+            
+            .social.is--desktop {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+
+                    display: flex;
+                    justify-content: flex-end;
+                    margin-bottom: 24px;
+                    margin-top: 7px;
+
+                    .social__link {
+                        margin-left: 10px;
+
+                        &:hover {
+                            filter: brightness(0) saturate(100%) invert(90%) sepia(46%) saturate(2105%) hue-rotate(297deg) brightness(112%) contrast(106%);
+                        }
+                    }
+                }
+            }
+
+            .address {
+                margin-bottom: 12px;
+                text-align: center;
+
+                a {
+                    font: 300 16px @roboto;
+                    color: white;
+
+                    &:hover {
+                        color: @lightOrange;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    text-align: right;
+                }
+            }
+
+            .email__phone {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                a {
+                    font: 300 16px @roboto;
+                    color: white;
+    
+                    &:hover {
+                        color: @lightOrange;
+                    } 
+                }
+
+                .email {
+                    margin-bottom: 12px; 
+
+                    @media screen and (min-width: 768px) {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .phone {
+
+                    @media screen and (min-width: 768px) {
+                        margin-left: 20px;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    .copyrights {
+        margin-top: 30px;
+        margin-bottom: 35px;
+
+        .customer {
+            text-align: center;
+            margin-bottom: 28px;
+
+            .copy {
+                font: 400 14px @roboto;
+                color: @richBlack;
+            }
+
+            @media screen and (min-width: 768px) {
+                text-align: left;
+                margin-bottom: 0;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            margin-top: 50px;
+        }
+
+        .ldna {
+            display: flex;
+            justify-content: center;
+
+            @media screen and (min-width: 768px) {
+                justify-content: flex-end;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-size: 100% 250px; 
+    }
+}

@@ -1,0 +1,39 @@
+// out: false
+
+// COLORS & EFFETCS
+
+body {
+    background-color: white;
+}
+
+@msuGreen: rgb(14, 72, 65);
+@lightOrange: rgb(249, 208, 169);
+@richBlack: rgb(10, 53, 48);
+@gray: rgb(67, 67, 67);
+@lightGray: rgb(233, 232, 232);
+
+.--transition() {
+    transition: all .3s linear;
+}
+
+//TYPOGRAPHY
+
+@roboto: 'Roboto', sans-serif;
+
+.title1() {
+    color: @gray;
+    font: 100 36px @roboto;
+
+    @media screen and (min-width: 768px) {
+        font-size: 56px;
+    }
+}
+
+.title2() {
+    color: @gray;
+    font: 100 36px @roboto;
+
+    @media screen and (min-width: 768px) {
+        font-size: 46px;
+    }
+}

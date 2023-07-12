@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="160.394" height="149.883" viewBox="0 0 160.394 149.883">
+  <defs>
+    <filter id="bxs-quote-right" x="0" y="0" width="160.394" height="149.883" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="18" result="blur"/>
+      <feFlood flood-opacity="0.09"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#bxs-quote-right)">
+    <path id="bxs-quote-right-2" data-name="bxs-quote-right" d="M50.937,41.883a17.7,17.7,0,0,0,4.426-12.324V8.618A2.618,2.618,0,0,0,52.744,6H37.038A5.24,5.24,0,0,0,31.8,11.235V29.559a2.618,2.618,0,0,0,2.618,2.618h8.057a7.565,7.565,0,0,1-1.122,3.654c-1.33,2.1-3.836,3.529-7.45,4.251l-2.1.419v7.382h2.618c7.286,0,12.842-2.019,16.514-6Zm-28.814,0a17.681,17.681,0,0,0,4.426-12.324V8.618A2.618,2.618,0,0,0,23.931,6H8.224a5.24,5.24,0,0,0-5.235,5.235V29.559a2.618,2.618,0,0,0,2.618,2.618h8.057a7.565,7.565,0,0,1-1.122,3.654c-1.33,2.1-3.836,3.529-7.45,4.251l-2.1.419v7.382H5.607c7.286,0,12.842-2.019,16.514-6Z" transform="translate(51.01 48)" fill="#0b1a30"/>
+  </g>
+</svg>

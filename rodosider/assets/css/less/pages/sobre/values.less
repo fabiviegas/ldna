@@ -1,0 +1,70 @@
+//out: false
+
+.about__values {
+    padding-top: 60px;
+    padding-bottom: 40px;    
+    background-color: #191919;
+
+    .cards {
+        padding-left: 30px;
+        padding-right: 30px;
+
+        .card__value {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.04);
+            border: 1px solid #efefef;
+            border-radius: 10px;
+            margin-bottom: 20px;
+
+            .card__icon {
+                background-color: white;
+                box-shadow: 0 0 6px rgba(0, 0, 0, 0.04);
+                border-radius: 10px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 42px;
+                height: 43px;
+                margin-bottom: 15px;
+
+                img {
+                    width: fit-content;
+                }
+            }
+
+            h2 {
+                font: 700 28px @fontM;
+                color: white;
+                margin-bottom: 15px;
+            }
+
+            p {
+               font: 400 14px @fontM;
+               line-height: 20px;
+               color: white; 
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        padding-bottom: 100px;
+        background-image: url('../img/values/bg-value.svg');
+        background-position: top 293px center;
+        background-repeat: no-repeat;
+
+        .cards {  
+            padding-left: 15px;
+            padding-right: 15px;          
+
+            .card__value {
+                padding: 55px 70px 30px 70px;
+                width: 370px;
+                height: 447px;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

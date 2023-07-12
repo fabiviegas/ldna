@@ -1,0 +1,103 @@
+//out: false
+
+.page__contact {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: white;
+
+    .contact__header {
+        margin-bottom: 30px;
+
+        h2 {
+            display: flex;
+            flex-direction: column;
+            font: 700 36px @fontM;
+            color: #191919;
+
+            img {
+                margin-bottom: 20px;
+                width: fit-content;
+            }
+        }
+    
+    }
+
+    .form__standard {
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+            padding: 20px 30px;
+            width: 100%;
+            background-color: #fff;
+            border-radius: 10px;
+            font: 600 15px @fontM;
+            color: black;
+            border: 1px solid #d4d4d4;
+            caret-color: #c00415;
+            margin-bottom: 20px;
+            
+            &:hover {
+                border-color: #e26d78;
+                outline: 1px solid transparent;
+            } 
+
+            &::placeholder {
+                font: 400 15px @fontM;
+                color: #4d4d4d;
+            }
+        }
+    
+        button[type="submit"] {
+            display: block;
+            width: fit-content;
+            border-radius: 10px;
+            border: 1px solid transparent;
+            font: 600 18px @fontM;
+            color: white;
+            text-align: center;
+            padding: 21px 53px;
+            background-color: #2ca738;
+                        
+            transition: all linear .15s;
+            &:hover {
+                color: white;
+                cursor: pointer;                        
+                transform: translateY(-5px);
+            }                
+        }
+    }
+    
+    .form__footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        margin-top: 10px;
+        gap: 30px;
+
+        img {
+            width: 270px;
+        }
+    }
+
+    // ? RESPONSIVE
+    @media screen and (min-width: 768px) {
+        padding-top: 94px;
+        padding-bottom: 111px;
+
+        input[type="tel"],
+        textarea {
+            margin-top: 0;
+        }
+
+        .form__standard {
+            textarea {
+                height: 141px;
+            }
+        }
+    }
+}
+
+.page__map {
+    background-color: white;
+}

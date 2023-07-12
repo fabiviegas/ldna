@@ -1,0 +1,59 @@
+// out: false
+
+// * LOWE Project
+@import "../base/_pallete.less";
+
+// ! Quick Pallete
+@titleFont: 700 36px @roboto;
+@titleColor: rgb(1, 38, 51);
+@textFont: 400 14px/25px @roboto;
+@textColor: rgb(145, 145, 145);
+
+// ? Pages '404.html' and 'contato-sucesso.html'
+
+.page__info {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font: @titleFont;
+        color: @titleColor;
+        text-align: center;
+    }
+
+    p {
+        margin-bottom: 30px;
+        text-align: center;
+        font: @textFont;
+        color: @textColor;
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    .btn__green--info {
+        box-shadow: 0 0 36px rgba(0, 0, 0, 0.06);
+        background-color: rgb(14, 72, 65);
+        color: rgb(255, 255, 255);
+        font:  700 18px @roboto;
+        padding: 20px 36px;
+        .--transition();
+        &:hover {
+            background-color: @msuGreen;
+            color: @lightOrange;
+            cursor: pointer;
+        }
+    }
+
+
+    // ? RESPONSIVE
+    @media screen and (min-width: 768px) {
+        margin-top: 100px;
+        margin-bottom: 95px;
+    }
+}

@@ -1,0 +1,544 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.page__banner {
+
+    background-image: url('../img/bg-banner-mobile.webp');
+    background-color: @stoneGray;
+    background-repeat: no-repeat;
+    background-position: top -538px left -336px;
+    overflow-x: hidden;
+    
+    .banner__title {
+        background-image: url('../img/green-line.svg');
+        background-repeat: no-repeat;
+        background-position: top 50px left 0;
+        background-size: 118px 18px;
+        font: 700 28px @maven;
+        color: @stoneGray;
+
+        margin-top: 136px;
+        margin-bottom: 31px;
+
+        @media screen and (min-width: 768px) {
+            background-position: top 80px left 0;
+            background-size: auto;
+            font: 700 46px @maven;
+            margin-top: 201px;
+            margin-bottom: 20px;
+            width: fit-content;
+        }
+    }
+
+    .banner__text {
+        font: 400 14px @maven;
+        color: @stoneGray;
+        line-height: 20px;
+        margin-bottom: 23px;         
+
+        .strong {
+            font: 800 14px @maven;
+        }
+
+        @media screen and (min-width: 768px) {
+            font: 400 22px @maven;
+            line-height: 30px;
+            width: 400px;
+
+            .strong {
+                font: 800 22px @maven;
+            }
+        }
+    }
+
+    .btn__banner {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            width: 327px;
+        }
+    }
+
+    .img__banner {
+        margin-top: 10px;
+        align-items: center;
+        justify-content: center;
+        
+        .icon {
+            display: flex;
+            justify-content: center;
+        }
+
+        .photo__solar {
+            margin-top: -20px;
+        }
+
+               
+        @media screen and (min-width: 768px) {
+            margin-top: 201px;
+            align-items: flex-end;
+            justify-content: flex-end;
+            
+            .icon {
+                justify-content: flex-start;
+
+                .icon__mouse {
+                    margin-bottom: 10px;
+                }
+            }
+
+            .photo__solar {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .contacts {
+        padding: 60px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .banner__contact {
+            font: 700 16px @maven;
+            color: white;
+            margin-bottom: 30px;
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                margin-bottom: 0;
+                text-align: left;
+            } 
+            
+            &:hover {
+                color: @lemonGreen;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding: 50px 0;
+        }
+        
+        .btn__banner2 {
+            width: 203px;
+            height: fit-content;
+            margin-right: auto;
+            margin-left: auto;
+            
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            padding: 0;
+            margin-top: 95px;
+            margin-bottom: 45px;
+
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: url('../img/bg-banner.webp');
+        background-position: top -2px left 0;
+    }
+}
+
+.services {
+
+    .services__title {
+        font: 400 16px @maven;
+        color: @lemonGreen;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        margin-top: 48px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+            margin-top: 0;
+        }
+    }
+
+    .services__title2 {
+        font: 800 38px @maven;
+        color: @stoneGray;
+        margin-bottom: 40px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+            font: 800 46px @maven;
+        }
+    }
+
+    .cards__painel {
+
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            flex-direction: row;
+
+            .card__services {
+                border-radius: 10px;
+                border: 1px solid rgb(241, 241, 241);
+                background-color: white;
+                max-height: 270px;
+                margin-bottom: 30px;;
+    
+                .card__infos {
+                    padding-top: 80px;
+                    padding-bottom: 74px;
+    
+                    .icon__services {
+                        position: relative;
+                        z-index: 10;
+                    }
+    
+                    .icon__servicesbg {
+                        position: absolute;
+                        bottom: 148px;
+                        right: 92px;
+                        z-index: 1;
+                    }
+    
+                    .card__title {
+                        color: @stoneGray;
+                        font: 500 20px @maven;
+                        margin-top: 42px;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+    
+                    .card__title2 {
+                        color: @stoneGray;
+                        font: 700 20px @maven;
+                        margin-top: 42px;
+                        text-align: center;
+                        text-transform: uppercase;
+                    }
+                }
+    
+                .--transition();
+                &:hover {
+                    background-color: @grassGreen;
+                    border: 1px solid @grassGreen;
+    
+                    .icon__services {
+                        filter: brightness(0%) invert(100%);
+                    }
+    
+                    .card__infos {
+                        .card__title {
+                            color: white;
+                        }
+    
+                        .card__title2 {
+                            color: white;
+                        }
+                    }
+                }        
+            }
+        }
+    }   
+}
+
+.benefits {
+
+    background-image: linear-gradient(270deg, rgb(56, 58, 54) 0%, rgb(42, 44, 41) 100%);
+    background-position: top 0 left 0;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+    .benefits__line {
+        display: flex;
+        flex-direction: column-reverse;
+
+        .photo__painel {
+            margin-left: -192px;
+            width: 597px;
+
+            @media screen and (min-width: 762px) {
+                margin-left: 0;
+                width: 591px;
+            }
+
+        }
+    
+        .benefits__title {
+            font: 700 38px @maven;
+            color: white;
+            margin-bottom: 30px;
+            padding-left: 10px;
+
+            .strong {
+                color: @lemonGreen;
+            }
+
+            @media screen and (min-width: 768px) {
+                font: 700 46px @maven; 
+                margin-top: 187px;
+                margin-bottom: 75px; 
+                padding-left: 0;               
+            }
+        }
+
+        .benefits__list {
+            padding-left: 24px;
+
+            .icon__text {
+
+                margin-bottom: 20px;
+
+                .benefits__topic {
+                    font: 500 14px @maven;
+                    color: white;
+                    margin-left: 10px;
+                    
+                }
+            }
+            @media screen and (min-width: 768px) {
+                padding-left: 0;               
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-position: top 172px left 0;
+    }
+}
+
+.projects {
+
+    .projects__title {
+        font: 400 16px @maven;
+        color: @lemonGreen;
+        letter-spacing: 8px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        text-align: center;
+        margin-top: 48px;
+        
+    }
+
+    .projects__title2 {
+        font: 800 38px @maven;
+        color: @stoneGray;
+        margin-bottom: 40px;
+        text-align: center;
+
+        @media screen and (min-width: 768px) {
+            font: 800 46px @maven; 
+        }
+    }
+}
+
+.numbers {
+
+    background-image: url('../img/bg-numbers.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .about__numbers {
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        .img__numbers {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .photo__numbers {
+                position: relative;
+                margin-top: 16px;
+
+                @media screen and (min-width: 768px) {
+                    width: 370px;
+                    align-self: flex-end;
+                    margin-top: 0;
+                }
+            }
+
+            .baloon {
+                background-image: url('../img/tag-bg.webp');
+                background-repeat: no-repeat;
+                position: absolute;
+                bottom: 84px;
+                left: 11px;
+                color: @stoneGray;
+                width: 141px;
+                height: 148px;
+
+                .icon__tag {
+                    margin-top: 22px;
+                    margin-left: 21px;
+                    margin-bottom: 13px;
+
+                    @media screen and (min-width: 768px) {
+                        width: 56px;
+                        margin-top: 35px;
+                        margin-left: 30px;
+                        margin-bottom: 10px;
+                    }
+                }
+
+                .number__tag {
+                    font: 700 28px @maven;
+                    margin-left: 21px;
+
+                    @media screen and (min-width: 768px) {
+                        font: 700 46px @maven; 
+                        margin-left: 30px;
+                    }
+                }
+
+                .text__tag {
+                    font: 500 15px @maven;
+                    margin-left: 21px;
+                    padding-bottom: 26px;
+
+                    @media screen and (min-width: 768px) {
+                        font: 700 26px @maven; 
+                        margin-left: 30px;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    background-image: url('../img/bg-tag-desk.webp');
+                    width: 224px;
+                    height: 232px;
+                    bottom: 50px;
+                    left: 11px; 
+                }
+                
+            }
+
+            
+            .btn__numbers2 {
+                width: 198px;
+                margin-top: 34px;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+        }
+
+        .numbers__content {
+
+            .numbers__title {
+                font: 400 16px @maven;
+                color: @lemonGreen;
+                letter-spacing: 8px;
+                text-transform: uppercase;
+                margin-bottom: 10px;
+                text-align: center;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                }
+            }
+
+            .numbers__title2 {
+                font: 800 36px @maven;
+                color: @stoneGray;
+                line-height: 50px;
+                margin-bottom: 35px;
+                text-align: center;
+                padding-left: 15px;
+                padding-right: 15px;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+
+            .numbers__text {
+                font: 400 16px @maven;
+                color: rgb(57, 60, 64);
+                line-height: 25px;
+                margin-bottom: 28px;
+                text-align: center;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                }
+            }
+
+            .number {
+                font: 700 60px @maven;
+                color: @lemonGreen;
+                text-align: center;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                }
+            }
+
+            .info {
+                font: 500 26px @maven;
+                color: @stoneGray;
+                line-height: 30px;
+                margin-right: 45px;
+                text-align: center;
+                width: 150px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 28px;
+
+                @media screen and (min-width: 768px) {
+                    text-align: left;
+                    width: fit-content;
+                }
+            }
+
+            .btn__numbers {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: block;
+                    width: 198px;
+                    margin-top: 12px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-left: 55px;
+                padding-top: 10px;
+            }
+            
+        }
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-top: 48px;
+        margin-bottom: 48px;
+    }
+}
+
+.partners {
+    background-color: rgb(241, 241, 241);
+
+    .container {
+        margin-right: 0;
+        margin-left: 0;
+
+        @media screen and (min-width: 768px) {
+            margin-right: auto;
+            margin-left: auto;
+        }
+    }
+}

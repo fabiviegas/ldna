@@ -1,0 +1,722 @@
+// out: false
+
+@import "__pallete.less"; 
+
+body {
+
+    background-image: url('../img/bg-footer-mobile.webp');
+    background-repeat: no-repeat;
+    background-position: bottom 0 left 0;
+
+    .page__header {
+        position: absolute;
+        padding-top: 35px;
+        width: 100%;
+        z-index: 3000;
+
+        .links__social {
+
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+                color: white;
+                opacity: 0.36;
+                font-size: 24px;
+
+                &:hover {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .logo__menu {
+            display: flex;
+            justify-content: space-between;
+            padding-left: 30px;
+            padding-right: 30px;
+
+            .logo__mira {
+                width: 189px;
+
+                @media screen and (min-width: 768px) {
+                    width: fit-content;
+                    margin-left: 40px;
+                    
+                }
+            }
+
+            .navbar__hamburguer {
+                background-color: white;
+                border-radius: 10px;
+                box-shadow: 8px 3px 36px rgba(0, 0, 0, 0.09);            
+                width: 70px;
+                height: 70px;
+
+                &:hover {
+                    background-color: @orange;
+                    cursor: pointer;
+
+                    img {
+                        filter: brightness(0%) invert(100%);
+                        -webkit-filter: brightness(0%) invert(100%);
+                        -moz-filter: brightness(0%) invert(100%);
+                    }
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-left: 15px;
+                padding-right: 15px;        
+            }
+        }
+
+        .navbar__overlay {
+            z-index: 3001;
+            display: none;
+        
+            &.open {
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                top: 0;
+                right: 0;
+                background-color: rgba(255, 255, 255, 0.849);
+                overflow: hidden !important;
+                transition: all linear 0.5s;
+        
+                .overlay__content {
+                    background-image: linear-gradient(180deg, rgb(0, 169, 159) 0%, rgb(4, 113, 107) 100%);
+                    background-color: @blue;
+                    overflow-y: auto !important;
+                    background-position: right 0 top 0;
+                    overflow-y: auto !important;
+
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 360px;
+                    height: 100%;
+                    transition: all linear 0.3s;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                                       
+                    .overlay__logo {
+                        width: 191px;
+                    }
+                    
+                    .overlay__close {
+                                                                        
+                        i {
+                            font-size: 48px; 
+                            color: white;
+
+                            &:hover {
+                                color: @orange;
+                            }
+                        }
+                    }
+
+                    .overlay__menu {
+                        margin: 0;
+                        
+                        .overlay__links {
+                            a {
+                                color: white;
+                                font-size: 30px;
+                                font-weight: 700;
+                                font-family: @lexend;
+
+                                &:hover {
+                                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.349);
+                                }
+                            }
+                        }
+
+                        .overlay__social {
+
+                            a {
+                                color: white;
+                                font-size: 32px;
+
+                                &:hover {
+                                    color: @orange;
+                                }
+                            }
+                        }
+                        .overlay__contact {
+                            a {
+                                
+                                .contact__menu {
+                                    color: white;
+                                    font-family: @lexend;
+                                    font-size: 16px;
+                                    font-weight: 700;
+                                    margin-left: -26px; 
+                                    
+                                    &:hover {
+                                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.349);
+                                    }
+                                }
+
+                                margin-bottom: 48px;
+                            }
+                        }
+                    }
+                }
+
+                
+            } 
+        }
+
+        @media screen and (min-width: 768px) {
+            padding-top: 60px;
+        }
+    }
+
+    .page__banner {
+        background-image: url('../img/bg-mobile.webp');
+        background-repeat: no-repeat;
+        background-size: 105%;
+        
+        
+        .page__title {
+            padding-top: 149px;
+            font-family: @lexend;
+            font-size: 30px;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+            font-weight: 700;
+            margin-bottom: 20px;
+            
+
+            .mark__title {
+                color: @orange;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 46px;
+                line-height: 60px;
+                padding-top: 170px;
+                margin-bottom: 48px;
+                
+            }
+        }
+
+        .contact {
+            display: flex;
+            align-items: center;
+            color: white;
+            font-family: @lexendE;
+            font-size: 16px;
+            font-weight: 600;
+            text-transform: uppercase;
+            padding: 28px 39px;
+            background-color: @orange;
+            border-radius: 10px;
+            margin-bottom: 57px;
+            
+            i {
+                font-size: 20px;
+                padding-right: 10px;
+            }
+
+            &:hover {
+                background-color: white;
+                color: @orange;
+            }
+
+            @media screen and (min-width: 768px) {
+                display: none;
+            }
+            
+
+        }
+
+        .icon__target {
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                display: block;
+                position: absolute;
+                width: fit-content;
+                top: -52px;
+                left: 88px;
+                z-index: 3000;
+            }
+        }
+
+        .photo__banner {
+            width: 300px;
+
+            @media screen and (min-width: 768px) {
+                width: auto;
+            }
+        }
+
+        .contact--desktop {
+
+            display: none;
+
+            @media screen and (min-width: 768px) {
+                position: absolute;
+                display: flex;
+                align-items: center;
+                right: -1px;
+                top: 111px;
+                color: white;
+                font-family: @lexendE;
+                font-size: 16px;
+                font-weight: 600;
+                text-transform: uppercase;
+                padding: 28px 39px;
+                background-color: @orange;
+                border-radius: 10px;
+                z-index: 20;
+
+                i {
+                    font-size: 20px;
+                    padding-right: 10px;
+                }
+
+                &:hover {
+                    background-color: white;
+                    color: @orange;
+                }
+            }
+        }
+
+        .icon__target2 {
+            position: absolute;
+            z-index: 10;
+            top: -41px;
+            width: 114px;
+            right: 240px;
+
+            @media screen and (min-width: 768px) {
+                right: -27px;
+                top: 82px;
+                width: fit-content;
+            }
+            
+        }
+
+        @media screen and (min-width: 768px) {
+            background-image: url('../img/bg-header.webp');
+            background-repeat: no-repeat;
+            background-position: top -74px right -61px; 
+        }
+    }
+
+    .about {
+        background-image: url('../img/target-big.webp'), linear-gradient(270deg, rgb(0, 169, 159) 0%, rgb(4, 113, 107) 100%);
+        background-repeat: no-repeat;
+        background-position: top center, top 435px left 0;
+        background-size: 440px, 100% 681px;
+        overflow: hidden;
+        padding-bottom: 48px;
+        padding-top: 80px;
+
+        .about__line {
+            display: flex;
+            flex-direction: column-reverse;
+
+            .about__title {
+                font-family: @lexend;
+                color: black;
+                font-size: 36px;
+                font-weight: 700;
+                margin-bottom: 19px;
+                
+                @media screen and (min-width: 768px) {
+                    margin-left: 60px;
+                }
+            }
+
+            .about__text {
+                font-family: @lexend;
+                color: rgb(57, 60, 64);
+                font-size: 16px;
+                line-height: 30px;
+                font-weight: 400;
+                margin-bottom: 130px;
+
+                @media screen and (min-width: 768px) {
+                    width: 370px;
+                    margin-left: 60px;
+                    margin-bottom: 75px;
+                }
+            }
+
+            .numbers {
+                font-family: @lexend;
+                color: white;
+                display: flex;
+                flex-direction: column;
+                            
+                .info {
+                    margin-bottom: 40px;
+
+                    .number {
+                        font-size: 41px;
+                        font-weight: 700;
+                        line-height: 20px;
+                        padding-bottom: 16px;
+                        text-align: center;
+                    }
+
+                    .description {
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        text-transform: uppercase;
+                        text-align: center;
+                    }
+                    @media screen and (min-width: 768px) {
+                        margin-right: 48px;
+                        margin-bottom: 0;
+                    }
+                }
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            background-position: top 0 right 114px, bottom 122px left 0;
+            background-size: 780px, 100% 171px;
+            padding-top: 48px;
+            
+        }
+    }
+
+    .testimonials {
+        background-image: linear-gradient(rgb(251, 251, 251), rgb(251, 251, 251));
+        background-size: 100% 526px;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        
+        .test__title {
+            color: rgb(0, 0, 0);
+            font-family: @lexend;
+            font-size: 36px;
+            font-weight: 700; 
+        }
+    }
+
+    .team {
+        background-image: url('../img/bg-team.webp');
+        background-repeat: no-repeat;
+        background-position: top center;
+        font-family: @lexend;
+
+        .team__content {
+            display: flex;
+            justify-content: center;
+
+            .team__title {
+                color: black;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 45px;
+                text-align: right;
+                padding-top: 80px;
+                
+            }
+
+            .team__title2 {
+                color: black;
+                font-size: 36px;
+                font-weight: 700;
+                line-height: 45px;
+                text-align: right;
+            }
+
+            .arrow__right {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: block;
+                    color: @blue;
+                    font-size: 25px;
+                    margin-top: 37px;
+                }
+            }
+
+            .arrow__down {
+                color: @blue;
+                font-size: 22px;
+                margin-top: 25px;
+                margin-bottom: 70px;
+
+                @media screen and (min-width: 768px) {
+                    display: none;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                justify-content: flex-end;
+            }
+        }
+
+        .about__team {
+
+            .team__team {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .team__member {
+                    .photo__team {
+                        margin-bottom: 121px;
+
+                        @media screen and (min-width: 768px) {
+                            margin-bottom: 0;
+                            margin-left: 116px;
+                        }
+                    }
+            
+                    .team__subtitle {
+                        background-color: @blue;
+                        border-radius: 10px;
+                        color: white;
+                        padding: 30px 55px 40px 30px;
+                        position: absolute;
+                        top: 308px;
+                        left: 5px;
+                        right: 5px;
+                                                
+                        .team__name {
+                            font-size: 22px;
+                            font-weight: 700;
+                        }
+
+                        .team__description {
+                            font-size: 14px;
+                            line-height: 25px;
+                            font-weight: 400;
+                        }
+
+                        .social__links {
+                            
+                            .social__link {
+                                color: white;
+                                font-size: 21px;
+                                margin-top: 19px;
+
+                                &:hover {
+                                    color: @orange;
+                                }
+                            }
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            padding: 35px 52px;
+                            left: 56px;
+                            
+                        }
+                    }
+                    
+                }
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    align-items: center;
+                }
+            }
+            .team__team {
+                .team__member2 {
+
+                    .photo__team2 {
+
+                        @media screen and (min-width: 768px) {
+                            margin-left: 36px;
+                        }
+                    }
+                    .team__subtitle2 {
+                        background-color: @blue;
+                        border-radius: 10px;
+                        color: white;
+                        padding: 30px 55px 40px 30px;
+                        position: absolute;
+                        top: 308px;
+                        left: 5px;
+                        right: 5px;
+                                                
+                        .team__name {
+                            font-size: 22px;
+                            font-weight: 700;
+                        }
+
+                        .team__description {
+                            font-size: 14px;
+                            line-height: 25px;
+                            font-weight: 400;
+                        }
+
+                        .social__links {
+                            
+                            .social__link {
+                                color: white;
+                                font-size: 21px;
+                                margin-top: 19px;
+
+                                &:hover {
+                                    color: @orange;
+                                }
+                            }
+                        }
+
+                        @media screen and (min-width: 768px) {
+                            padding: 35px 52px;
+                            left: 74px;
+                        }
+                    }                    
+                }                
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            background-position: top 0 left 137px;
+        }
+    }
+
+    .page__footer {
+        overflow: hidden;
+
+        .first__line {
+
+            .footer__logo {
+                display: flex;
+                justify-content: center;
+
+                @media screen and (min-width: 768px) {
+                    justify-content: flex-start;
+                }
+            }
+            
+            .arrow__up {
+                display: none;
+
+                @media screen and (min-width: 768px) {
+                    display: block;
+                    background-color: white;
+                    color: @blue;
+                    border-radius: 100%;
+                    padding: 20px 23px;
+                    font-size: 24px;
+                    margin-bottom: 55px;
+
+                    &:hover {
+                        background-color: @orange;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        .second__line {
+            padding-top: 48px;
+
+            .info__footer {
+                margin-bottom: 45px;
+
+                .contact__footer {
+                    color: white;
+                    font-family: @lexend;
+                    font-size: 16px;
+                    font-weight: 700;
+                    margin-left: -26px;
+
+                    &:hover {
+                        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.349);
+                        cursor: pointer;
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
+            @media screen and (min-width: 768px) {
+                padding-bottom: 48px;
+            }
+        }
+
+        .third__line {
+            border-bottom: 1px solid rgb(255, 255, 255);
+            padding-bottom: 35px;
+            margin-left: 33px;
+            margin-right: 33px;
+
+            .social__footer {
+                color: white;
+                font-size: 32px;
+
+                &:hover {
+                    color: @orange;
+                    cursor: pointer;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                padding: 48px 0;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+
+        .fourth__line {
+            
+
+            .copyright__customer {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                color: white;
+                font-family: @lexend;
+                font-size: 14px;
+                font-weight: 400;
+                text-align: center;
+                margin-bottom: 14px;
+                
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    text-align: left;
+                    margin-bottom: 0;
+                
+                }
+            }
+
+            .copyright__ldna {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 15px;
+
+                @media screen and (min-width: 768px) {
+                    flex-direction: row;
+                    justify-content: flex-end;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: url('../img/bg-footer.webp');
+        background-position: bottom -33px left 0; 
+    }
+}

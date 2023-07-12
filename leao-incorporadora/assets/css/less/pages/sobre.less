@@ -1,0 +1,75 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.page__about.is--about {
+    margin-top: 60px;
+    background-position: bottom 0 left 0;
+
+    .about__content {
+        background-image: url('../img/bg-page-about.jpg');
+        .second-paragraph {
+            color: white;
+            font: 300 15px/25px @roboto;
+            padding-bottom: 48px;
+            p {
+                padding-left: 32px;
+            }
+        }
+    }
+
+    .qualities {
+        padding-bottom: 50px;
+    }
+
+    @media screen and (min-width: 768px) {
+        margin-top: 100px;
+
+        .about__content {
+            background-image: url('../img/about-bg-desktop.webp');
+            background-size: 941px 740px;
+            .second-paragraph {
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-bottom: 45px;
+                p {
+                    padding-left: 0;
+                }
+            }
+        }
+
+        .qualities {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.page__values {
+    padding-top: 25px;
+    margin-bottom: 50px;
+    .value__card {
+        border: 1px solid rgb(248, 248, 248);
+        padding: 40px 50px;
+        width: 330px;
+        margin-bottom: 20px;
+
+        h3 {
+            margin-top: 19px;
+            margin-bottom: 21px;
+            color: rgb(10, 53, 48);
+            font: 700 26px @roboto;
+        }
+        p {
+            color: rgb(145, 145, 145);
+            font: 400 15px/30px @roboto;
+        }
+        @media screen and (min-width: 768px) {
+            padding: 61px 70px;
+            width: 370px;
+            margin-bottom: 0;
+        }
+    }
+    @media screen and (min-width: 768px) {
+        margin-top: 100px;
+    }
+}

@@ -1,0 +1,106 @@
+// out: false
+
+.modal.modal__service {
+    backdrop-filter: blur(4px);
+
+    .modal-dialog {
+        border-radius: 10px;
+        
+        .modal-content {
+            padding-top: 66px;
+            border-radius: 10px;
+
+            .button__close {
+                appearance: none;
+                border: none;
+                background-color: transparent;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 0;
+
+                &:hover {
+                    cursor: pointer;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(56%) sepia(77%) saturate(2060%) hue-rotate(344deg) brightness(99%) contrast(86%);
+                    }
+                }
+
+                &:focus-visible {
+                    outline: #EB7A2F auto 1px;
+                }
+            }
+
+            .heading {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 54px;
+                border-bottom: solid 1px #F1F1F1;
+                .icon {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 12px;
+                }
+    
+                h3 {
+                    color: #283B8B;
+                    padding-bottom: 23px;
+                    font: 700 26px @fontT;
+                    text-align: center;
+                }
+            }
+
+            h4 {
+                font: 700 18px @fontT;
+                text-transform: uppercase;
+                color: #283B8B;
+                padding-bottom: 10px;
+                padding-left: 30px;
+            }
+
+            p {
+                font: 400 16px/30px @fontT;
+                color: #818181;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            a {                
+                margin-top: 92px;
+                width: 100%;
+                font: 700 15px @fontT;
+                color: white;
+                padding-top: 22px;
+                padding-bottom: 22px;
+                
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+
+                border-radius: 0 0 10px 10px;
+                border: 0;
+                background-color: #EB7A2F;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                &:focus-visible {
+                    outline: #EB7A2F auto 1px;
+                }
+
+                &:hover {
+                    background-color: lighten(#EB7A2F, 5%);
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .modal-dialog {
+            min-width: 770px;
+        }
+    }
+}

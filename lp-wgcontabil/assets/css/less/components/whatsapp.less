@@ -1,0 +1,56 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.button__whatsapp--floating {
+    display: inline-block;
+    z-index: 175;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;    
+    padding: 14px;
+    background-color: #4caf50;
+    z-index: 2010;    
+    border-radius: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+    
+    .text {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            font: 700 15px @fontT;
+            color: white;
+            letter-spacing: 2.25px;
+            line-height: 15px;
+            text-transform: uppercase;
+
+            span {
+                font: 400 13px @fontT;
+                color: white;
+                letter-spacing: 2.34px;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        border-radius: 5px;
+        padding: 12px 19px;
+
+        img {
+            margin-right: 10px;
+        }
+
+        .text {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    &:hover {
+        color: white;
+        cursor: pointer;
+    }
+}

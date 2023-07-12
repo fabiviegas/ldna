@@ -1,0 +1,118 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.owl-carousel.owl-theme.services__carousel {
+
+    .card__service {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 42px;
+        border: 3px solid rgb(222, 183, 143);
+        border-radius: 5px;
+        width: 270px;
+        height: 270px;
+        margin-bottom: 30px;
+
+        img {
+            width: fit-content;
+            margin-bottom: 20px;
+        }
+
+        h4 {
+            font: 700 18px @fontU;
+            color: white;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        p {
+            font: 400 12px @fontU;
+            color: white;
+            line-height: 20px;
+        }
+
+    }
+
+    .owl-dots {
+        margin-top: 29px;
+    
+        .owl-dot {
+            span {
+                width: 10px;
+                height: 10px;
+                background-color: rgb(9, 45, 35);
+                border: 1px solid rgb(222, 183, 143);
+            }
+    
+            &.active {
+                span {
+                    background-color: rgb(222, 183, 143);
+                }
+            }
+        }
+    }
+}
+
+.owl-carousel.owl-theme.about__carousel {
+    img {
+        max-width: 500px;
+    }
+
+    .owl-nav {
+        display: flex;
+        justify-content: flex-end;
+        height: 44px;
+        width: 100%;
+        position: absolute;
+        bottom: 5px;
+        right: 0;
+
+        .owl-prev {
+            margin: 0;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(9, 45, 35);
+            background-color: rgb(222, 183, 143);
+            border-radius: 0;
+            border-top-left-radius: 5px;
+            
+        }
+        
+        .owl-next {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(9, 45, 35);
+            background-color: rgb(222, 183, 143);
+            border-radius: 0;
+            border-bottom-right-radius: 5px;
+            
+        }
+
+        .owl-prev,
+        .owl-next {
+            margin: -1px;
+                        
+            &:hover {
+                border: 1px solid #fff;
+                color: #fff;
+            }
+
+            span {
+                font-size: 30px;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            right: 21px;
+        }
+    }
+} 

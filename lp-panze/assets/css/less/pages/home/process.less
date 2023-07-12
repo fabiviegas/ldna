@@ -1,0 +1,198 @@
+// out: false
+
+.page__process {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    position: relative;
+    background-color: white;
+    background-image: url('../img/bg-panze.svg');
+    background-repeat: no-repeat;
+    background-position: top -5px right -80px;
+    background-size: 177px;
+
+    .detail__orange {
+        position: absolute;
+        top: -69px;
+        left: -21px;
+        z-index: 10;
+        width: 78px;    
+
+        @media screen and (min-width: 768px) {
+            width: fit-content;
+        }
+    }
+
+    .title {
+
+        h2 {
+            font: 400 32px @fontA;
+            color: #2d2d2d;
+            text-transform: uppercase;
+            text-align: center;
+
+            span {
+                color: #f97716;
+            }
+        }
+
+        h3 {
+            font: 400 16px @fontO;
+            color: #2d2d2d;
+            text-align: center;
+            margin-bottom: 60px;
+
+            span {
+                font-weight: 700;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            
+            h2 {
+                font-size: 60px;
+            }
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 43px;
+            }
+        }
+    }
+
+    .is--desktop {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+
+            .wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                img {
+                    margin-bottom: 17px;
+                }
+
+                .process__descriptions {
+                   display: flex;
+                   justify-content: space-between;
+                   width: 107%;
+
+                   .info {
+                     display: flex;
+                     flex-direction: column;
+                     text-align: center;
+
+                     h4 {
+                        font: 700 24px @fontO;
+                        color: #2d2d2d;
+                        margin-bottom: 14px;
+                     }
+
+                     p {
+                        font: 400 16px @fontO;
+                        color:#2d2d2d;
+                     }
+
+                     &.info--1 {
+                        max-width: 161px;
+                        margin-left: 12px;
+                     }
+
+                     &.info--2 {
+                        max-width: 168px;
+                        margin-left: 15px;
+                     }
+
+                     &.info--3 {
+                        max-width: 145px;
+                        margin-left: 20px;
+                     }
+
+                     &.info--4 {
+                        max-width: 237px;
+                     }
+                   }
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+        .wrapper {
+
+            .process__image {
+                padding-right: 0;
+            }
+
+            .process__descriptions {
+                padding-left: 0;
+               
+               .info {
+                 display: flex;
+                 flex-direction: column;
+
+                 h4 {
+                    font: 700 20px @fontO;
+                    color: #2d2d2d;
+                    margin-bottom: 14px;
+                 }
+
+                 p {
+                    font: 400 14px @fontO;
+                    color:#2d2d2d;
+                    max-width: 154px;
+                 }
+
+                 &.info--1 {
+
+                   h4 {
+                     width: 85px;
+                   }
+
+                   p {
+                     margin-bottom: 40px;
+                   }
+                 }
+
+                 &.info--2 {
+
+                    h4 {
+                        width: 147px;
+                    }
+                    p {
+                        margin-bottom: 60px;
+                    }
+                 }
+
+                 &.info--3 {
+
+                    h4 {
+                        width: 130px;
+                    }
+                    p {
+                        margin-bottom: 60px;
+                    }
+                 }
+
+                 &.info--4 {
+                    max-width: 237px;
+                 }
+               }
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;            
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 104px;
+        padding-bottom: 93px; 
+        background-position: top -26px right -154px;
+        background-size: auto;
+    }
+}

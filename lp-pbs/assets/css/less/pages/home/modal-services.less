@@ -1,0 +1,124 @@
+// out: false
+
+.modal.modal__service {
+    backdrop-filter: blur(4px);
+    z-index: 3001;
+
+    .modal-dialog {
+        // border-top-left-radius: 20px;
+        // border-bottom-right-radius: 20px;
+        
+        .modal-content {
+            padding-top: 60px;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-top-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 0;
+
+            .button__close {
+                appearance: none;
+                border: none;
+                background-color: transparent;
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                padding: 0;                
+
+                &:hover {
+                    cursor: pointer;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(54%) sepia(88%) saturate(365%) hue-rotate(98deg) brightness(89%) contrast(89%);
+                    }
+                }
+
+                &:focus-visible {
+                    outline: #28b36f auto 1px;
+                }
+
+                @media screen and (min-width: 768px) {
+                    top: 40px;
+                    right: 40px; 
+                }
+            }
+
+            .heading {
+                width: 80%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 35px;
+
+                .icon {
+                    display: block;
+                    margin-left: auto;
+                    margin-right: auto;
+                    margin-bottom: 29px;
+                }
+    
+                h3 {
+                    color: #153158;
+                    font: 600 28px @fontA;
+                    text-align: center;                    
+                }
+            }
+
+            p {
+                font: 300 14px/25px @fontA;
+                color: #091426;
+                text-align: center;
+            }
+
+            a {                
+                margin-bottom: 60px;
+                margin-top: 48px;
+                width: 100%;
+                font: 600 15px @fontA;
+                color: white;
+                padding: 16px;                               
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+                border: 0;
+                background-color: #28b36f;
+                text-transform: uppercase;
+                letter-spacing: 1.5px;
+                
+                img {
+                    width: 25px;
+
+                    @media screen and (min-width: 768px) {
+                        width: 14px;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    color: white;
+                    background-color: #153158;
+                }
+
+                @media screen and (min-width: 768px) {
+                    margin-bottom: 106px;
+                    margin-top: 65px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                padding-top: 138px;
+                padding-left: 95px;
+                padding-right: 95px;
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .modal-dialog {
+            min-width: 770px;
+        }
+    }
+}

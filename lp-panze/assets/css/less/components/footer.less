@@ -1,0 +1,256 @@
+// out: false
+
+.page__footer {
+    padding-top: 60px;
+    background-image: url('../img/bg-panze-3.svg'), url('../img/bg-texture.webp');
+    background-repeat: no-repeat, repeat;
+    background-position: top 14px right 150px, top 0 left 0; 
+
+    .cta {
+        padding-bottom: 60px;
+
+        h2 {
+            font: 400 32px @fontA;
+            color: white;
+            text-transform: uppercase;
+            line-height: 40px;
+            text-align: center;
+            max-width: 268px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 15px;
+
+            span {
+                color: #ea7d24;
+            }
+
+            @media screen and (min-width: 768px) {
+                font-size: 50px;
+                line-height: 65px;
+                max-width: 424px;
+                text-align: left;
+                margin-left: 0;
+                margin-bottom: 0;
+            }
+        }
+
+        .cta__button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .wrapper {
+                max-width: 255px; 
+
+                p {
+                    font: 400 14px @fontO;
+                    color: white;
+                    line-height: 18px;
+                    margin-bottom: 30px; 
+                    text-align: center;
+                }
+
+                .button {
+                    img {
+                        margin-right: 12px;
+                        width: 22px;
+                    }
+
+                    @media screen and (min-width: 768px) {
+                                        
+                        img {
+                            margin-right: 14px;
+                            width: fit-content;
+                        }
+                    }
+                }
+
+                @media screen and (min-width: 768px) {
+                    max-width: 463px; 
+
+                    p {
+                        font-size: 20px;
+                        line-height: normal;
+                        text-align: left;
+                    }
+                }
+            }
+        }
+    }
+
+    .is--desktop {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            background-color: #ea7d24;
+            border-top-left-radius: 34px;
+            border-top-right-radius: 34px;
+            padding: 80px 100px 30px 100px;
+
+            .contact {
+
+                h2 {
+                   font: 700 16px @fontR;
+                   color: white;
+                   margin-bottom: 20px; 
+                }
+
+                a {
+                   font: 400 14px @fontM; 
+                   color: white;
+                   margin-bottom: 14px;
+
+                   &:hover {
+                     text-decoration: underline;
+                   }
+                }
+            }
+
+            .logo__footer {
+                display: flex;
+                justify-content: center;
+
+                a {
+                    img {
+                        width: fit-content;
+                    }
+                }
+            }
+
+            .social {
+                display: flex;
+                justify-content: space-between;
+                width: 131px;
+                margin-top: -30px;
+
+                a {
+                    border: 1px solid white;
+                    border-radius: 5px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 34px;
+                    height: 33px;
+                    transition: all linear .2s;
+
+                    &:hover {
+                        background-color: white;
+                    }
+
+                }
+            }
+
+            .copyrights {
+                margin-top: 30px;
+                border-top: 1px solid white;
+                padding-top: 36px;
+
+                .customer {
+                    font: 400 14px @fontM;
+                    color: white;
+                }
+
+                .logo__ldna {
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+        display: flex;
+        margin-right: 15px;
+        margin-left: 15px;
+        background-color: #ea7d24;
+        border-top-left-radius: 34px;
+        border-top-right-radius: 34px;
+        padding: 42px 35px 35px 35px;
+
+        .logo__footer {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 36px;
+
+            a {
+                img {
+                    width: 142px;
+                }
+            }
+        }
+
+        .contact {
+            text-align: center;
+
+            h2 {
+                font: 700 14px @fontR;
+                color: white;
+                margin-bottom: 17px; 
+            }
+
+            a {
+                font: 400 14px @fontM; 
+                color: white;
+                margin-bottom: 10px;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }        
+
+        .social {
+            display: flex;
+            justify-content: space-between;
+            width: 131px;
+            margin-top: 30px;
+
+            a {
+                border: 1px solid white;
+                border-radius: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 34px;
+                height: 33px;
+                transition: all linear .2s;
+
+                &:hover {
+                    background-color: white;
+                }
+
+            }
+        }
+
+        .copyrights {
+            margin-top: 40px;
+            border-top: 1px solid white;
+            padding-top: 26px;
+
+            .customer {
+                font: 400 14px @fontM;
+                color: white;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+
+            .logo__ldna {
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+            
+        }
+    }
+
+    
+    
+    @media screen and (min-width: 768px) {
+        padding-top: 100px;
+        background-position: top 103px right 50px, top 0 left 0;
+    }
+}

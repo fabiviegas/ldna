@@ -1,0 +1,51 @@
+// out: false
+
+.page__cta {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    position: relative;
+    background-color: #283b8b;
+
+    .bg__detail {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: block;
+            position: absolute;
+            bottom: -28px;
+            left: 86px; 
+            height: 86px;
+        }
+    }
+
+    .text {
+        h2 {
+            font: 700 26px @fontT;
+            color: white;
+            line-height: 40px;
+            text-align: center;
+            margin-bottom: 18px;
+            width: 286px;
+            margin-left: auto;
+            margin-right: auto;
+
+            @media screen and (min-width: 768px) {
+                text-align: left;
+                margin-bottom: 0;
+                width: 370px; 
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+
+        @media screen and (min-width: 768px) {
+            text-align: left;
+            justify-content: flex-end;
+        }
+    }
+}

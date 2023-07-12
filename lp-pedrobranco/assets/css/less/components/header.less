@@ -1,0 +1,130 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.page__header {
+    position: absolute;
+    width: 100%;
+    padding-top: 28px;
+    z-index: 3000;
+
+    .logo__header {
+        margin-left: 15px;
+        width: 155px;
+
+        @media screen and (min-width: 768px) {
+            margin-left: 0;
+            width: fit-content;
+        }
+    }
+
+    .is--desktop {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .menu__desk {
+                display: flex;
+                align-items: center;
+                width: 202px;
+                justify-content: space-between;
+
+                .menu__link {
+                    font: 400 15px @fontU;
+                    color: white;
+
+                    .--transition();
+                    &:hover {
+                        color: rgb(222, 183, 143);
+                    }
+                }
+            }
+        }
+    }
+
+    .is--mobile {
+
+        .navbar__hamburguer {
+            margin-right: 15px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar__overlay {
+            background-color: rgb(9, 45, 35);
+            z-index: 3001;
+            display: none;
+        
+            &.open {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                width: 100%;
+                position: fixed;
+                                
+                top: 0;
+                right: 0;
+                
+                overflow: hidden !important;
+                transition: all linear 0.5s;
+        
+                .overlay__content {
+                    
+                    overflow-y: auto !important;
+                    height: 90%;
+
+                    .overlay__header {
+                        margin: 30px 30px 106px 30px;
+
+                        .overlay__logo {
+                            width: 155px; 
+                        }
+                        
+                        .overlay__close {
+                            
+                            font-size: 30px;
+                            color: white;
+                        }
+                    }
+
+                    .overlay__menu {
+                        margin: 0;
+                        
+                        .overlay__links {
+                            a {
+                                font: 400 15px @fontU;
+                                color: white;
+                                text-decoration: none;
+                                margin-bottom: 19px;
+                            }
+                        }
+                        
+                        .overlay__button {
+                            margin-top: 40px;
+                            margin-bottom: 76px;
+                        }
+
+                        .overlay__social {
+                            width: 130px;
+
+                            a {
+                                text-decoration: none;
+                                font-size: 23px;
+                                color: rgb(222, 183, 143);
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+
+        @media screen and (min-width: 768px) {
+            display: none;
+        }
+    }
+
+}

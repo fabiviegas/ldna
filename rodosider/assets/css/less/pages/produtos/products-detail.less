@@ -1,0 +1,107 @@
+//out: false
+
+.products__detail {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: white;
+
+    .content {
+        margin-bottom: 40px;
+
+        .product__photo {
+            width: fit-content;
+            position: relative; 
+            margin-left: auto;
+            margin-right: auto; 
+            margin-bottom: 30px;      
+            
+            img {
+                width: fit-content;
+                border: 1px solid #d9d9d9;
+                border-radius: 10px;
+            }
+        }
+
+        .product__description {
+
+            h2 {
+                font: 700 28px @fontM;
+                color: #191919;
+                line-height: 40px;
+                margin-top: 12px;
+                margin-bottom: 20px;
+                max-width: 452px;
+            }
+
+            p {
+                font: 400 14px @fontM;
+                color: #6b6b73;
+                line-height: 25px;
+                margin-bottom: 40px; 
+            }
+        }
+    }
+
+    .tec__description {
+        border-radius: 10px;
+        border: 1px solid #d9d9d9;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding: 30px 15px;
+
+        h2 {
+            display: flex;
+            align-items: center;
+            font: 700 18px @fontM;
+            color: #191919;
+            margin-bottom: 33px; 
+
+            img {
+                width: fit-content;
+                margin-right: 10px;
+            }
+        }
+
+        p {
+           font: 400 14px @fontM;
+           color: #191919; 
+           line-height: 25px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 133px;
+        padding-bottom: 75px;
+
+        .content {
+            margin-bottom: 70px;
+
+            .product__photo { 
+                width: 370px;
+                margin-left: 0;
+                margin-bottom: 0;
+
+                img {
+                    width: 370px;
+                }
+            }
+
+            .product__description {
+                position: relative;
+                padding-left: 45px;
+
+                .button {
+                    position: absolute;
+                    bottom: 0;
+                    left: 45px;
+                }
+            }
+        }
+
+        .tec__description {
+            margin-right: -15px;
+            margin-left: -15px;
+            padding: 56px 70px 77px 70px;
+        }
+    }
+}

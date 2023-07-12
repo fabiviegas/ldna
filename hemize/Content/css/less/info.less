@@ -1,0 +1,42 @@
+// out: false 
+// Easy Less compiler extension for VS Code.
+@import "__pallete.less";           // ? pallete importation
+
+// ! Quick Pallete
+@titleFont: 700 36px @roboto;
+@titleColor: @darkBlue;
+@textFont: 400 15px/25px @roboto;
+@textColor: @prussianBlue;
+
+// ? Pages '404.html' and 'contato-sucesso.html'
+
+.page__info {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        padding-top: 30px;
+        padding-bottom: 10px;
+        font: @titleFont;
+        color: @titleColor;
+    }
+
+    p {
+        margin-bottom: 30px;
+        text-align: center;
+        font: @textFont;
+        color: @textColor;
+    }
+
+                                    // ? RESPONSIVE
+    @media screen and (min-width: 768px) {
+        margin-top: 100px;
+        margin-bottom: 95px;
+    }
+}
+
+/* ****************************************** */

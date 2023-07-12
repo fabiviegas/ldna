@@ -1,0 +1,42 @@
+// out: false
+
+.page__cta {    
+    background-image: url('../img/bg-cta-mobile.webp');
+    background-repeat: no-repeat; 
+    background-position: bottom 0 left -1400px;
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+       
+        h2 {
+            padding-top: 92px;
+            font: 800 36px @fontR;
+            text-align: right;            
+            color: white;
+            margin-bottom: 18px;
+            margin-left: 15px;                
+        }
+
+        a {
+           margin-bottom: 440px;  
+        }
+    }        
+    
+
+    @media screen and (min-width: 768px) {        
+        background-image: url('../img/bg-cta.webp');
+        background-position: center top 0;
+
+        .content {
+            h2 {
+                padding-top: 83px;
+            }
+
+            a {
+                margin-bottom: 125px;
+            }
+        }
+    }
+}

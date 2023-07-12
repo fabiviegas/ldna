@@ -1,0 +1,235 @@
+// out: false
+
+@import "__pallete.less"; 
+
+.page__products {
+    .container {
+
+        .products__menu {
+            font-family: @lato;
+            text-transform: uppercase;
+            text-align: center;
+
+            .categories {
+                color: rgb(0, 0, 0);
+                font-size: 18px;
+                font-weight: 900;
+                letter-spacing: 1.8px;
+                padding-bottom: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 20px;
+                    letter-spacing: 2px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            .cat__selected {
+                color: rgb(0, 0, 0);
+                font-size: 16px;
+                font-weight: 900;
+                padding-bottom: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            .cat__unselected {
+                color: rgb(135, 135, 135);
+                font-size: 16px;
+                font-weight: 700;
+                padding-bottom: 10px;
+
+                @media screen and (min-width: 768px) {
+                    font-size: 18px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            @media screen and (min-width: 768px) {
+                text-align: left;
+            }
+        }
+
+        .products__list {
+
+            a {
+
+                position: relative;
+                
+                .product {
+    
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    z-index: 1;
+                    margin-bottom: 20px;
+    
+                    .tag__release {
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        max-width: 270px;
+                        background-color: rgba(114, 97, 89, 0.9);
+                        color: rgb(255, 255, 255);
+                        font-family: @lato;
+                        font-size: 16px;
+                        font-weight: 900;
+                        text-align: center;
+                        letter-spacing: 1.6px;
+                        text-transform: uppercase;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                    }
+    
+                    .product__subtitle {
+    
+                        margin-top: -50px;
+                        padding-top: 30px;
+                        padding-bottom: 30px;
+                        width: 190px;
+                        text-align: center;
+    
+                        background-color: rgb(255, 255, 255);
+                        font-family: @lato;
+                        font-size: 20px;
+                        font-weight: 900;
+                        letter-spacing: 2px;
+                        color: rgb(0, 0, 0);
+                        text-transform: uppercase;
+
+                        @media screen and (min-width: 768px) {
+                            padding-top: 15px;
+                            padding-bottom: 15px;
+                            width: 130px; 
+                            font-size: 16px;
+                            letter-spacing: 1.6px;
+                        }
+
+                        @media screen and (min-width: 992px) {
+                            padding-top: 30px;
+                            padding-bottom: 30px;
+                            width: 190px;
+                            font-size: 20px;
+                            letter-spacing: 2px;
+                        }
+                    }
+                }
+                
+                .product__overlay {
+                    display: none;                    
+                }
+    
+                &:hover {
+    
+                    .product {
+    
+                        .photo__products {
+                            filter: brightness(60%);
+                        }
+    
+                        .product__subtitle {
+                            z-index: 3;
+                        }
+                    }
+    
+                    .product__overlay {
+                        display: block;
+                        position: absolute;
+                        z-index: 2;
+                        width: 100%;
+                        bottom: 50%;
+                        left: calc(50% - 14px);
+    
+                        .plus__icon {
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page__detail {
+    font-family: @lato;
+
+    .category {
+        color: rgb(206, 206, 206);
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-top: 18px;
+        margin-bottom: 10px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 18px;
+            margin-top: 0;
+        }
+    }
+
+    .detail__title {
+        color: rgb(0, 0, 0);
+        font-size: 28px;
+        letter-spacing: 2.8px;
+        text-transform: uppercase;
+        font-weight: 900;
+
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+            letter-spacing: 3.6px;
+        }
+    }
+
+    .detail__description {
+        color: rgb(0, 0, 0);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 30px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.product__infos {
+    background-color: rgb(245, 245, 245);
+    .container {
+        font-family: @lato;
+        color: rgb(0, 0, 0);
+        
+        .info__title,
+        .info__video {
+            font-size: 28px;
+            font-weight: 900;
+            letter-spacing: 2.8px;
+            text-transform: uppercase;
+            margin-bottom: 31px;
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                font-size: 36px;
+                letter-spacing: 3.6px;
+                text-align: left;
+            }
+        }
+
+        .info__description {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 30px;
+            margin-bottom: 76px;
+            text-align: center;
+
+            @media screen and (min-width: 768px) {
+                font-size: 16px;
+                text-align: center;
+
+            }
+        }
+
+    }
+}

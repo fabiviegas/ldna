@@ -1,0 +1,127 @@
+// out: false
+
+.page__about {
+    padding-top: 60px;
+    padding-bottom: 155px;
+    background-color: white;
+    overflow: hidden;
+     
+    .wrapper {
+        overflow: hidden;
+        position: relative;
+
+        .about__photo--desktop {
+            display: none;
+        }
+        
+        .about__content { 
+            padding-bottom: 500px;   
+
+            .title__line {
+                width: fit-content;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                font: 800 36px @fontR;
+                color: #011529;
+                margin-bottom: 18px;
+
+                span {
+                    color: #008ecb;
+                }
+            }
+
+            .text {
+                font: 400 18px @fontR;
+                color: #545454; 
+                line-height: 30px;
+                margin-bottom: 39px;
+            }
+        }
+
+        .about__photo--mobile {
+            position: absolute;
+            bottom: 0;
+            left: -140px;
+        }
+    }
+
+    .numbers {
+        position: relative;
+        
+        .numbers__wrapper {
+            display: flex;
+            gap: 20px;
+            justify-content: flex-start;
+            z-index: 15;
+            position: absolute;
+            top: -103px;
+            left: 119px;
+            width: 85%;
+
+            .info {
+                max-width: 112px;
+
+                .number {
+                    font: 800 36px @fontR;
+                    color: white;                    
+                }
+                .text {
+                    font: 400 14px @fontR;
+                    color: white;
+                    letter-spacing: 1.64px;
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+    
+   
+    @media screen and (min-width: 768px) {
+        padding-top: 123px;
+        padding-bottom: 158px; 
+        overflow: hidden;
+        
+        .wrapper {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            overflow: visible;
+            flex-wrap: wrap-reverse;
+
+            .about__photo--desktop {
+                display: block;
+                width: 428px;                
+            }
+
+            .about__content {
+                width: 396px;
+                padding-bottom: 0;
+
+                .title__line {
+                    margin-top: 33px;
+                }
+
+                .title {
+                    font-size: 46px;
+                }
+            } 
+            
+            .about__photo--mobile {
+                display: none;
+            }
+        }
+
+
+
+        .numbers {
+            .numbers__wrapper {
+                justify-content: flex-end;
+                gap: 67px;
+                top: -140px;
+                left: 44px;
+            }
+        }
+    }
+}

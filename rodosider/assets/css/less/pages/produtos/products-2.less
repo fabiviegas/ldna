@@ -1,0 +1,102 @@
+//out: false
+
+.products__menu {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: white;
+    border-bottom: 1px solid #d9d9d9;
+
+    .products__nav {
+        margin-bottom: 20px;
+
+        h2 {
+           font: 700 22px @fontM;
+           color: #191919;
+           margin-bottom: 30px;
+           text-align: center; 
+        }
+
+        .category {
+            font: 400 18px @fontM;
+            color: #191919;
+            margin-bottom: 20px;
+            text-align: center;
+
+            &.active {
+                font-weight: 700;
+            }
+
+            transition: all linear .15s;
+            &:hover {
+                text-decoration: underline;
+                text-underline-offset: 4px;
+                color: #c00415;
+            }
+        }
+    }
+
+    .products__cards {
+
+        .card__product {
+            position: relative;
+            display: flex;
+            flex-direction: column;                
+            width: 277px;
+            height: 424px;
+            border-radius: 10px;
+            background-color: white;               
+            padding: 5px;
+            box-shadow: 0 0 26px rgba(0, 0, 0, 0.09);
+            margin-bottom: 20px;
+
+            .card__photo {
+                margin-bottom: 20px;
+            }           
+
+            h3 {
+                font: 900 18px @fontL;
+                color: #191919;
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+
+            .card__dots {
+                width: fit-content;
+                position: absolute;
+                bottom: 15px;
+                right: 15px;
+            }
+
+            transition: all linear .15s;
+            &:hover {
+                background-color: #191919;
+                                    
+                .card__dots {
+                    filter: brightness(0) saturate(100%) invert(10%) sepia(84%) saturate(6421%) hue-rotate(350deg) brightness(84%) contrast(102%);
+                }
+
+                h3 {
+                    color: white;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-top: 60px;
+        padding-bottom: 100px;
+        
+        .products__nav {
+            margin-bottom: 0;
+
+            h2 {
+                margin-top: 39px;
+                text-align: left;
+            }
+
+            .category {
+                text-align: left;
+            }
+        }
+    }
+}

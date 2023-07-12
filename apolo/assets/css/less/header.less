@@ -1,0 +1,250 @@
+// out: false
+
+@import "__pallete.less"; 
+
+.page__header {
+
+    position: absolute;
+    width: 100%;
+    z-index: 2000;
+
+    .is--mobile {
+
+        .container {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+
+            .logo__header {
+                width: 150px;
+            }
+
+            .header--language {
+                order: 4;
+
+                .language__current {
+                    display: flex;
+                    img {
+                        width: fit-content;
+                    }
+                    gap: 3px;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font: 400 15px @lato;
+                }
+    
+                #js-language-alternate {
+                    display: none;
+                    a {
+                        color: white;
+                        font: 400 15px @lato;
+                    }
+                }
+    
+                &:hover {
+                    #js-language-current {
+                        border-bottom: 1px solid black;
+                        transition: all 0.5s ease-in-out;
+                    }
+
+                    .util--transform {
+                        transform: rotateZ(-90deg);
+                        transition: 0.2s all ease-in;
+                    }
+                }
+            }
+            
+            .navbar__hamburguer {
+                img {
+                    width: 31px;
+                }
+            }
+
+            .navbar__overlay {
+                z-index: 3000;
+                display: none;
+            
+                &.open {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 100%;
+                    position: fixed;
+                                    
+                    top: 0;
+                    right: 0;
+                    background-color: @umber;
+                    overflow: hidden !important;
+                    transition: all linear 0.5s;
+            
+                    .overlay__content {
+                        
+                        overflow-y: auto !important;
+                        height: 100%;
+                        
+                        .overlay__close {
+                            float: right;
+                            
+                            i {
+                                font-size: 30px;
+                                color: rgb(255, 255, 255);
+                            }
+                        }
+
+                        .overlay__menu {
+                            margin: 0;
+                            
+                            .overlay__links {
+                                font-family: @lato;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                font-size: 16px;
+                                letter-spacing: 2px;
+
+                                a {
+                                    color: rgb(255, 255, 255);
+                                }
+                            }
+                            
+                        }
+                    }
+                } 
+            }
+        } 
+    
+        @media screen and (min-width: 990px) { 
+            display: none;
+        }
+    }
+
+    .is--desktop {
+        display: none;
+        
+
+        @media screen and (min-width: 990px) { 
+            display: block;
+            z-index: 200;
+
+            .header--language {
+                order: 4;
+
+                .language__current {
+                    display: flex;
+                    img {
+                        width: fit-content;
+                    }
+                    gap: 3px;
+                    justify-content: center;
+                    align-items: center;
+                    color: white;
+                    font: 400 15px @lato;
+                }
+    
+                #js-language-alternate-d {
+                    display: none;
+                    a {
+                        color: white;
+                        font: 400 15px @lato;
+                        padding-left: 8px;
+                    }
+                }
+    
+                &:hover {
+                    #js-language-current-d {
+                        border-bottom: 1px solid black;
+                        transition: all 0.5s ease-in-out;
+                    }
+
+                    .util--transform {
+                        transform: rotateZ(-90deg);
+                        transition: 0.2s all ease-in;
+                    }
+
+                    cursor: pointer;
+                }
+            }
+
+            .navbar__hamburguer__desk {
+                img {
+                    width: 16px;
+                }
+
+                .navbar__title {
+                    color: white;
+                    font-family: @lato;
+                    font-size: 15px;
+                    font-weight: 700;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+            
+
+            .navbar__overlay__desk {
+                z-index: 3000;
+                display: none;
+            
+                &.open {
+                    display: flex;
+                    flex-direction: column;
+                    height: 100%;
+                    width: 30%;
+                    position: fixed;
+                                    
+                    top: 0;
+                    right: 0;
+                    background-color: @umber;
+                    overflow: hidden !important;
+                    transition: all linear 0.5s;
+            
+                    .overlay__content {
+                        
+                        overflow-y: auto !important;
+                        height: 100%;
+            
+                        
+                        .overlay__close__desk {
+                            float: right;
+                            
+                            i {
+                                font-size: 30px;
+                                color: rgb(255, 255, 255);                                
+                            }
+                        }
+
+                        .overlay__menu {
+                            margin: 0;
+                            
+                            .overlay__links {
+                                font-family: @lato;
+                                font-weight: 700;
+                                text-transform: uppercase;
+                                font-size: 18px;
+                                letter-spacing: 2px;
+
+                                a {
+                                    color: rgb(255, 255, 255);
+                                    text-transform: uppercase;
+                                    font-size: 16px;
+                                    
+                                }
+                            }
+                            
+                        }
+                    }
+                } 
+            }
+        }
+    }
+}

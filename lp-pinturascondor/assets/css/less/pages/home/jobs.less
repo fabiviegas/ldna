@@ -1,0 +1,128 @@
+//out: false
+
+.page__jobs {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    .title {
+        margin-bottom: 40px;
+
+        h2 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font: 800 46px @fontR;
+            color: #1c1c1c;
+            text-align: center;
+
+            img {
+                width: fit-content;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    .carousel {
+        padding-left: 0;
+        padding-right: 0;
+
+        .owl-carousel.owl-theme.jobs__carousel {
+            .card__job {
+                position: relative;
+                width: 278px;
+                height: 361px;
+                border-radius: 30px;
+                overflow: hidden;
+
+                .photo__job {
+                    position: absolute;
+                    z-index: 1;
+                    top: 0;
+                    left: 0;
+                    width: 278px;
+                    height: 361px;
+                    border-radius: 30px;
+                    transition: all linear .15s;
+                }
+
+                .overlay__job {
+                    position: absolute;
+                    z-index: 2;
+                    top: 0;
+                    left: 0;
+                }
+
+                .icon__job {
+                    position: absolute;
+                    z-index: 3;
+                    top: 159px;
+                    left: calc(50% - 25px);
+                    width: 48px;
+                }
+
+                h3 {
+                    position: absolute;
+                    z-index: 3;
+                    font: 800 18px @fontR;
+                    color: white;
+                    text-align: center;
+                    bottom: 25px;
+                    left: 20px;
+                    max-width: 240px;
+                }
+
+                &:hover {
+                    cursor: pointer;
+
+                    .photo__job {
+                       transform: scale(1.1); 
+                    }
+
+                    .icon__job {
+                        filter: brightness(0) saturate(100%) invert(48%) sepia(77%) saturate(601%) hue-rotate(333deg) brightness(94%) contrast(92%); 
+                    }
+                }
+            }
+
+            .owl-dots {
+                margin-top: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+
+                .owl-dot {
+                    height: 10px !important;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        margin: 0;
+                        width: 6px;
+                        height: 6px;
+                        background-color: #194f70;
+                        transition: all linear .25s;
+                    }
+                    &.active {
+                        span {
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+
+                &.disabled {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 184px;
+
+        .carousel {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    }
+}

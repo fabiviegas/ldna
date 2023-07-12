@@ -1,0 +1,58 @@
+// out: false
+
+@import "__pallete.less"; 
+
+.breadcrumb {
+
+    background-image: url('../img/bg-breadcrumb.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .breadcrumb__title {
+        font-family: @lato;
+        color: white;
+        font-size: 32px;
+        font-weight: 900;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
+        margin-bottom: 20px;
+        padding-top: 158px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 46px;
+            letter-spacing: 4.6px;
+            padding-top: 222px;
+            margin-bottom: 40px;
+        }
+    }
+
+    .breadcrumb__nav {
+        font-family: @lato;
+        font-size: 12px;
+        color: white;
+        text-transform: uppercase;
+
+        a {
+            color: white;
+        }
+
+        p {
+            margin-bottom: 0;
+        }
+
+        .current__page {
+            font-weight: 700;
+        }
+
+        @media screen and (min-width: 768px) {
+            font-size: 15px;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: url('../img/bg-bread-detail.svg'), url('../img/bg-breadcrumb.webp');
+        background-repeat: no-repeat;
+        background-position: bottom 0 right 0;
+        background-size: 197px, cover;
+    }
+}

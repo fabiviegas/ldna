@@ -1,0 +1,61 @@
+// out: false
+
+@import "../base/_pallete.less";
+
+.breadcrumb {
+    background-image: linear-gradient(rgb(255, 255, 255)35%, rgb(56, 58, 54)30%);
+    padding-top: 95px;
+
+    .breadcrumb__line {
+
+        padding: 40px 0;
+
+        .page__title {
+            font: 700 38px @maven;
+            color: white;
+            margin-bottom: 13px;
+
+            @media screen and (min-width: 768px) {
+                font: 700 46px @maven;
+                margin-bottom: 0;
+            }
+        }
+
+        .pages {
+
+            justify-content: flex-start;
+    
+            .previous__page {
+                font: 500 16px @maven;
+                color: white;
+                margin-right: 10px;
+                text-transform: uppercase;
+            }
+    
+            .icon__arrow {
+                color: @lemonGreen;
+                font-size: 12px;
+                margin-right: 10px;
+            }
+    
+            .current__page {
+                font: 700 16px @maven;
+                color: @lemonGreen;
+                text-transform: uppercase;
+            }
+    
+            @media screen and (min-width: 768px) {
+                justify-content: flex-end;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            padding: 95px 0;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        background-image: linear-gradient(rgb(255, 255, 255)30%, rgb(56, 58, 54)30%);
+        padding-top: 125px;
+    }
+}
