@@ -1,0 +1,98 @@
+// out: false
+
+@import "../less/__pallete.less";
+
+@space_cadet: rgb(25, 29, 54);
+@lime_green: rgb(42, 204, 30);
+@oxford_blue: rgb(19, 23, 45);
+
+.services {
+
+    #modalPrev {
+        background-image: url('../../Content/img/bg-prev.svg');
+        background-repeat: no-repeat;
+        background-position: bottom 30px right 30px;
+        background-size: 250px;
+    }
+
+    #modalCiv {
+        background-image: url('../../Content/img/bg-civ.svg');
+        background-repeat: no-repeat;
+        background-position: bottom 30px right 30px;
+        background-size: 250px;
+    }
+
+    #modalFam {
+        background-image: url('../../Content/img/bg-fam.svg');
+        background-repeat: no-repeat;
+        background-position: bottom 30px right 30px;
+        background-size: 400px;
+    }
+
+    #modalTrab {
+        background-image: url('../../Content/img/bg-trab.svg');
+        background-repeat: no-repeat;
+        background-position: bottom 30px right 30px;
+        background-size: 350px;
+    }
+     
+    .modal-header {
+        padding-bottom: 0;
+    }
+    .modal__custom {
+        border: none;
+        font-family: 'Catamaran', sans-serif;
+        justify-content: center;
+
+        .title__icon {
+            margin-left: 30px;
+            .icon__modal {
+                padding-top: 6rem;
+                padding-bottom: 20px;
+            }
+
+            .custom__title {
+                font-size: 22px;
+                font-weight: 800;
+            }
+        }
+        
+        .custom__text {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 20px;
+        }
+    }
+
+    .button__whatsapp {
+        border-radius: 5px;
+        padding: 7px 12px;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        background-color: @lime_green;
+        color: @oxford_blue;
+    
+        i {
+            font-size: 36px;
+            color: @space_cadet;
+            padding-right: 7px;
+        }
+
+        .whats__modal {
+            display: inline-block;
+
+            span {
+                display: block;
+                color: @oxford_blue;
+                font: 500 11px SANS-SERIF;
+                text-transform: uppercase;
+                letter-spacing: -0.18px;
+        
+                &.sub {
+                    font: 900 18px SANS-SERIF;
+                    letter-spacing: 1.1px;
+                }
+            }
+        }
+    }
+}

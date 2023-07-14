@@ -1,0 +1,355 @@
+// out: false
+
+@import "__pallete.less";
+
+.banner {
+
+    background-image: linear-gradient(180deg, rgba(7, 7, 7, 0) 65%, #070707 95%), 
+        url('../img/bg-banner-g.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: @white;
+
+    h1 {
+        
+        padding-top: 155px;
+        font-size: 36px;
+        font-weight: 700;
+        text-transform: uppercase;
+        padding-bottom: 10px;
+        margin: 0;
+
+        @media screen and (min-width: 768px) {
+            padding-top: 291px;
+            font-size: 46px;
+        }
+
+        span {
+            display: block;
+            color: @gold;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 7.2px;
+            padding-bottom: 10px;
+                
+        }
+    }
+
+    h2 {
+        font-size: 26px;
+        font-weight: 600;
+        line-height: 35px;
+        padding: 0 15px 15px 15px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 36px;
+        }
+    }
+
+    p {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+        padding: 0 30px 255px 30px;
+        margin: 0;
+
+        @media screen and (min-width: 768px) {
+            padding-bottom: 80px;
+        }
+    }
+
+    .mouse__desk {
+        
+        .mouse__icon {
+            display: none;
+            
+            @media screen and (min-width: 768px) {
+                display: block;
+                padding-bottom: 244px;
+            } 
+        }
+    }
+}
+
+.services {
+
+    background-color: @black;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) {
+        padding-bottom: 100px;
+    }
+
+    h2 {
+        color: @gold;
+        font-size: 18px;
+        font-weight: 300px;
+        letter-spacing: 7.2px;
+        text-transform: uppercase;
+        padding: 0 30px 20px 30px;
+
+        @media screen and (min-width: 768px) {
+            padding-bottom: 42px;
+        }
+
+        span {
+            display: block;
+            color: @white;
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 40px;
+            margin-top: 30px;
+            letter-spacing: normal;
+            text-transform: none;
+
+            @media screen and (min-width: 768px) {
+                font-size: 46px;
+            }
+        }
+    }
+
+    
+
+    .card {
+
+        height: 270px;
+    
+        .card-body {
+            padding: 30px 20px 30px 20px;
+        
+            img {
+                padding-bottom: 19px;
+            }
+
+            .card-title {
+                font-size: 22px;
+                font-weight: 700;
+                margin-bottom: 5px;
+            }
+
+            .card-text {
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 20px;
+            }
+        }
+
+        &:hover {
+
+            background-color: @gold;
+            color: @white;
+            cursor: pointer;
+
+            img {
+                filter: brightness(300%);
+            }
+        }
+    }
+}
+
+.about {
+
+    .about__content {
+        h2 {
+            color: @gold;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 7.2px;
+            text-transform: uppercase;
+            padding-bottom: 30px;
+
+            .title__content {
+                display: block;
+                color: @black;
+                font-size: 36px;
+                font-weight: 700;
+                letter-spacing: normal;
+                text-transform: none;
+                line-height: 40px;
+                padding-top: 30px;
+            }
+        }
+        
+        p {
+            color: @lightBlack;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 25px;
+            padding-bottom: 30px;
+        }
+
+        .infos {
+            color: @gold;
+            padding-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+
+                .info__highlight {
+
+                    padding-top: 20px;
+                
+                    .highlight {
+                        font-size: 46px;
+                        font-weight: 900;
+                        line-height: 20px;
+                    }
+
+                    .description {
+                        display: block;
+                        font-size: 26px;
+                        font-weight: 400;
+                        letter-spacing: 2.52px;
+                    }
+                }
+        }
+
+        .btn {
+            border-radius: 0;
+            background-image: linear-gradient(105deg, rgb(222, 170, 116) 0%, rgb(185, 134, 80) 100%);
+            color: @white;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 20px 44px;
+            text-transform: uppercase;
+            margin-bottom: 40px;
+            
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+
+        .about__content {
+
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            padding: 0;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+           
+
+            .title__content {
+                font-size: 46px;
+                line-height: 55px;
+            }
+
+            .infos {
+                .info__content {
+                    flex-direction: row;
+                }
+                
+            }
+
+            .btn {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.team {
+    background-color: @black;
+
+    .container {
+        h2 {
+            color: @gold;
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 7.2px;
+            text-transform: uppercase;
+            padding-bottom: 30px;
+
+            .title__about {
+                display: block;
+                color: @white;
+                font-size: 36px;
+                font-weight: 800;
+                letter-spacing: normal;
+                text-transform: none;
+                line-height: 40px;
+                padding-top: 10px; 
+
+                @media screen and (min-width: 768px) {
+                    font-size: 46px;
+                }
+            }
+        }
+
+        .team__carousel {
+            .card__team {
+
+                max-width: 369px;
+
+                .photo {
+                    padding: 7px 7px 0 7px;
+                }
+                .card-title {
+                    color: @black;
+                    font-size: 18px;
+                    font-weight: 800;
+                    
+                }
+                .card-subtitle {
+                    color: @gold;
+                    font-size: 12px;
+                    font-weight: 600;
+                    letter-spacing: 1.2px;
+                    text-transform: uppercase;
+                    padding-bottom: 7px;
+                }
+                .card-text {
+                    color: @lightBlack;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+                .card-link {
+                    color: @black;
+                    font-size: 12px;
+                    font-weight: 500;
+
+                    .icon {
+                        padding-right: 10px;
+                    }
+                }
+            }
+        
+        }
+ 
+    }
+    @media screen and (min-width: 768px) {
+        padding-top: 49px;
+        padding-bottom: 40px;
+    }
+}
+
+.cta {
+    background-image: linear-gradient(103deg, rgb(222, 170, 116) 0%, rgb(185, 134, 80) 100%);
+    .container {
+        .title__cta {
+            color: @black;
+            font-size: 36px;
+            font-weight: 800;
+            line-height: 40px;
+            padding-bottom: 20px;
+        }
+        .btn2 {
+            display: inline-block;
+            background-color: @white;
+            color: @gold;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 20px 35px;
+            text-transform: uppercase;
+            min-width: 264px;
+        }
+
+        @media screen and (min-width: 768px) {
+            
+            .cta__button {
+                display: flex;
+                justify-content: flex-end;
+            }
+        }
+    }
+}
